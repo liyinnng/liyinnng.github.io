@@ -15,11 +15,17 @@ website:
     
     # sub-pages
     left:
-      - education.qmd
+      - text: "Home"
+        file: index.qmd
+      - text: "Education"
+        file: education.qmd
       - text: "Experiences"
         file: experiences.qmd
       - text: "Projects"
         file: projects.qmd
+      - text: "CV"
+        file: CV.qmd
+      
         
 preview: 
     port: 22222
