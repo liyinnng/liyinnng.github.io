@@ -2,13 +2,13 @@
 title: "liying"
 image: mypic.jpg
 about: 
-  template: trestles
+  template: jolla
   image-shape: round
   image-width: 15em
   links: 
     - text: Email
       icon: envelope
-      href: mailto:liying.soh@u.nus.edu
+      href: "mailto:liying.soh@u.nus.edu"
     - text: Github
       icon: github
       href: https://github.com/liyinnng
@@ -16,10 +16,13 @@ about:
       icon: file-text
 ---
 
-This is a Quarto website.
+::: {#about-block}
+:::
 
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+# About Me.
 
-```{r}
-1 + 1
-```
+Hi, I am Li Ying, a Penultimate undergraduate at the National University of Singapore. Currently pursuing a Bachelor's in Business Administration, I am taking up a major in Marketing alongside a minor in Interactive Media Development.
+
+I am an ambivert individuals with an inquisite mind to adapt fast to a new environment. A good team player, I am not afraid to experiment with fresh things. I am also an eager self-directed learner and I enjoy gaining new knowledge along the way.
+
+Please feel free to [contact me](mailto:liying.soh@u.nus.edu) if you have any questions or would like to discuss potential collaborations. 

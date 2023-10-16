@@ -3,21 +3,42 @@ project:
   output-dir: docs
   
 website:
-  title: "Hello"
+  title: "Li Ying"
+  favicon: img/frog_book.png
+  
+  # navigation bar at the top of the web
   navbar:
+    pinned: true
+    logo: img/frog_book.png
     background: primary
     search: true
+    
+    # sub-pages
     left:
-      - text: "Home"
-        file: index.qmd
-      - text: "About"
-        file: about.qmd
+      - education.qmd
+      - text: "Experiences"
+        file: experiences.qmd
+      - text: "Projects"
+        file: projects.qmd
+        
+preview: 
+    port: 22222
+    browser: true
+    watch-inputs: true
+    navigate: true
+
+execute:
+  freeze: true
 
 format:
   html:
+    fontsize: 1.35em
     theme: lux
     css: styles.css
     toc: true
+    fig-cap-location: margin
+    anchor-sections: true
+    reference-location: margin
 
 editor: visual
 
