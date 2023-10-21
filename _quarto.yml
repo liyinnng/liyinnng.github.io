@@ -26,6 +26,11 @@ website:
         file: projects.qmd
       - text: "CV"
         file: CV.qmd
+        
+  #footer
+  page-footer:
+    left: Copyright 2023, Soh Li Ying
+    right: This website is built with {{< fa heart title="a heart" >}} and [Quarto](https://quarto.org/)
       
         
 preview: 
