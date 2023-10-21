@@ -4,11 +4,10 @@ project:
   
 website:
   title: "Li Ying"
-  favicon: img/frog_book.png
+  favicon: img/logo.png
   
   # navigation bar at the top of the web
   navbar:
-    pinned: true
     logo: img/frog_book.png
     background: primary
     search: true
@@ -17,6 +16,8 @@ website:
     left:
       - text: "Home"
         file: index.qmd
+      - text: "About"
+        file: about.qmd
       - text: "Education"
         file: education.qmd
       - text: "Experiences"

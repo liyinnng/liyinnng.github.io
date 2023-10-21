@@ -1,0 +1,7 @@
+---
+title: "About"
+subtitle: "A little bit more about me"
+title-block-banner: true
+---
+
+## <i class="fa fa-graduation-cap" aria-hidden="true"></i> me.  

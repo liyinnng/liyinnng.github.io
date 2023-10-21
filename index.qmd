@@ -14,7 +14,7 @@ about:
       href: https://github.com/liyinnng
     - text: Resume
       icon: file-text
-      ## how to add download link???
+
 ---
 
 ::: {#about-block}
@@ -22,8 +22,8 @@ about:
 
 # About Me.
 
-Hi, I am Li Ying, a Penultimate undergraduate at the National University of Singapore. Currently pursuing a Bachelor's in Business Administration, I am taking up a major in Marketing alongside a minor in Interactive Media Development.
+Hi, I am Li Ying, a Penultimate undergraduate at the National University of Singapore. Professionally, I am an ambivert individual with an inquisite mind to adapt fast to a new environment. In all (non)seriousness, I enjoy writing, is a novice (but passionate) meal-maker, occasional gamer, and also loves doodling. 
 
-I am an ambivert individuals with an inquisite mind to adapt fast to a new environment. A good team player, I am not afraid to experiment with fresh things. I am also an eager self-directed learner and I enjoy gaining new knowledge along the way.
+Poke around my website to learn more!
 
 Please feel free to [contact me](mailto:liying.soh@u.nus.edu) if you have any questions or would like to discuss potential collaborations. 
