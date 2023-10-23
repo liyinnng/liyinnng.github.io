@@ -6,27 +6,24 @@ title: "Education"
 *Major in Bachelor of Business Administration with Minor in Interactive Media Development*  
 •	Current CAP Score: 4.3/5.0
 
-#### ACHIEVEMENTS, LEADERSHIP & COMMITTEE EXPERIENCE
+#### {{< fa server >}} ACHIEVEMENTS, LEADERSHIP & COMMITTEE EXPERIENCE
 **NUS ROTARACT CLUB**  
 **duration**: Aug 2021 - Aug 2022  
 **role**: Level In-Charge  
 •	Facilitated welcome activities for over 100 active and new volunteers from different faculties in NUS  
 •	Responsible for weekly lesson plans and worksheets alongside being in charge of overseeing and ensuring smooth execution of weekly tutoring sessions
  
-**NUS BUSINESS CAMP**	 
+**[NUS BUSINESS CAMP](https://liyinnng.github.io/school_projects/NBC.html)**	 
 **duration**: Sep 2021 - Jun 2022  
 **role**: Publicity Executive  
-•	Led a group of 6 committee members in campus-wide publicity campaigns that attracted more than 600 sign-ups to be a participant of the 2022 NUS Business Camp  
-•	Person in-charge of managing social-relations with students and public, accumulating over a thousand followers on Instagram over a span of two weeks
+•	Led a faculty-wide publicity campaigns that attracted more than 600 sign-ups to be a participant of the 2022 NUS Business Camp  
+•	Person in-charge of managing social-relations with students and public, accumulating over a thousand followers on Instagram
  
 **NUS BIZCONNECT**  
 **duration**: Sep 2022 – Present  
 **role**: Publicity Executive  								    
 •	Working with a team of 7 in bridging relations between undergraduates and alumni of NUS Business School to connect various like-minded individuals  
 •	In-charge of social media marketing within the team to extend outreach of organized events to attract interested participants
-
-
-
 
 
 ---
