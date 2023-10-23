@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Li Ying - Education</title>
+<title>Li Ying - Projects</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -31,6 +31,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
 <link href="./img/logo.png" rel="icon" type="image/png">
+<script src="site_libs/quarto-listing/list.min.js"></script>
+<script src="site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -61,7 +63,38 @@ ul.task-list li input[type="checkbox"] {
     "search-submit-button-title": "Submit"
   }
 }</script>
+<script>
 
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-listing .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      
+      searchColumns: ["listing-title","listing-author","listing-image","listing-description","listing-categories"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  </script>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <link rel="stylesheet" href="styles.css">
 </head>
@@ -95,7 +128,7 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./education.html" rel="" target="" aria-current="page">
+    <a class="nav-link" href="./education.html" rel="" target="">
  <span class="menu-text">Education</span></a>
   </li>  
   <li class="nav-item">
@@ -103,7 +136,7 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">Experiences</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./projects.html" rel="" target="">
+    <a class="nav-link active" href="./projects.html" rel="" target="" aria-current="page">
  <span class="menu-text">Projects</span></a>
   </li>  
   <li class="nav-item">
@@ -118,25 +151,19 @@ ul.task-list li input[type="checkbox"] {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#national-university-of-singapore-nus" id="toc-national-university-of-singapore-nus" class="nav-link active" data-scroll-target="#national-university-of-singapore-nus">NATIONAL UNIVERSITY OF SINGAPORE (NUS)</a></li>
-  <li><a href="#nanyang-junior-college" id="toc-nanyang-junior-college" class="nav-link" data-scroll-target="#nanyang-junior-college">Nanyang Junior College</a></li>
-  </ul>
-</nav>
-    </div>
+        
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(1)</span></div></div></div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content column-page-left" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Education</h1>
+<h1 class="title">Projects</h1>
+<p class="subtitle lead">A list of projects I’ve done and associated materials</p>
 </div>
 
 
@@ -151,40 +178,39 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<section id="national-university-of-singapore-nus" class="level1">
-<h1>NATIONAL UNIVERSITY OF SINGAPORE (NUS)</h1>
-<p><em>Major in Bachelor of Business Administration with Minor in Interactive Media Development</em><br>
-• Current CAP Score: 4.3/5.0</p>
-<section id="achievements-leadership-committee-experience" class="level4">
-<h4 class="anchored" data-anchor-id="achievements-leadership-committee-experience">ACHIEVEMENTS, LEADERSHIP &amp; COMMITTEE EXPERIENCE</h4>
-<p><strong>NUS ROTARACT CLUB</strong><br>
-<strong>duration</strong>: Aug 2021 - Aug 2022<br>
-<strong>role</strong>: Level In-Charge<br>
-• Facilitated welcome activities for over 100 active and new volunteers from different faculties in NUS<br>
-• Responsible for weekly lesson plans and worksheets alongside being in charge of overseeing and ensuring smooth execution of weekly tutoring sessions</p>
-<p><strong>NUS BUSINESS CAMP</strong><br>
-<strong>duration</strong>: Sep 2021 - Jun 2022<br>
-<strong>role</strong>: Publicity Executive<br>
-• Led a group of 6 committee members in campus-wide publicity campaigns that attracted more than 600 sign-ups to be a participant of the 2022 NUS Business Camp<br>
-• Person in-charge of managing social-relations with students and public, accumulating over a thousand followers on Instagram over a span of two weeks</p>
-<p><strong>NUS BIZCONNECT</strong><br>
-<strong>duration</strong>: Sep 2022 – Present<br>
-<strong>role</strong>: Publicity Executive<br>
-• Working with a team of 7 in bridging relations between undergraduates and alumni of NUS Business School to connect various like-minded individuals<br>
-• In-charge of social media marketing within the team to extend outreach of organized events to attract interested participants</p>
-<hr>
-</section>
-</section>
-<section id="nanyang-junior-college" class="level1">
-<h1>Nanyang Junior College</h1>
-<p><em>GCE ‘A’ Levels</em><br>
-• Achievement 4 distinctions in Mathematics, General Paper, Physics and Economics<br>
-• President of International Service-Learning Club</p>
 
 
-</section>
 
-</main> <!-- /main -->
+
+<div class="quarto-listing quarto-listing-container-grid" id="listing-listing">
+<div class="list grid quarto-listing-cols-3">
+<div class="g-col-1" data-index="0" data-listing-file-modified-sort="1698031922761" data-listing-reading-time-sort="1">
+<a href="./school_projects/NBC.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img src="./school_projects/nbc-cover.gif" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+NBC works
+</h5>
+<div class="card-text listing-description">
+Publicity works done for a faculty-wide orientation camp
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+</div>
+<div class="listing-no-matching d-none">
+No matching items
+</div>
+</div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

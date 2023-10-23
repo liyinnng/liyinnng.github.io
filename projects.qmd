@@ -1,3 +1,17 @@
 ---
 title: Projects
+subtitle: "A list of projects I've done and associated materials"
+listing: 
+  contents: school_projects
+  feed: true
+  type: grid
+  grid-item-border: true
+  grid-item-align: left
+  max-description-length: 175
+  date-format: medium
+  categories: numbered
+  sort-ui: false
+  filter-ui: false
+page-layout: full
+  
 ---
