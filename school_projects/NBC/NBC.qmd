@@ -2,7 +2,7 @@
 title: "NBC works"
 description: 
   Publicity works done for a faculty-wide orientation camp
-image: nbc-cover.gif
+image: nbc_lower.gif
 draft: false
 ---
 
