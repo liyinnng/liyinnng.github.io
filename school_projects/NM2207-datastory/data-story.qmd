@@ -10,3 +10,5 @@ draft: false
 # About
 This project aims to find stories in data through visualization via shiny, ggplot2 and other functions with Rstudio. 
 
+# Shiny App
+<iframe height="400" width="100%" frameborder="no" src="https://liyinnng.shinyapps.io/NM2207-Final-Project-App/"> </iframe>

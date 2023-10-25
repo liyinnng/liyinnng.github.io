@@ -123,7 +123,7 @@
     "href": "school_projects/NM2207-datastory/data-story.html",
     "title": "NM2207 Final Project",
     "section": "",
-    "text": "About\nThis project aims to find stories in data through visualization via shiny, ggplot2 and other functions with Rstudio."
+    "text": "About\nThis project aims to find stories in data through visualization via shiny, ggplot2 and other functions with Rstudio.\n\n\nShiny App"
   },
   {
     "objectID": "school_projects/NBC/NBC.html",
@@ -131,5 +131,12 @@
     "title": "NUS Business Camp (NBC)",
     "section": "",
     "text": "About\nNBC (NUS Business Camp) serves as the firestarter to the five Freshman Orientation Programmes (FOPs), bringing incoming freshmen together through highly immersive activities.\nTaking up the role of publicity executive in the NUS Business Camp planning committee, my team and I were the ones who came up with the thematic of the camp, publicity stints, and designs of the collateral.\nHaving experience in Canva, Procreate and Adobe Photoshop, I was in charge of publicity campaigns on top of helping out with design works. From Instagram stories to illustrated grid layouts from scratch, these designs attracted over 600 sign ups for the camp."
+  },
+  {
+    "objectID": "school_projects/NM2207-datastory/Shiny-for-final-proj/shiny-final-proj.html",
+    "href": "school_projects/NM2207-datastory/Shiny-for-final-proj/shiny-final-proj.html",
+    "title": "Li Ying",
+    "section": "",
+    "text": "library(ggplot2)\nfunction(input, output) {\ndataset &lt;- reactive({ diamonds[sample(nrow(diamonds), input$sampleSize),] })\noutput$plot &lt;- renderPlot({\np &lt;- ggplot(dataset(), aes_string(x=input$x, y=input$y)) + geom_point()\n\nif (input$color != 'None')\n  p &lt;- p + aes_string(color=input$color)\n\nfacets &lt;- paste(input$facet_row, '~', input$facet_col)\nif (facets != '. ~ .')\n  p &lt;- p + facet_grid(facets)\n\nif (input$jitter)\n  p &lt;- p + geom_jitter()\nif (input$smooth)\n  p &lt;- p + geom_smooth()\n\nprint(p)\n})\n}"
   }
 ]

@@ -1,0 +1,14 @@
+{
+  "hash": "386333e86d1b5c45594061640897ee7a",
+  "result": {
+    "markdown": "library(ggplot2)\n \nfunction(input, output) {\n \n  dataset <- reactive({\n    diamonds[sample(nrow(diamonds), input$sampleSize),]\n  })\n \n  output$plot <- renderPlot({\n    \n    p <- ggplot(dataset(), aes_string(x=input$x, y=input$y)) + geom_point()\n    \n    if (input$color != 'None')\n      p <- p + aes_string(color=input$color)\n    \n    facets <- paste(input$facet_row, '~', input$facet_col)\n    if (facets != '. ~ .')\n      p <- p + facet_grid(facets)\n    \n    if (input$jitter)\n      p <- p + geom_jitter()\n    if (input$smooth)\n      p <- p + geom_smooth()\n    \n    print(p)\n    \n  })\n  \n}",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
