@@ -1,7 +1,8 @@
 --- 
 title: "NM2207 Final Project"
 description: 
-  Data-story telling for my final project 
+  Data-story telling for my final project
+categories: [curriculum]
 image: cover-nm2207.gif
 draft: false
 ---

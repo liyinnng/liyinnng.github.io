@@ -2,6 +2,7 @@
 title: "NUS Business Camp (NBC)"
 description: 
   Publicity works done for a faculty-wide orientation camp
+categories: [Committee]
 image: nbc_lower.gif
 draft: false
 ---
