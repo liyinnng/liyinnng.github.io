@@ -1,8 +1,8 @@
 --- 
-title: "NUS Business Camp (NBC)"
+title: "NM2207 Final Project"
 description: 
-  Publicity works done for a faculty-wide orientation camp
-image: nbc_lower.gif
+  Data-story telling for my final project 
+image: cover-nm2207.gif
 draft: false
 ---
 
@@ -12,5 +12,3 @@ NBC (NUS Business Camp) serves as the firestarter to the five Freshman Orientati
 
 Taking up the role of publicity executive in the NUS Business Camp planning committee, my team and I were the ones who came up with the thematic of the camp, publicity stints, and designs of the collateral.  
 Having experience in Canva, Procreate and Adobe Photoshop, I was in charge of publicity campaigns on top of helping out with design works. From Instagram stories to illustrated grid layouts from scratch, these designs attracted over 600 sign ups for the camp. 
-
-
