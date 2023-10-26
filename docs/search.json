@@ -123,7 +123,7 @@
     "href": "school_projects/NM2207-datastory/data-story.html",
     "title": "NM2207 Final Project",
     "section": "",
-    "text": "About\nThis project aims to find stories in data through visualization via shiny, ggplot2 and other functions with Rstudio.\n\n\nShiny App"
+    "text": "This project aims to find stories in data through visualization via shiny, ggplot2 and other functions with Rstudio.\n\n\nInvestigating the relationship between social media usage and its dark side.\nBackground As social media usage continues to expand globally, there is a growing worry about its impact on the mental and overall health of individuals and communities. A survey conducted by the Cybersmile Foundation reveals that a significant 89% of social media users perceive social media as harmful to their mental well-being. According Ms Ranjini Veerappan, a certified addiction specialist at Holistic Psychotherapy Centre, a child’s brain is still maturing and rapidly developing until they are about 25 years old. This leads to the prevalence of negative effects of social media within youths."
   },
   {
     "objectID": "school_projects/NBC/NBC.html",
@@ -138,5 +138,12 @@
     "title": "Li Ying",
     "section": "",
     "text": "library(ggplot2)\nfunction(input, output) {\ndataset &lt;- reactive({ diamonds[sample(nrow(diamonds), input$sampleSize),] })\noutput$plot &lt;- renderPlot({\np &lt;- ggplot(dataset(), aes_string(x=input$x, y=input$y)) + geom_point()\n\nif (input$color != 'None')\n  p &lt;- p + aes_string(color=input$color)\n\nfacets &lt;- paste(input$facet_row, '~', input$facet_col)\nif (facets != '. ~ .')\n  p &lt;- p + facet_grid(facets)\n\nif (input$jitter)\n  p &lt;- p + geom_jitter()\nif (input$smooth)\n  p &lt;- p + geom_smooth()\n\nprint(p)\n})\n}"
+  },
+  {
+    "objectID": "school_projects/NM2207-datastory/data-story.html#topic",
+    "href": "school_projects/NM2207-datastory/data-story.html#topic",
+    "title": "NM2207 Final Project",
+    "section": "",
+    "text": "Investigating the relationship between social media usage and its dark side.\nBackground As social media usage continues to expand globally, there is a growing worry about its impact on the mental and overall health of individuals and communities. A survey conducted by the Cybersmile Foundation reveals that a significant 89% of social media users perceive social media as harmful to their mental well-being. According Ms Ranjini Veerappan, a certified addiction specialist at Holistic Psychotherapy Centre, a child’s brain is still maturing and rapidly developing until they are about 25 years old. This leads to the prevalence of negative effects of social media within youths."
   }
 ]

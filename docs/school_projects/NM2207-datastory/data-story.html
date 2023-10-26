@@ -127,8 +127,13 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#about" id="toc-about" class="nav-link active" data-scroll-target="#about">About</a></li>
+  <li><a href="#about" id="toc-about" class="nav-link active" data-scroll-target="#about">About</a>
+  <ul class="collapse">
+  <li><a href="#topic" id="toc-topic" class="nav-link" data-scroll-target="#topic">Topic:</a>
+  <ul class="collapse">
   <li><a href="#shiny-app" id="toc-shiny-app" class="nav-link" data-scroll-target="#shiny-app">Shiny App</a></li>
+  </ul></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -163,13 +168,18 @@ ul.task-list li input[type="checkbox"] {
 <section id="about" class="level1">
 <h1>About</h1>
 <p>This project aims to find stories in data through visualization via shiny, ggplot2 and other functions with Rstudio.</p>
-</section>
-<section id="shiny-app" class="level1">
-<h1>Shiny App</h1>
+<section id="topic" class="level2">
+<h2 class="anchored" data-anchor-id="topic">Topic:</h2>
+<p>Investigating the relationship between social media usage and its dark side.</p>
+<p><strong><em>Background</em></strong> As social media usage continues to expand globally, there is a growing worry about its impact on the mental and overall health of individuals and communities. A survey conducted by the <a href="https://www.marketingtechnews.net/news/2022/jun/22/89-of-people-feel-social-media-negatively-affects-their-mental-health/">Cybersmile Foundation</a> reveals that a significant 89% of social media users perceive social media as harmful to their mental well-being. <a href="https://www.channelnewsasia.com/singapore/big-read-teenagers-social-media-addiction-cost-mental-health-3647121">According Ms Ranjini Veerappan</a>, a certified addiction specialist at Holistic Psychotherapy Centre, a child’s brain is still maturing and rapidly developing until they are about 25 years old. This leads to the prevalence of negative effects of social media within youths.</p>
+<section id="shiny-app" class="level3">
+<h3 class="anchored" data-anchor-id="shiny-app">Shiny App</h3>
 <iframe height="400" width="100%" frameborder="no" src="https://liyinnng.shinyapps.io/NM2207-Final-Project-App/">
 </iframe>
 
 
+</section>
+</section>
 </section>
 
 </main> <!-- /main -->
