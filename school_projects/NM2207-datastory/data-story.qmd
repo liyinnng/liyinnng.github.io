@@ -11,14 +11,14 @@ draft: false
 This project aims to find stories in data through visualization via shiny, ggplot2 and other functions with Rstudio. 
 
 ## Topic:
-Investigating the relationship between social media usage and its dark side.
+What are the relationships between social media usage and its negative impacts?
 
 ***Background:***  
 As social media usage continues to expand globally, there is a growing worry about its impact on the mental and overall health of individuals and communities. A survey conducted by the [Cybersmile Foundation](https://www.marketingtechnews.net/news/2022/jun/22/89-of-people-feel-social-media-negatively-affects-their-mental-health/) reveals that a significant 89% of social media users perceive social media as harmful to their mental well-being. [According Ms Ranjini Veerappan](https://www.channelnewsasia.com/singapore/big-read-teenagers-social-media-addiction-cost-mental-health-3647121), a certified addiction specialist at Holistic Psychotherapy Centre, a child's brain is still maturing and rapidly developing until they are about 25 years old. This leads to the prevalence of negative effects of social media within youths. Research by the [National    Center for Health Research](https://www.center4research.org/social-media-affects-mental-health/) has also conducted a study on adolescents has identified that body image, for girls and boys, is harmed by social media use.
 
 
-
-
-
 ### Shiny App
 <iframe height="400" width="100%" frameborder="no" src="https://liyinnng.shinyapps.io/NM2207-Final-Project-App/"> </iframe>
+
+***WordCloud***
+<iframe height="400" width="100%" frameborder="no" src="https://liyinnng.shinyapps.io/wordcloud-app/"> </iframe>

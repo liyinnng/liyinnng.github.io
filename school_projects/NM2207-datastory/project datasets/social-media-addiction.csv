@@ -1,0 +1,30 @@
+﻿ID,Start time,Completion time,Email,Name,Age_Range,Sex,Field,Education,Employability,Income,Daily_used,Accounts,Hrs,Time,Followers,Posted,Posted_later,Believed
+1,3/27/22 8:10:49,3/27/22 8:13:50,anonymous,,18 to 24,Male,BA,Diploma,No,0,Youtube;,Youtube;,0.5,Morning;,0,No,No,No
+2,3/27/22 8:10:45,3/27/22 8:14:10,anonymous,,18 to 24,Female,IT,Bachelor,No,0,Instagram;WhatsApp;Youtube;Snapchat;Twitter;,Instagram;,2.5,Morning;Evening;,6000,Maybe,Yes,Maybe
+3,3/27/22 8:11:27,3/27/22 8:15:25,anonymous,,18 to 24,Male,ID,Diploma,No,0,Instagram;,Instagram;,4.5,Night;,2000,Maybe,Maybe,Maybe
+4,3/27/22 8:17:39,3/27/22 8:20:59,anonymous,,18 to 24,Female,IT,Bachelor,No,0,Twitter;,Youtube;WhatsApp;Twitter;TikTok;Instagram;,4.5,Morning;,3,No,Maybe,Yes
+5,3/27/22 8:23:38,3/27/22 8:27:20,anonymous,,18 to 24,Female,BA,Bachelor,No,0,Instagram;TikTok;Twitter;,Instagram;,2.5,Evening;,10,No,Maybe,Yes
+6,3/27/22 8:23:10,3/27/22 8:29:03,anonymous,,18 to 24,Female,IT,Bachelor,No,0,Snapchat;Youtube;WhatsApp;TikTok;,Snapchat;,0.5,Night;,80,Maybe,Maybe,Maybe
+7,3/27/22 8:28:43,3/27/22 8:30:57,anonymous,,18 to 24,Male,BA,Bachelor,No,0,Facebook;Instagram;WhatsApp;Snapchat;,WhatsApp;Facebook;Snapchat;Instagram;Youtube;,0.5,Afternoon;Night;Morning;,100,No,No,Maybe
+8,3/27/22 8:30:30,3/27/22 8:33:49,anonymous,,18 to 24,Female,IT,Bachelor,No,0,Youtube;WhatsApp;Twitter;Snapchat;TikTok;Instagram;,Instagram;TikTok;Snapchat;Twitter;WhatsApp;Youtube;,2.5,Evening;Morning;Afternoon;,0,No,No,Maybe
+9,3/27/22 8:48:58,3/27/22 8:51:08,anonymous,,18 to 24,Female,ID,Bachelor,No,0,Instagram;TikTok;WhatsApp;,Instagram;TikTok;Snapchat;Facebook;WhatsApp;,2.5,Morning;Afternoon;Evening;Night;,500,No,Yes,Yes
+10,3/27/22 8:58:32,3/27/22 9:03:18,anonymous,,25 to 34,Female,IT,Bachelor,No,250,WhatsApp;,WhatsApp;,1,Evening;,0,Maybe,Maybe,Maybe
+11,3/27/22 9:01:56,3/27/22 9:03:44,anonymous,,18 to 24,Male,IT,Bachelor,No,250,Instagram;Snapchat;WhatsApp;Youtube;,Instagram;Snapchat;WhatsApp;Youtube;Twitter;,1,Evening;Afternoon;Morning;Night;,2000,Maybe,Maybe,Maybe
+12,3/27/22 9:18:46,3/27/22 9:22:21,anonymous,,25 to 34,Male,BA,Bachelor,No,800,Instagram;Twitter;WhatsApp;,Instagram;Snapchat;Twitter;WhatsApp;,2.5,Night;,330,No,No,No
+13,3/27/22 10:15:01,3/27/22 10:17:35,anonymous,,18 to 24,Female,ID,Diploma,No,0,Instagram;WhatsApp;,Instagram;WhatsApp;,4.5,Night;Morning;Afternoon;Evening;,500,No,No,Yes
+14,3/27/22 10:32:17,3/27/22 10:33:33,anonymous,,18 to 24,Female,BA,Diploma,Private,250,Snapchat;WhatsApp;,Facebook;,2.5,Evening;,0,Yes,Maybe,Maybe
+15,3/27/22 9:35:40,3/27/22 10:34:51,anonymous,,18 to 24,Male,IT,Bachelor,No,0,Youtube;WhatsApp;,WhatsApp;Youtube;,4.5,Evening;,100,No,No,Maybe
+16,3/27/22 11:12:45,3/27/22 11:14:35,anonymous,,18 to 24,Female,BA,Bachelor,No,250,Instagram;TikTok;Snapchat;WhatsApp;,Instagram;Snapchat;Twitter;WhatsApp;,4.5,Morning;Night;Evening;,400,No,Maybe,Yes
+17,3/27/22 11:51:33,3/27/22 11:57:37,anonymous,,18 to 24,Female,BA,Diploma,No,0,Instagram;TikTok;Snapchat;WhatsApp;Youtube;,Instagram;,2.5,Afternoon;Night;,1000,No,Maybe,Yes
+18,3/27/22 12:09:50,3/27/22 12:13:34,anonymous,,18 to 24,Female,ID,Bachelor,No,,Instagram;Youtube;,Instagram;WhatsApp;Youtube;,4.5,Evening;Night;Morning;,50,No,No,Yes
+19,3/27/22 12:25:49,3/27/22 12:28:37,anonymous,,25 to 34,Male,BA,Bachelor,Private,800,WhatsApp;Youtube;,WhatsApp;,2.5,Afternoon;Evening;Morning;,2000,No,No,No
+20,3/27/22 15:01:35,3/27/22 15:04:32,anonymous,,Below 18,Female,BA,Bachelor,No,0,Instagram;WhatsApp;,Instagram;TikTok;Snapchat;WhatsApp;Youtube;,4.5,Afternoon;Evening;Morning;Night;,20,No,Yes,Yes
+21,3/27/22 15:48:11,3/27/22 15:50:16,anonymous,,35 to 44,Female,BA,Bachelor,Public,450,Instagram;Snapchat;WhatsApp;,Instagram;Snapchat;WhatsApp;,0.5,Afternoon;Evening;,100,No,No,No
+22,3/27/22 16:48:14,3/27/22 16:49:01,anonymous,,18 to 24,Female,BA,Bachelor,Private,650,Instagram;,Snapchat;,4.5,Evening;Afternoon;Morning;Night;,100,Yes,Yes,Yes
+23,3/28/22 8:47:12,3/28/22 8:49:42,anonymous,,18 to 24,Female,BA,Bachelor,No,250,Instagram;TikTok;,Instagram;,4.5,Night;,70,No,Maybe,Yes
+24,3/28/22 14:06:21,3/28/22 14:09:46,anonymous,,18 to 24,Female,IT,Bachelor,No,0,Instagram;Snapchat;Twitter;TikTok;WhatsApp;,Instagram;TikTok;Snapchat;Facebook;Twitter;WhatsApp;,2.5,Morning;Night;,178,No,Maybe,Maybe
+25,3/28/22 14:10:12,3/28/22 14:12:31,anonymous,,18 to 24,Female,ID,Bachelor,No,0,Instagram;TikTok;WhatsApp;,Instagram;TikTok;Snapchat;WhatsApp;,4.5,Night;,200,No,No,Yes
+26,3/28/22 14:13:46,3/28/22 14:18:13,anonymous,,18 to 24,Female,ID,Diploma,No,0,TikTok;Instagram;Youtube;WhatsApp;Snapchat;,Instagram;TikTok;WhatsApp;Snapchat;,2.5,Night;Evening;,200,No,No,Yes
+27,3/28/22 14:58:02,3/28/22 15:00:08,anonymous,,25 to 34,Male,BA,Bachelor,No,0,Instagram;Snapchat;WhatsApp;,Instagram;TikTok;Snapchat;WhatsApp;Twitter;,2.5,Afternoon;Evening;,2300,No,No,No
+28,3/28/22 16:30:03,3/28/22 16:32:56,anonymous,,18 to 24,Male,BA,Diploma,No,0,Instagram;Netflix ;,Instagram;TikTok;Snapchat;WhatsApp;Youtube;,4.5,Night;Morning;Afternoon;Evening;,0,No,No,Yes
+29,3/29/22 8:14:24,3/29/22 8:27:13,anonymous,,Below 18,Female,BA,Bachelor,No,450,Instagram;Twitter;WhatsApp;Youtube;,Instagram;Twitter;WhatsApp;Youtube;,2.5,Morning;Afternoon;Evening;Night;,203,No,No,Maybe
