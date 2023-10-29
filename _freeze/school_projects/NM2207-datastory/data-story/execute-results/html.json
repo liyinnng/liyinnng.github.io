@@ -1,0 +1,16 @@
+{
+  "hash": "be830811ffc309dcd12a54d22962aba4",
+  "result": {
+    "markdown": "---\ntitle: \"NM2207 Final Project\"\ndescription: \n  Data-story telling for my final project\ncategories: [Curriculum]\nimage: cover-nm2207.gif\ndraft: false\n---\n\n\n# About\n\nThis project aims to find stories in data through visualization via shiny, ggplot2 and other functions with Rstudio.\n\n## Topic:\n\nWhat are the relationships between social media usage and its negative impacts?\n\n***Background:***\\\nAs social media usage continues to expand globally, there is a growing worry about its impact on the mental and overall health of individuals and communities. A survey conducted by the [Cybersmile Foundation](https://www.marketingtechnews.net/news/2022/jun/22/89-of-people-feel-social-media-negatively-affects-their-mental-health/) reveals that a significant 89% of social media users perceive social media as harmful to their mental well-being. [According Ms Ranjini Veerappan](https://www.channelnewsasia.com/singapore/big-read-teenagers-social-media-addiction-cost-mental-health-3647121), a certified addiction specialist at Holistic Psychotherapy Centre, a child's brain is still maturing and rapidly developing until they are about 25 years old. This leads to the prevalence of negative effects of social media within youths. Research by the [National Center for Health Research](https://www.center4research.org/social-media-affects-mental-health/) has also conducted a study on adolescents has identified that body image, for girls and boys, is harmed by social media use.\n\n\n::: {.cell}\n\n:::\n\n\n*Social Media Usage by Age*\\\nThis graphs shows that of all respondents, most of them in their tens to twenties uses social media.\n\n\n::: {.cell}\n::: {.cell-output-display}\n![](data-story_files/figure-html/unnamed-chunk-2-1.png){width=672}\n:::\n:::\n\n\n*Average time spent on social media daily\\\nNext, we investigate the average time spent on social media daily. The graph indicates that the largest group of respondents spends more than 5 hours of their time on social media daily on average.\n\n\n::: {.cell}\n::: {.cell-output-display}\n![](data-story_files/figure-html/unnamed-chunk-3-1.png){width=672}\n:::\n:::\n\n\n*Sleep quality*\\\nNext, we will compare the sleep quality between respondednts who use social media, and those who do not use social media. With the use of a Violin plot, it is evident that those who do not use social media never, or seldom face issues with regards to sleeping. On the other hand, the largest group of respondents who use social media indicated that they often face such issues.\n\n\n::: {.cell}\n::: {.cell-output-display}\n![](data-story_files/figure-html/unnamed-chunk-4-1.png){width=672}\n:::\n:::\n\n\n### Shiny App\n\n<iframe height=\"400\" width=\"100%\" frameborder=\"no\" src=\"https://liyinnng.shinyapps.io/NM2207-Final-Project-App/\">\n\n</iframe>\n\n***WordCloud*** <iframe height=\"400\" width=\"100%\" frameborder=\"no\" src=\"https://liyinnng.shinyapps.io/wordcloud-app/\"> </iframe>",
+    "supporting": [
+      "data-story_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

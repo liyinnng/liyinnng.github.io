@@ -46,7 +46,7 @@ ggplot(age_usage_count, aes(x = X1..What.is.your.age., y = count, fill = factor(
 
 ```
 
-*Average time spent on social media daily*\
+*Average time spent on social media daily\
 Next, we investigate the average time spent on social media daily. The graph indicates that the largest group of respondents spends more than 5 hours of their time on social media daily on average.
 
 ```{r, eval=T,echo=FALSE, message = FALSE}
