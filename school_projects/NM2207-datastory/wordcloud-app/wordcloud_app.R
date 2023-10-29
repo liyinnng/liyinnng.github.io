@@ -18,7 +18,7 @@ ui <- fluidPage(
   sidebarLayout(
     sidebarPanel(
       sliderInput("num_words", "Number of words to include in word cloud:",
-                  min = 10, max = 150, value = 100)
+                  min = 10, max = 100, value = 100)
     ),
     mainPanel(
       plotOutput("wordcloud", width = "600px", height = "600px")
