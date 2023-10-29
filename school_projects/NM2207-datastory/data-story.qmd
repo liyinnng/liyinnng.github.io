@@ -1,4 +1,4 @@
---- 
+---
 title: "NM2207 Final Project"
 description: 
   Data-story telling for my final project
@@ -8,17 +8,89 @@ draft: false
 ---
 
 # About
-This project aims to find stories in data through visualization via shiny, ggplot2 and other functions with Rstudio. 
+
+This project aims to find stories in data through visualization via shiny, ggplot2 and other functions with Rstudio.
 
 ## Topic:
+
 What are the relationships between social media usage and its negative impacts?
 
-***Background:***  
-As social media usage continues to expand globally, there is a growing worry about its impact on the mental and overall health of individuals and communities. A survey conducted by the [Cybersmile Foundation](https://www.marketingtechnews.net/news/2022/jun/22/89-of-people-feel-social-media-negatively-affects-their-mental-health/) reveals that a significant 89% of social media users perceive social media as harmful to their mental well-being. [According Ms Ranjini Veerappan](https://www.channelnewsasia.com/singapore/big-read-teenagers-social-media-addiction-cost-mental-health-3647121), a certified addiction specialist at Holistic Psychotherapy Centre, a child's brain is still maturing and rapidly developing until they are about 25 years old. This leads to the prevalence of negative effects of social media within youths. Research by the [National    Center for Health Research](https://www.center4research.org/social-media-affects-mental-health/) has also conducted a study on adolescents has identified that body image, for girls and boys, is harmed by social media use.
+***Background:***\
+As social media usage continues to expand globally, there is a growing worry about its impact on the mental and overall health of individuals and communities. A survey conducted by the [Cybersmile Foundation](https://www.marketingtechnews.net/news/2022/jun/22/89-of-people-feel-social-media-negatively-affects-their-mental-health/) reveals that a significant 89% of social media users perceive social media as harmful to their mental well-being. [According Ms Ranjini Veerappan](https://www.channelnewsasia.com/singapore/big-read-teenagers-social-media-addiction-cost-mental-health-3647121), a certified addiction specialist at Holistic Psychotherapy Centre, a child's brain is still maturing and rapidly developing until they are about 25 years old. This leads to the prevalence of negative effects of social media within youths. Research by the [National Center for Health Research](https://www.center4research.org/social-media-affects-mental-health/) has also conducted a study on adolescents has identified that body image, for girls and boys, is harmed by social media use.
 
+```{r, eval=TRUE,echo=FALSE,message = FALSE}
+library(tidyverse)
+library(ggplot2)
+library(dplyr)
+social_media_health <- read.csv("social-media-and-mental-health.csv")
+
+```
+
+*Social Media Usage by Age*\
+This graphs shows that of all respondents, most of them in their tens to twenties uses social media.
+
+```{r, eval=TRUE,echo=FALSE, message = FALSE}
+# Data filtering to find rs between age and usage of social media
+
+age_usage_count <- social_media_health %>%
+  group_by(X1..What.is.your.age., X6..Do.you.use.social.media.) %>%
+  summarise(count = n())
+
+ggplot(age_usage_count, aes(x = X1..What.is.your.age., y = count, fill = factor(X6..Do.you.use.social.media.))) +
+  geom_bar(stat = "identity", position = "dodge") +
+  labs(title = "Social Media Usage by Age",
+       x = "Age",
+       y = "Count",
+       fill = "Do you use social media?") +
+  scale_fill_manual(values = c("No" = "red", "Yes" = "green")) 
+
+```
+
+*Average time spent on social media daily*\
+Next, we investigate the average time spent on social media daily. The graph indicates that the largest group of respondents spends more than 5 hours of their time on social media daily on average.
+
+```{r, eval=T,echo=FALSE, message = FALSE}
+# Average time spent on social media daily
+social_media <- social_media_health %>% filter( X6..Do.you.use.social.media. == "Yes")
+
+time_spent <- social_media %>% 
+  group_by(X8..What.is.the.average.time.you.spend.on.social.media.every.day.) %>%
+  summarise(count = n())
+
+ggplot(time_spent, aes(x = X8..What.is.the.average.time.you.spend.on.social.media.every.day., y = count)) +
+  geom_bar(stat = "identity") +
+  geom_text(aes(label = count), vjust = -0.5, size = 3) +
+  labs(
+    title = "Average Time Spent on Social Media",
+    x = "Average Time Spent",
+    y = "Count") + 
+  scale_x_discrete(guide = guide_axis(angle = 20))
+
+```
+
+*Sleep quality*\
+Next, we will compare the sleep quality between respondednts who use social media, and those who do not use social media. With the use of a Violin plot, it is evident that those who do not use social media never, or seldom face issues with regards to sleeping. On the other hand, the largest group of respondents who use social media indicated that they often face such issues.
+
+```{r, eval=T,echo=FALSE}
+# Comparison of sleep quality between those who use, and do not use SM 
+sleep <- social_media_health %>% 
+  select(X6..Do.you.use.social.media., X20..On.a.scale.of.1.to.5..how.often.do.you.face.issues.regarding.sleep.)
+
+ggplot(sleep, aes(x = X6..Do.you.use.social.media., y = X20..On.a.scale.of.1.to.5..how.often.do.you.face.issues.regarding.sleep.)) +
+  geom_violin(aes(fill = X6..Do.you.use.social.media.), scale = "width") +
+  labs(
+    title = "Comparison of Sleep Quality by Social Media Use and Sleep Issues",
+    caption = "Note: 1 being never, and 5 being often",
+    x = "Do you use social media?",
+    y = "Frequency of facing issues regarding sleep",
+    fill = "Do you use social media?")
+
+```
 
 ### Shiny App
-<iframe height="400" width="100%" frameborder="no" src="https://liyinnng.shinyapps.io/NM2207-Final-Project-App/"> </iframe>
 
-***WordCloud***
-<iframe height="400" width="100%" frameborder="no" src="https://liyinnng.shinyapps.io/wordcloud-app/"> </iframe>
+<iframe height="400" width="100%" frameborder="no" src="https://liyinnng.shinyapps.io/NM2207-Final-Project-App/">
+
+</iframe>
+
+***WordCloud*** <iframe height="400" width="100%" frameborder="no" src="https://liyinnng.shinyapps.io/wordcloud-app/"> </iframe>
