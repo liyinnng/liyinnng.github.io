@@ -46,7 +46,7 @@ ggplot(age_usage_count, aes(x = X1..What.is.your.age., y = count, fill = factor(
 
 ```
 
-*Average time spent on social media daily\
+*Average time spent on social media daily*\
 Next, we investigate the average time spent on social media daily. The graph indicates that the largest group of respondents spends more than 5 hours of their time on social media daily on average.
 
 ```{r, eval=T,echo=FALSE, message = FALSE}
@@ -83,6 +83,24 @@ ggplot(sleep, aes(x = X6..Do.you.use.social.media., y = X20..On.a.scale.of.1.to.
     caption = "Note: 1 being never, and 5 being often",
     x = "Do you use social media?",
     y = "Frequency of facing issues regarding sleep",
+    fill = "Do you use social media?")
+
+```
+
+*Concentration*
+In this section, we will investigate the relationship between the use of social media and concentration of respondents
+```{r, eval=T,echo=TRUE}
+# Comparison between those who use, and do not use SM on whether they find it difficult to concentrate on things 
+concentration <- social_media_health %>% 
+  select(X6..Do.you.use.social.media., X14..Do.you.find.it.difficult.to.concentrate.on.things.)
+
+ggplot(concentration, aes(x = X6..Do.you.use.social.media., y = X14..Do.you.find.it.difficult.to.concentrate.on.things.)) +
+  geom_violin(aes(fill = X6..Do.you.use.social.media.), scale = "width") +
+  labs(
+    title = "Comparison of concentration ability",
+    caption = "Note: 1 being no difficulty faced, and 5 being very difficult",
+    x = "Do you use social media?",
+    y = "Difficulty in concentrating on things",
     fill = "Do you use social media?")
 
 ```

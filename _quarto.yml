@@ -8,7 +8,7 @@ website:
   
   # navigation bar at the top of the web
   navbar:
-    logo: img/frog_book.png
+    logo: img/logo.png
     background: primary
     search: true
     
