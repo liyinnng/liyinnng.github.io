@@ -87,9 +87,9 @@ ggplot(sleep, aes(x = X6..Do.you.use.social.media., y = X20..On.a.scale.of.1.to.
 
 ```
 
-*Concentration*
+*Concentration*\
 In this section, we will investigate the relationship between the use of social media and concentration of respondents
-```{r, eval=T,echo=TRUE}
+```{r, eval=T,echo=FALSE}
 # Comparison between those who use, and do not use SM on whether they find it difficult to concentrate on things 
 concentration <- social_media_health %>% 
   select(X6..Do.you.use.social.media., X14..Do.you.find.it.difficult.to.concentrate.on.things.)
@@ -102,6 +102,42 @@ ggplot(concentration, aes(x = X6..Do.you.use.social.media., y = X14..Do.you.find
     x = "Do you use social media?",
     y = "Difficulty in concentrating on things",
     fill = "Do you use social media?")
+
+```
+
+*Relationship between Social Media usage and worries*\
+```{r, eval=T,echo=FALSE}
+
+# Create a cross-tabulation of the two variables
+SM_worries_heatmap <- table(social_media_health$X6..Do.you.use.social.media., social_media_health$X13..On.a.scale.of.1.to.5..how.much.are.you.bothered.by.worries.)
+
+# Create a heatmap using ggplot2
+ggplot(data = as.data.frame(SM_worries_heatmap), aes(x = Var1, y = Var2, fill = Freq)) +
+  geom_tile() +
+  labs(x = "Do you use social media?",
+       y = "How much are you bothered by worries?",
+       fill = "Frequency") +
+  scale_fill_gradient(low = "white", high = "#9FC0DE") +
+  theme_minimal()
+
+```
+
+
+*Seeking validation from Social Media*\
+```{r, eval=T,echo=FALSE}
+# Data filtering to find rs between frequency of seeking validation from SM and frequency of feeling depressed or down 
+
+# Create a cross-tabulation of the two variables
+validation_depressed_heatmap <- table(social_media_health$X17..How.often.do.you.look.to.seek.validation.from.features.of.social.media., social_media_health$X18..How.often.do.you.feel.depressed.or.down.)
+
+# Create a heatmap using ggplot2
+ggplot(data = as.data.frame(validation_depressed_heatmap), aes(x = Var1, y = Var2, fill = Freq)) +
+  geom_tile() +
+  labs(x = "How often do you seek validation from social media?",
+       y = "How often do you feel depressed or down?",
+       fill = "Frequency") +
+  scale_fill_gradient(low = "white", high = "orange") +
+  theme_minimal()
 
 ```
 
