@@ -143,8 +143,6 @@ ggplot(data = as.data.frame(validation_depressed_heatmap), aes(x = Var1, y = Var
 
 ### Shiny App
 
-<iframe height="400" width="100%" frameborder="no" src="https://liyinnng.shinyapps.io/NM2207-Final-Project-App/">
-
-</iframe>
+<iframe height="400" width="100%" frameborder="no" src="https://liyinnng.shinyapps.io/bargraph-app/"> </iframe>
 
 ***WordCloud*** <iframe height="400" width="100%" frameborder="no" src="https://liyinnng.shinyapps.io/wordcloud-app/"> </iframe>
