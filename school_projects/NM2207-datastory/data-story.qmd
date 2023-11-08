@@ -22,7 +22,12 @@ As social media usage continues to expand globally, there is a growing worry abo
 library(tidyverse)
 library(ggplot2)
 library(dplyr)
+library(plotly)
 social_media_health <- read.csv("social-media-and-mental-health.csv")
+
+# Filter age outliers
+social_media_health <- social_media_health %>%
+  filter(X1..What.is.your.age. != 91)
 
 ```
 
@@ -37,13 +42,12 @@ age_usage_count <- social_media_health %>%
   summarise(count = n())
 
 ggplot(age_usage_count, aes(x = X1..What.is.your.age., y = count, fill = factor(X6..Do.you.use.social.media.))) +
-  geom_bar(stat = "identity", position = "dodge") +
+  geom_col(position = "dodge", width = 0.3) +
   labs(title = "Social Media Usage by Age",
        x = "Age",
        y = "Count",
        fill = "Do you use social media?") +
-  scale_fill_manual(values = c("No" = "red", "Yes" = "green")) 
-
+  scale_fill_manual(values = c("No" = "#D64045", "Yes" = "#9FC0DE"))
 ```
 
 *Average time spent on social media daily*\
@@ -57,68 +61,58 @@ time_spent <- social_media %>%
   group_by(X8..What.is.the.average.time.you.spend.on.social.media.every.day.) %>%
   summarise(count = n())
 
-ggplot(time_spent, aes(x = X8..What.is.the.average.time.you.spend.on.social.media.every.day., y = count)) +
-  geom_bar(stat = "identity") +
-  geom_text(aes(label = count), vjust = -0.5, size = 3) +
-  labs(
+time_colour <- "#9FC0DE"
+
+average_time <- plot_ly(
+  data = time_spent,
+  x = ~X8..What.is.the.average.time.you.spend.on.social.media.every.day.,
+  y = ~count,
+  type = "bar",
+  marker = list(color = time_colour)
+)
+
+average_time <- average_time %>%
+  layout(
     title = "Average Time Spent on Social Media",
-    x = "Average Time Spent",
-    y = "Count") + 
-  scale_x_discrete(guide = guide_axis(angle = 20))
+    xaxis = list(title = "Average Time Spent"),
+    yaxis = list(title = "Count")
+  )
+
+average_time
 
 ```
 
-*Sleep quality*\
-Next, we will compare the sleep quality between respondednts who use social media, and those who do not use social media. With the use of a Violin plot, it is evident that those who do not use social media never, or seldom face issues with regards to sleeping. On the other hand, the largest group of respondents who use social media indicated that they often face such issues.
 
-```{r, eval=T,echo=FALSE}
-# Comparison of sleep quality between those who use, and do not use SM 
-sleep <- social_media_health %>% 
-  select(X6..Do.you.use.social.media., X20..On.a.scale.of.1.to.5..how.often.do.you.face.issues.regarding.sleep.)
 
-ggplot(sleep, aes(x = X6..Do.you.use.social.media., y = X20..On.a.scale.of.1.to.5..how.often.do.you.face.issues.regarding.sleep.)) +
-  geom_violin(aes(fill = X6..Do.you.use.social.media.), scale = "width") +
-  labs(
-    title = "Comparison of Sleep Quality by Social Media Use and Sleep Issues",
-    caption = "Note: 1 being never, and 5 being often",
-    x = "Do you use social media?",
-    y = "Frequency of facing issues regarding sleep",
-    fill = "Do you use social media?")
+  
+*Sleep quality & concentration with social media usage*\
+Next, we will compare the sleep quality and the concentration ability between respondents who use social media, and those who do not use social media. With the use of a **Violin plot**, it is evident that those who do not use social media never, or seldom face issues with regards to sleeping. On the other hand, the largest group of respondents who use social media indicated that they often face such issues.  
+A similar trend can be observed for the plot comparing the concentration ability of both groups. The plot has an *inverse* relationship between both graphs: Most who do not use social media indicated that they face minimal difficulty in concentrating on things; on the other hand, the plot is thicker at the top for those who use social media, indicating that they face greater difficulty in concentrating on things.
 
-```
+<iframe height="400" width="100%" frameborder="no" src="https://liyinnng.shinyapps.io/violin-app/"> </iframe>
 
-*Concentration*\
-In this section, we will investigate the relationship between the use of social media and concentration of respondents
-```{r, eval=T,echo=FALSE}
-# Comparison between those who use, and do not use SM on whether they find it difficult to concentrate on things 
-concentration <- social_media_health %>% 
-  select(X6..Do.you.use.social.media., X14..Do.you.find.it.difficult.to.concentrate.on.things.)
-
-ggplot(concentration, aes(x = X6..Do.you.use.social.media., y = X14..Do.you.find.it.difficult.to.concentrate.on.things.)) +
-  geom_violin(aes(fill = X6..Do.you.use.social.media.), scale = "width") +
-  labs(
-    title = "Comparison of concentration ability",
-    caption = "Note: 1 being no difficulty faced, and 5 being very difficult",
-    x = "Do you use social media?",
-    y = "Difficulty in concentrating on things",
-    fill = "Do you use social media?")
-
-```
 
 *Relationship between Social Media usage and worries*\
+To investigate the relationship between social media usage and its potential effect of causing worries to users, I have decided to adopt the usage of a heatmap. Starting on the side for those who do not use social media, respondents have only selected "1" and "2", which indicates that they are not at all, to very minimally bothered by worries. On the other hand, the colour of the heatmap gets darker progressively, which is an indication that for those who use social media, there is an increasing trend of users being bothered by worries. 
+
 ```{r, eval=T,echo=FALSE}
 
 # Create a cross-tabulation of the two variables
 SM_worries_heatmap <- table(social_media_health$X6..Do.you.use.social.media., social_media_health$X13..On.a.scale.of.1.to.5..how.much.are.you.bothered.by.worries.)
 
-# Create a heatmap using ggplot2
-ggplot(data = as.data.frame(SM_worries_heatmap), aes(x = Var1, y = Var2, fill = Freq)) +
+heatmap_data <- as.data.frame(SM_worries_heatmap)
+
+heatmap_plot <- ggplot(heatmap_data, aes(x = Var1, y = Var2, fill = Freq)) +
   geom_tile() +
   labs(x = "Do you use social media?",
        y = "How much are you bothered by worries?",
        fill = "Frequency") +
   scale_fill_gradient(low = "white", high = "#9FC0DE") +
   theme_minimal()
+
+heatmap_worries <- ggplotly(heatmap_plot)
+
+heatmap_worries
 
 ```
 

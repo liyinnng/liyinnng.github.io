@@ -1,0 +1,12 @@
+name: violin-app
+title: violin-app
+username: liyinnng
+account: liyinnng
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 10452832
+bundleId: 7901569
+url: https://liyinnng.shinyapps.io/violin-app/
+version: 1
+asMultiple: FALSE
+asStatic: FALSE
