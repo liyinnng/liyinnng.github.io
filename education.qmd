@@ -4,7 +4,7 @@ title: "Education"
 
 # NATIONAL UNIVERSITY OF SINGAPORE (NUS)
 *Major in Bachelor of Business Administration with Minor in Interactive Media Development*  
-•	Current CAP Score: 4.3/5.0
+•	Current CAP Score: 4.58/5.0
 
 #### {{< fa server >}} ACHIEVEMENTS, LEADERSHIP & COMMITTEE EXPERIENCE
 **NUS ROTARACT CLUB**  
