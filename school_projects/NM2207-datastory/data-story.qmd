@@ -5,6 +5,9 @@ description:
 categories: [Curriculum]
 image: cover-nm2207.gif
 draft: false
+format: 
+  html: 
+    css: styles.css
 ---
 
 # About
@@ -18,11 +21,12 @@ What are the relationships between social media usage and its negative impacts?
 ***Background:***\
 As social media usage continues to expand globally, there is a growing worry about its impact on the mental and overall health of individuals and communities. A survey conducted by the [Cybersmile Foundation](https://www.marketingtechnews.net/news/2022/jun/22/89-of-people-feel-social-media-negatively-affects-their-mental-health/) reveals that a significant 89% of social media users perceive social media as harmful to their mental well-being. [According Ms Ranjini Veerappan](https://www.channelnewsasia.com/singapore/big-read-teenagers-social-media-addiction-cost-mental-health-3647121), a certified addiction specialist at Holistic Psychotherapy Centre, a child's brain is still maturing and rapidly developing until they are about 25 years old. This leads to the prevalence of negative effects of social media within youths. Research by the [National Center for Health Research](https://www.center4research.org/social-media-affects-mental-health/) has also conducted a study on adolescents has identified that body image, for girls and boys, is harmed by social media use.
 
-```{r, eval=TRUE,echo=FALSE,message = FALSE}
+```{r, eval=TRUE,echo=FALSE,message = FALSE, warning = FALSE}
 library(tidyverse)
 library(ggplot2)
 library(dplyr)
 library(plotly)
+
 social_media_health <- read.csv("social-media-and-mental-health.csv")
 
 # Filter age outliers
