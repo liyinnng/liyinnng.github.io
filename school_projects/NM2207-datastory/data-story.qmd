@@ -5,9 +5,6 @@ description:
 categories: [Curriculum]
 image: cover-nm2207.gif
 draft: false
-format: 
-  html: 
-    css: styles.css
 ---
 
 # About
@@ -38,7 +35,7 @@ social_media_health <- social_media_health %>%
 *Social Media Usage by Age*\
 This graphs shows that of all respondents, most of them in their tens to twenties uses social media.
 
-```{r, eval=TRUE,echo=FALSE, message = FALSE}
+```{r, out.width='100%', eval=TRUE,echo=FALSE, message = FALSE}
 # Data filtering to find rs between age and usage of social media
 
 age_usage_count <- social_media_health %>%
@@ -87,9 +84,7 @@ average_time
 ```
 
 
-
-  
-*Sleep quality & concentration with social media usage*\
+*Sleep quality, concentration & worries with social media usage*\
 Next, we will compare the sleep quality and the concentration ability between respondents who use social media, and those who do not use social media. With the use of a **Violin plot**, it is evident that those who do not use social media never, or seldom face issues with regards to sleeping. On the other hand, the largest group of respondents who use social media indicated that they often face such issues.  
 A similar trend can be observed for the plot comparing the concentration ability of both groups. The plot has an *inverse* relationship between both graphs: Most who do not use social media indicated that they face minimal difficulty in concentrating on things; on the other hand, the plot is thicker at the top for those who use social media, indicating that they face greater difficulty in concentrating on things.
 

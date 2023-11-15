@@ -50,6 +50,11 @@ format:
     fig-cap-location: margin
     anchor-sections: true
     reference-location: margin
+    grid:
+      sidebar-width: 100px
+      body-width: 950px
+      margin-width: 180px
+      gutter-width: 1.5rem
 
 editor: visual
 
