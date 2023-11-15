@@ -45,7 +45,7 @@ server <- function(input, output) {
       title <- "Comparison of Concentration Ability"
       y_label <- "X14..Do.you.find.it.difficult.to.concentrate.on.things."
     } else if (variable == "Being bothered by worries") {
-      title <- "Comparison of Worries Botheration"
+      title <- "Comparison of being bothered by Worries"
       y_label <- "X13..On.a.scale.of.1.to.5..how.much.are.you.bothered.by.worries."
     }
     
@@ -63,7 +63,12 @@ server <- function(input, output) {
     # Transpose the data matrix
     heatmap_data_transposed <- t(heatmap_data)
     
-    # Create custom hover text
+    # Custom y-axis labels
+    custom_y_names <- c("Frequency of facing issues regarding sleep",
+                        "Difficulty in concentrating on things",
+                        "Comparison of being bothered by Worries")
+    
+    # Create custom hover texts
     hover_text <- matrix(
       paste("Frequency: ", heatmap_data_transposed),
       nrow = nrow(heatmap_data_transposed),

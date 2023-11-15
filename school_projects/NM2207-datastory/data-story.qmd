@@ -84,36 +84,15 @@ average_time
 ```
 
 
-*Sleep quality, concentration & worries with social media usage*\
-Next, we will compare the sleep quality and the concentration ability between respondents who use social media, and those who do not use social media. With the use of a **Violin plot**, it is evident that those who do not use social media never, or seldom face issues with regards to sleeping. On the other hand, the largest group of respondents who use social media indicated that they often face such issues.  
+*Relationship between Sleep quality abd social media usage*\
+Next, we will compare the sleep quality and the concentration ability between respondents who use social media, and those who do not use social media. With the use of a **Violin plot**, it is evident that those who do not use social media never, or seldom face issues with regards to sleeping. On the other hand, the largest group of respondents who use social media indicated that they often face such issues.
+
+*Relationship between SOcial Media usage and concentration ability*\
 A similar trend can be observed for the plot comparing the concentration ability of both groups. The plot has an *inverse* relationship between both graphs: Most who do not use social media indicated that they face minimal difficulty in concentrating on things; on the other hand, the plot is thicker at the top for those who use social media, indicating that they face greater difficulty in concentrating on things.
 
-<iframe height="400" width="100%" frameborder="no" src="https://liyinnng.shinyapps.io/violin-app/"> </iframe>
-
-
 *Relationship between Social Media usage and worries*\
-To investigate the relationship between social media usage and its potential effect of causing worries to users, I have decided to adopt the usage of a heatmap. Starting on the side for those who do not use social media, respondents have only selected "1" and "2", which indicates that they are not at all, to very minimally bothered by worries. On the other hand, the colour of the heatmap gets darker progressively, which is an indication that for those who use social media, there is an increasing trend of users being bothered by worries. 
-
-```{r, eval=T,echo=FALSE}
-
-# Create a cross-tabulation of the two variables
-SM_worries_heatmap <- table(social_media_health$X6..Do.you.use.social.media., social_media_health$X13..On.a.scale.of.1.to.5..how.much.are.you.bothered.by.worries.)
-
-heatmap_data <- as.data.frame(SM_worries_heatmap)
-
-heatmap_plot <- ggplot(heatmap_data, aes(x = Var1, y = Var2, fill = Freq)) +
-  geom_tile() +
-  labs(x = "Do you use social media?",
-       y = "How much are you bothered by worries?",
-       fill = "Frequency") +
-  scale_fill_gradient(low = "white", high = "#9FC0DE") +
-  theme_minimal()
-
-heatmap_worries <- ggplotly(heatmap_plot)
-
-heatmap_worries
-
-```
+To investigate the relationship between social media usage and its potential effect of causing worries to users, I have decided to adopt the usage of a heatmap. Starting on the side for those who do not use social media, respondents have only selected "1" and "2", which indicates that they are not at all, to very minimally bothered by worries. On the other hand, the colour of the heatmap gets darker progressively, which is an indication that for those who use social media, there is an increasing trend of users being bothered by worries.  
+<iframe height="400" width="100%" frameborder="no" src="https://liyinnng.shinyapps.io/violin-app/"> </iframe>
 
 
 *Seeking validation from Social Media*\
@@ -139,3 +118,4 @@ ggplot(data = as.data.frame(validation_depressed_heatmap), aes(x = Var1, y = Var
 <iframe height="400" width="100%" frameborder="no" src="https://liyinnng.shinyapps.io/bargraph-app/"> </iframe>
 
 ***WordCloud*** <iframe height="400" width="100%" frameborder="no" src="https://liyinnng.shinyapps.io/wordcloud-app/"> </iframe>
+
