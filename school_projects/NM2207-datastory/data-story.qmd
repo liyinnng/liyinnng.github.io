@@ -15,7 +15,7 @@ This project aims to find stories in data through visualization via shiny, ggplo
 
 What are the relationships between social media usage and its negative impacts?
 
-***Background:***\
+### Background:
 As social media usage continues to expand globally, there is a growing worry about its impact on the mental and overall health of individuals and communities. A survey conducted by the [Cybersmile Foundation](https://www.marketingtechnews.net/news/2022/jun/22/89-of-people-feel-social-media-negatively-affects-their-mental-health/) reveals that a significant 89% of social media users perceive social media as harmful to their mental well-being. [According Ms Ranjini Veerappan](https://www.channelnewsasia.com/singapore/big-read-teenagers-social-media-addiction-cost-mental-health-3647121), a certified addiction specialist at Holistic Psychotherapy Centre, a child's brain is still maturing and rapidly developing until they are about 25 years old. This leads to the prevalence of negative effects of social media within youths. Research by the [National Center for Health Research](https://www.center4research.org/social-media-affects-mental-health/) has also conducted a study on adolescents has identified that body image, for girls and boys, is harmed by social media use.
 
 ```{r, eval=TRUE,echo=FALSE,message = FALSE, warning = FALSE}
@@ -92,7 +92,7 @@ A similar trend can be observed for the plot comparing the concentration ability
 
 *Relationship between Social Media usage and worries*\
 To investigate the relationship between social media usage and its potential effect of causing worries to users, I have decided to adopt the usage of a heatmap. Starting on the side for those who do not use social media, respondents have only selected "1" and "2", which indicates that they are not at all, to very minimally bothered by worries. On the other hand, the colour of the heatmap gets darker progressively, which is an indication that for those who use social media, there is an increasing trend of users being bothered by worries.  
-<iframe height="400" width="100%" frameborder="no" src="https://liyinnng.shinyapps.io/violin-app/"> </iframe>
+<iframe height="550" width="100%" frameborder="no" src="https://liyinnng.shinyapps.io/violin-app/"> </iframe>
 
 
 *Seeking validation from Social Media*\

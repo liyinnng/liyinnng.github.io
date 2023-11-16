@@ -18,15 +18,16 @@ ui <- fluidPage(
         inputId = "variable",
         label = "Choose a variable to analyze:",
         choices = c(
-          "Frequency of facing issues regarding sleep",
-          "Difficulty in concentrating on things",
+          "Frequency of issues with sleep",
+          "Concentration Ability",
           "Being bothered by worries"
         ),
-        selected = "Frequency of facing issues regarding sleep"
+        selected = "Frequency of issues with sleep"
       )
     ),
     mainPanel(
-      plotlyOutput("plot")
+      plotlyOutput("plot"), 
+      height = "800px"
     )
   )
 )
@@ -38,14 +39,14 @@ server <- function(input, output) {
     title <- ""
     y_label <- ""
     
-    if (variable == "Frequency of facing issues regarding sleep") {
-      title <- "Comparison of Sleep Quality by Social Media Use and Sleep Issues"
+    if (variable == "Frequency of issues with sleep") {
+      title <- "Sleep Quality"
       y_label <- "X20..On.a.scale.of.1.to.5..how.often.do.you.face.issues.regarding.sleep."
-    } else if (variable == "Difficulty in concentrating on things") {
-      title <- "Comparison of Concentration Ability"
+    } else if (variable == "Concentration Ability") {
+      title <- "Concentration Ability"
       y_label <- "X14..Do.you.find.it.difficult.to.concentrate.on.things."
     } else if (variable == "Being bothered by worries") {
-      title <- "Comparison of being bothered by Worries"
+      title <- "Being bothered by worries"
       y_label <- "X13..On.a.scale.of.1.to.5..how.much.are.you.bothered.by.worries."
     }
     
@@ -56,7 +57,6 @@ server <- function(input, output) {
     heatmap_data <- table(data$X6..Do.you.use.social.media., data[[y_label]])
     
     if (sum(heatmap_data) == 0) {
-      # Handle case where the heatmap data is empty
       return(NULL)
     }
     
@@ -87,7 +87,7 @@ server <- function(input, output) {
       layout(
         title = title,
         xaxis = list(title = "Do you use social media?"),
-        yaxis = list(title = y_label)
+        yaxis = list(title = input$variable)
       )
     
     return(heatmap)

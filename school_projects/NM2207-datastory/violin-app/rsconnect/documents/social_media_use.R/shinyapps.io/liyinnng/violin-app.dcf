@@ -5,7 +5,7 @@ account: liyinnng
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 10452832
-bundleId: 7929191
+bundleId: 7929780
 url: https://liyinnng.shinyapps.io/violin-app/
 version: 1
 asMultiple: FALSE
