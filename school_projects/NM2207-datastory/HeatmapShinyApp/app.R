@@ -39,7 +39,7 @@ server <- function(input, output) {
     y_label <- ""
     
     if (variable == "Frequency of issues with sleep") {
-      title <- "Sleep Quality"
+      title <- "Frequency of issues with sleep"
       y_label <- "X20..On.a.scale.of.1.to.5..how.often.do.you.face.issues.regarding.sleep."
     } else if (variable == "Concentration Ability") {
       title <- "Concentration Ability"

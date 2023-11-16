@@ -5,7 +5,7 @@ account: liyinnng
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 10541957
-bundleId: 7933345
+bundleId: 7933430
 url: https://liyinnng.shinyapps.io/HeatmapShinyApp/
 version: 1
 asMultiple: FALSE
