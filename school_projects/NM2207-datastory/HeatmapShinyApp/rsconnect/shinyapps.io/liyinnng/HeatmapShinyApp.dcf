@@ -1,12 +1,12 @@
-name: violin-app
-title: violin-app
+name: HeatmapShinyApp
+title: HeatmapShinyApp
 username: liyinnng
 account: liyinnng
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
-appId: 10452832
-bundleId: 7929780
-url: https://liyinnng.shinyapps.io/violin-app/
+appId: 10541957
+bundleId: 7933345
+url: https://liyinnng.shinyapps.io/HeatmapShinyApp/
 version: 1
 asMultiple: FALSE
 asStatic: FALSE
