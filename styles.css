@@ -18,9 +18,13 @@ h3 {
   font-size: 24px;
 }
 
+h4 {
+  font-size: 20px;
+}
+
 p {
   font-size: 20px;
-  line-height: 1.4
+  line-height: 1.45
 }
 
 a {

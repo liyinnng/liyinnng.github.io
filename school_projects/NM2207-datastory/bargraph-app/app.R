@@ -18,7 +18,8 @@ ui <- fluidPage(
     ),
     mainPanel(
       plotOutput("bar_plot1"),
-      plotOutput("bar_plot2")
+      plotOutput("bar_plot2"),
+      height = "1000px"
     )
   )
 )

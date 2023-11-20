@@ -8,21 +8,20 @@ draft: false
 ---
 
 # About
-
 This project aims to find stories in data through visualization via shiny, ggplot2 and other functions with Rstudio.
 
-# Topic:
-
-What are the relationships between social media usage and its negative impacts?
-
 # Background:
-As social media usage continues to expand globally, there is a growing worry about its impact on the mental and overall health of individuals and communities. A survey conducted by the [Cybersmile Foundation](https://www.marketingtechnews.net/news/2022/jun/22/89-of-people-feel-social-media-negatively-affects-their-mental-health/) reveals that a significant 89% of social media users perceive social media as harmful to their mental well-being. [According Ms Ranjini Veerappan](https://www.channelnewsasia.com/singapore/big-read-teenagers-social-media-addiction-cost-mental-health-3647121), a certified addiction specialist at Holistic Psychotherapy Centre, a child's brain is still maturing and rapidly developing until they are about 25 years old. This leads to the prevalence of negative effects of social media within youths. Research by the [National Center for Health Research](https://www.center4research.org/social-media-affects-mental-health/) has also conducted a study on adolescents has identified that body image, for girls and boys, is harmed by social media use.
+<center><iframe src="https://liyinnng.github.io/nm2207-slides/" title="Introduction" width=800px, height=500px></iframe></center>
+
 
 ```{r, eval=TRUE,echo=FALSE,message = FALSE, warning = FALSE}
 library(tidyverse)
 library(ggplot2)
 library(dplyr)
 library(plotly)
+library(r2symbols)
+
+xaringanExtra::use_panelset()
 
 social_media_health <- read.csv("social-media-and-mental-health.csv")
 
@@ -88,20 +87,65 @@ average_time
 
 ```
 
+<br>
+
+```{r}
+#| eval: true 
+#| echo: false
+#| fig-align: "center"
+#| out-width: "100%" 
+knitr::include_graphics("social-media-downsides.png")
+```
+
 ## Impacts of Social Media 
 
 To investigate on the impacts of social media on various variables, such as one's sleep quality, concentration ability, and worries, the interactive shiny app below that uses a 2-dimensional heat map will be able provide us further insights. 
 
+::::: {.panelset}
+
+::: {.panel}
+
+[Sleep Quality]{.panel-name}
+
+#### Relationship between social media usage and sleep quality:  
+
+- From the heat map, it is evident that those who do not use social media never, or seldom face issues with regards to sleeping as the respondents generally chose between 1 and 2 only. 
+
+- On the other hand, as we move over to the heat map for those who use social media, the darkest area of the heat map is at the top (where respondents chose 5 as their response). 
+
+As we hover over the heat map, a total of 110 and 124 respondents chose 4 and 5 respectively in response to the survey question of "On the scale of 1 to 5, how often do you face issues regarding sleep". The largest group of respondents who use social media indicated that they often face such issues.
+
+:::
+
+::: {.panel}
+
+[Concentration Ability]{.panel-name}
+
+#### Relationship between social media usage and it potential effect on concentration ability:
+
+A similar trend can be observed for the plot comparing the concentration ability of both groups, as compared to the sleep quality section earlier. 
+
+- The plot has an *inverse* relationship between both graphs: Most who do not use social media indicated that they face minimal difficulty in concentrating on things; 
+
+- On the other hand, the plot is thicker at the top for those who use social media, indicating that they face greater difficulty in concentrating on things.
+
+:::
+
+::: {.panel}
+
+[Worries]{.panel-name}
+
+#### Relationship between social media usage and its potential effect of causing worries to users: 
+
+- Starting on the side for those who do not use social media, respondents have only selected "1" and "2", which indicates that they are not at all, to very minimally bothered by worries. 
+
+- On the other hand, the color of the heatmap gets darker progressively, which is an indication that for those who use social media, there is an increasing trend of users being bothered by worries.
+
+:::
+
+:::::
+
 <iframe height="550" width="100%" frameborder="no" src="https://liyinnng.shinyapps.io/HeatmapShinyApp/"> </iframe>
-
-*Relationship between Sleep quality and social media usage*\
-First, we will compare the sleep quality and the concentration ability between respondents who use social media, and those who do not use social media. From the heat map, it is evident that those who do not use social media never, or seldom face issues with regards to sleeping as the respondents generally chose between 1 and 2 only. On the other hand, as we move over to the heat map for those we use social media, the darkest of area of the heat map is at the top (where respondents chose 5 as their response). As we hover over the heat map, a total of 110 and 124 respondents chose 4 and 5 respectively in response to the survey question of "On the scale of 1 to 5, how often do you face issues regarding sleep". The largest group of respondents who use social media indicated that they often face such issues.
-
-*Relationship between Social Media usage and concentration ability*\
-A similar trend can be observed for the plot comparing the concentration ability of both groups. The plot has an *inverse* relationship between both graphs: Most who do not use social media indicated that they face minimal difficulty in concentrating on things; on the other hand, the plot is thicker at the top for those who use social media, indicating that they face greater difficulty in concentrating on things.
-
-*Relationship between Social Media usage and worries*\
-To investigate the relationship between social media usage and its potential effect of causing worries to users, I have decided to adopt the usage of a heatmap. Starting on the side for those who do not use social media, respondents have only selected "1" and "2", which indicates that they are not at all, to very minimally bothered by worries. On the other hand, the colour of the heatmap gets darker progressively, which is an indication that for those who use social media, there is an increasing trend of users being bothered by worries.  
 
 
 *Seeking validation from Social Media*\
@@ -117,7 +161,7 @@ ggplot(data = as.data.frame(validation_depressed_heatmap), aes(x = Var1, y = Var
   labs(x = "How often do you seek validation from social media?",
        y = "How often do you feel depressed or down?",
        fill = "Frequency") +
-  scale_fill_gradient(low = "white", high = "orange") +
+  scale_fill_gradient(low = "white", high = "#9FC0DE") +
   theme_minimal()
 
 ```
@@ -125,4 +169,15 @@ ggplot(data = as.data.frame(validation_depressed_heatmap), aes(x = Var1, y = Var
 <iframe height="400" width="100%" frameborder="no" src="https://liyinnng.shinyapps.io/bargraph-app/"> </iframe>
 
 ***WordCloud*** <iframe height="400" width="100%" frameborder="no" src="https://liyinnng.shinyapps.io/wordcloud-app/"> </iframe>
+
+
+## Conclusion
+
+
+
+## Citations 
+https://backlinko.com/social-media-users#social-media-usage-stats
+https://www.kaggle.com/datasets/souvikahmed071/social-media-and-mental-health
+
+
 
