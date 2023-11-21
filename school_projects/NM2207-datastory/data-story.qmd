@@ -101,6 +101,10 @@ knitr::include_graphics("social-media-downsides.png")
 
 To investigate on the impacts of social media on various variables, such as one's sleep quality, concentration ability, and worries, the interactive shiny app below that uses a 2-dimensional heat map will be able provide us further insights. 
 
+<br>
+
+<iframe height="550" width="100%" frameborder="no" src="https://liyinnng.shinyapps.io/HeatmapShinyApp/"> </iframe>
+
 ::::: {.panelset}
 
 ::: {.panel}
@@ -144,8 +148,6 @@ A similar trend can be observed for the plot comparing the concentration ability
 :::
 
 :::::
-
-<iframe height="550" width="100%" frameborder="no" src="https://liyinnng.shinyapps.io/HeatmapShinyApp/"> </iframe>
 
 
 *Seeking validation from Social Media*\
