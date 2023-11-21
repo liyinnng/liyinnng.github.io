@@ -34,10 +34,31 @@ social_media_health <- social_media_health %>%
 
 ## Social Media Usage
 
-*Social Media Usage by Age*\
-This graphs shows that of all respondents, most of them in their tens to twenties uses social media.
+From our Pie Chart in the first tab, it is evident that most of the respondents from our data set uses social media. 
+
+To further breakdown on our demographics, the Bar Chart in our second tab categorises our respondents and their social media usage tendency according to their ages. From the bars, a similar conclusion can be drawn: most of our respondents are in their 20s, and they do use social media. 
 
 ::: {.panel-tabset}
+
+## Pie Chart
+
+```{r, out.width='100%', eval=TRUE,echo=FALSE, message = FALSE}
+
+social_media_use <- social_media_health %>%
+  count(X6..Do.you.use.social.media.)
+
+# Define custom colors
+color_yes <- "#9FC0DE"
+color_no <- "black"
+
+pie <- social_media_use %>% 
+  e_charts(x = X6..Do.you.use.social.media.) %>% 
+  e_pie(n, legend = FALSE, name = "Do you use social media?") %>% 
+  e_tooltip() %>%
+  e_color(color = list(color_no, color_yes)) %>% 
+  e_title("Do you use social media?")
+pie
+```
 
 ## Bar Chart
 
@@ -82,28 +103,11 @@ social_media_usage %>%
     axisLabel = list(
       fontSize = 12
     )
-  )
+  ) %>% 
+  e_title("Do you use social media?")
 
 ```
 
-## Pie Chart
-
-```{r, out.width='100%', eval=TRUE,echo=FALSE, message = FALSE}
-
-social_media_use <- social_media_health %>%
-  count(X6..Do.you.use.social.media.)
-
-# Define custom colors
-color_yes <- "#9FC0DE"
-color_no <- "black"
-
-pie <- social_media_use %>% 
-  e_charts(x = X6..Do.you.use.social.media.) %>% 
-  e_pie(n, legend = FALSE, name = "Do you use social media?") %>% 
-  e_tooltip() %>%
-  e_color(color = list(color_no, color_yes))
-pie
-```
 :::
 
 *Average time spent on social media daily*\
