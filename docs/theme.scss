@@ -1,0 +1,53 @@
+/*-- scss:rules --*/
+
+// Colours
+$black: #000000; 
+$gray: #a69eb0; 
+$cream: #f2e2cd; 
+$periwinkle: #dadae3;
+$light-blue: #efeff2;
+$dark-gray: #474747
+
+// Base document colors
+$navbar-bg: $gray;
+$navbar-fg: $dark-gray; 
+$navbar-hl: $purple; 
+$body-bg: $cream;
+$body-color: $dark-gray;
+$footer-bg: $gray; 
+$link-color: $purple;
+
+/* ELEMENT SELECTORS */
+
+h1 {
+  font-size: 28px;
+}
+
+h2 {
+  font-size: 26px;
+}
+
+h3 {
+  font-size: 24px;
+}
+
+h4 {
+  font-size: 20px;
+}
+
+p {
+  font-size: 20px;
+  line-height: 1.45
+}
+
+a {
+  color: #9370db;
+  text-decoration: underline
+}
+
+body {
+  font-size: 16px;
+  line-height: 1.6;
+  margin: 0 auto;
+  
+}

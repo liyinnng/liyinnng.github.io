@@ -43,9 +43,9 @@ execute:
 
 format:
   html:
+    theme: 
+      - theme.scss
     fontsize: 1.35em
-    theme: lux
-    css: styles.css
     toc: true
     fig-cap-location: margin
     anchor-sections: true
