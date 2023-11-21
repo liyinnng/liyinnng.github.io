@@ -110,36 +110,84 @@ social_media_usage %>%
 
 :::
 
-*Average time spent on social media daily*\
+**Average time spent on social media daily**\
 Next, we investigate the average time spent on social media daily. The graph indicates that the largest group of respondents spends more than 5 hours of their time on social media daily on average.
 
 ```{r, eval=T,echo=FALSE, message = FALSE}
 # Average time spent on social media daily
-social_media <- social_media_health %>% filter( X6..Do.you.use.social.media. == "Yes")
-
-time_spent <- social_media %>% 
-  group_by(X8..What.is.the.average.time.you.spend.on.social.media.every.day.) %>%
-  summarise(count = n())
 
 time_colour <- "#9FC0DE"
 
-average_time <- plot_ly(
-  data = time_spent,
-  x = ~X8..What.is.the.average.time.you.spend.on.social.media.every.day.,
-  y = ~count,
-  type = "bar",
-  marker = list(color = time_colour)
-)
+time_spent <- social_media_health %>%
+  filter( X6..Do.you.use.social.media. == "Yes") %>%
+  filter(!is.na(X8..What.is.the.average.time.you.spend.on.social.media.every.day.)) %>%
+  group_by(X8..What.is.the.average.time.you.spend.on.social.media.every.day.) %>%
+  summarise(count = n()) %>%
+  filter(!is.na(count))
 
-average_time <- average_time %>%
-  layout(
-    title = "Average Time Spent on Social Media",
-    xaxis = list(title = "Average Time Spent"),
-    yaxis = list(title = "Count")
-  )
+# Create echarts4r bar chart
+time_spent %>%
+  e_charts(X8..What.is.the.average.time.you.spend.on.social.media.every.day.) %>%
+  e_bar(count, 
+        itemStyle = list(color = time_colour),
+        barCategoryGap = "15%",  
+        barGap = "10%") %>%
+  e_tooltip(
+    trigger = "axis", 
+    axisPointer = list(
+      type = "shadow"
+      )
+    ) %>%
+  e_y_axis(
+    splitArea = list(show = FALSE),
+    splitLine = list(show = FALSE),
+    name = "Count",
+    axisLabel = list(fontSize = 12)
+  ) %>%
+  e_x_axis(
+    boundaryGap = c(0, 0.5),
+    name = "Average Time Spent on Social Media",
+    axisLabel = list(
+      fontSize = 12,
+      rotate = 0,
+      interval = 0
+    )
+  ) 
 
+time_spent <- social_media_health %>%
+  filter(X6..Do.you.use.social.media. == "Yes") %>%
+  filter(!is.na(X8..What.is.the.average.time.you.spend.on.social.media.every.day.)) %>%
+  group_by(X1..What.is.your.age., X8..What.is.the.average.time.you.spend.on.social.media.every.day.) %>%
+  summarise(count = n()) %>%
+  filter(!is.na(count))
 
-average_time
+# Create echarts4r bar chart with data zoom
+time_spent %>%
+  e_charts(X8..What.is.the.average.time.you.spend.on.social.media.every.day.) %>%
+  e_bar(count, 
+        itemStyle = list(color = time_colour)) %>%
+  e_tooltip(
+    trigger = "axis", 
+    axisPointer = list(
+      type = "shadow"
+      )
+    ) %>%
+  e_y_axis(
+    splitArea = list(show = FALSE),
+    splitLine = list(show = FALSE),
+    name = "Count",
+    axisLabel = list(fontSize = 12)
+  ) %>%
+  e_x_axis(
+    boundaryGap = c(0, 0.5),
+    name = "Average Time Spent on Social Media",
+    axisLabel = list(
+      fontSize = 12,
+      rotate = 0,
+      interval = 0
+    )
+  ) %>%
+  e_datazoom
 
 ```
 
