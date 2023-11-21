@@ -52,3 +52,9 @@ body {
 .navbar {
   font-size: 20px;
 }
+
+// resize logo (top left corner)
+.navbar-brand img { 
+  max-height: 50px;
+  width: auto;
+}
