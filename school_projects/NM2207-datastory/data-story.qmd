@@ -20,8 +20,7 @@ library(ggplot2)
 library(dplyr)
 library(plotly)
 library(r2symbols)
-
-xaringanExtra::use_panelset()
+library(echarts4r)
 
 social_media_health <- read.csv("social-media-and-mental-health.csv")
 
@@ -39,19 +38,49 @@ social_media_health <- social_media_health %>%
 This graphs shows that of all respondents, most of them in their tens to twenties uses social media.
 
 ```{r, out.width='100%', eval=TRUE,echo=FALSE, message = FALSE}
-# Data filtering to find rs between age and usage of social media
 
-age_usage_count <- social_media_health %>%
-  group_by(X1..What.is.your.age., X6..Do.you.use.social.media.) %>%
-  summarise(count = n())
+# Define custom colors
+color_yes <- "#9FC0DE"
+color_no <- "black"
 
-ggplot(age_usage_count, aes(x = X1..What.is.your.age., y = count, fill = factor(X6..Do.you.use.social.media.))) +
-  geom_col(position = "dodge", width = 0.3) +
-  labs(title = "Social Media Usage by Age",
-       x = "Age",
-       y = "Count",
-       fill = "Do you use social media?") +
-  scale_fill_manual(values = c("No" = "black", "Yes" = "#FACA5E"))
+social_media_usage <- social_media_health %>%
+  count(X1..What.is.your.age., X6..Do.you.use.social.media.) %>%
+  spread(X6..Do.you.use.social.media., n, fill = 0)
+
+social_media_usage %>%
+  e_charts(X1..What.is.your.age., stack = "grp") %>%
+  e_bar(Yes, name = "Use Social Media", stack = "stack", barWidth = 10, 
+        itemStyle = list(color = color_yes)) %>% 
+  e_bar(No, name = "Do Not Use Social Media", stack = "stack", barWidth = 10, 
+        itemStyle = list(color = color_no)) %>% 
+  e_tooltip(
+    trigger = "axis",
+    axisPointer = list(
+      type = "shadow"
+    )
+  ) %>% 
+  e_y_axis(
+    splitArea = list(show = FALSE),
+    splitLine = list(show = FALSE), 
+    boundaryGap = c(0, 0.5), 
+    min = 0,
+    max = 90, 
+    name = "Count",
+    axisLabel = list(
+      fontSize = 12 
+    )
+  ) %>%
+  e_x_axis(
+    boundaryGap = c(0, 0.5), 
+    min = 10,
+    max = 70, 
+    name = "Age",
+    axisLabel = list(
+      fontSize = 12
+    )
+  )
+
+
 ```
 
 *Average time spent on social media daily*\
