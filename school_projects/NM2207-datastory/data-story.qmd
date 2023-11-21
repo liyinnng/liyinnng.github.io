@@ -37,6 +37,10 @@ social_media_health <- social_media_health %>%
 *Social Media Usage by Age*\
 This graphs shows that of all respondents, most of them in their tens to twenties uses social media.
 
+::: {.panel-tabset}
+
+## Bar Chart
+
 ```{r, out.width='100%', eval=TRUE,echo=FALSE, message = FALSE}
 
 # Define custom colors
@@ -80,8 +84,27 @@ social_media_usage %>%
     )
   )
 
-
 ```
+
+## Pie Chart
+
+```{r, out.width='100%', eval=TRUE,echo=FALSE, message = FALSE}
+
+social_media_use <- social_media_health %>%
+  count(X6..Do.you.use.social.media.)
+
+# Define custom colors
+color_yes <- "#9FC0DE"
+color_no <- "black"
+
+pie <- social_media_use %>% 
+  e_charts(x = X6..Do.you.use.social.media.) %>% 
+  e_pie(n, legend = FALSE, name = "Do you use social media?") %>% 
+  e_tooltip() %>%
+  e_color(color = list(color_no, color_yes))
+pie
+```
+:::
 
 *Average time spent on social media daily*\
 Next, we investigate the average time spent on social media daily. The graph indicates that the largest group of respondents spends more than 5 hours of their time on social media daily on average.
@@ -134,11 +157,9 @@ To investigate on the impacts of social media on various variables, such as one'
 
 <iframe height="550" width="100%" frameborder="no" src="https://liyinnng.shinyapps.io/HeatmapShinyApp/"> </iframe>
 
-::::: {.panelset}
+::: {.panel-tabset}
 
-::: {.panel}
-
-[Sleep Quality]{.panel-name}
+## Sleep Quality
 
 #### Relationship between social media usage and sleep quality:  
 
@@ -148,11 +169,7 @@ To investigate on the impacts of social media on various variables, such as one'
 
 As we hover over the heat map, a total of 110 and 124 respondents chose 4 and 5 respectively in response to the survey question of "On the scale of 1 to 5, how often do you face issues regarding sleep". The largest group of respondents who use social media indicated that they often face such issues.
 
-:::
-
-::: {.panel}
-
-[Concentration Ability]{.panel-name}
+## Concentration Ability
 
 #### Relationship between social media usage and it potential effect on concentration ability:
 
@@ -162,11 +179,7 @@ A similar trend can be observed for the plot comparing the concentration ability
 
 - On the other hand, the plot is thicker at the top for those who use social media, indicating that they face greater difficulty in concentrating on things.
 
-:::
-
-::: {.panel}
-
-[Worries]{.panel-name}
+## Worries
 
 #### Relationship between social media usage and its potential effect of causing worries to users: 
 
@@ -175,8 +188,6 @@ A similar trend can be observed for the plot comparing the concentration ability
 - On the other hand, the color of the heatmap gets darker progressively, which is an indication that for those who use social media, there is an increasing trend of users being bothered by worries.
 
 :::
-
-:::::
 
 
 *Seeking validation from Social Media*\
