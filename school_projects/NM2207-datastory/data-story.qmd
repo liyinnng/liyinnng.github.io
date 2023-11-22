@@ -21,6 +21,11 @@ library(dplyr)
 library(plotly)
 library(r2symbols)
 library(echarts4r)
+library(reactable)
+library(reactablefmtr)
+library(htmltools)
+library(crosstalk)
+library(viridis)
 
 social_media_health <- read.csv("social-media-and-mental-health.csv")
 
@@ -153,19 +158,38 @@ time_spent %>%
       interval = 0
     )
   ) 
+```
+
+time_colour <- "#9FC0DE"
+
+crosstalk_data <- SharedData$new(social_media_health)
+
+# Define a filter_slider for X1..What.is.your.age.
+age_filter <- filter_slider(
+  id = "age",
+  label = "Age Range",
+  sharedData = crosstalk_data,
+  column = ~X1..What.is.your.age.,
+  ticks = TRUE,
+  dragRange = TRUE,  # Allow range selection
+  step = 1,
+  sep = "",
+  width = "90%"
+)
 
 time_spent <- social_media_health %>%
-  filter(X6..Do.you.use.social.media. == "Yes") %>%
+  filter( X6..Do.you.use.social.media. == "Yes") %>%
   filter(!is.na(X8..What.is.the.average.time.you.spend.on.social.media.every.day.)) %>%
-  group_by(X1..What.is.your.age., X8..What.is.the.average.time.you.spend.on.social.media.every.day.) %>%
+  group_by(X8..What.is.the.average.time.you.spend.on.social.media.every.day.) %>%
   summarise(count = n()) %>%
   filter(!is.na(count))
 
-# Create echarts4r bar chart with data zoom
 time_spent %>%
   e_charts(X8..What.is.the.average.time.you.spend.on.social.media.every.day.) %>%
   e_bar(count, 
-        itemStyle = list(color = time_colour)) %>%
+        itemStyle = list(color = time_colour),
+        barCategoryGap = "15%",  
+        barGap = "10%") %>%
   e_tooltip(
     trigger = "axis", 
     axisPointer = list(
@@ -186,10 +210,7 @@ time_spent %>%
       rotate = 0,
       interval = 0
     )
-  ) %>%
-  e_datazoom
-
-```
+  ) 
 
 <br>
 
