@@ -15,6 +15,13 @@ negative_comments <- data %>%
 # Define UI
 ui <- fluidPage(
   titlePanel("Top words found in comments that are considered a Hate comment"),
+  tags$head(
+    tags$style(HTML("
+      .wordcloud a {
+        color: blue;
+      }
+    "))
+  ),
   sidebarLayout(
     sidebarPanel(
       sliderInput("num_words", "Number of words to include in word cloud:",
@@ -50,4 +57,3 @@ server <- function(input, output) {
 
 # Create the Shiny app by combining UI and server
 shinyApp(ui = ui, server = server)
-

@@ -135,8 +135,9 @@ time_spent %>%
   e_charts(X8..What.is.the.average.time.you.spend.on.social.media.every.day.) %>%
   e_bar(count, 
         itemStyle = list(color = time_colour),
-        barCategoryGap = "15%",  
-        barGap = "10%") %>%
+        barWidth = 100,
+        barCategoryGap = "10%",  
+        barGap = "5%") %>%
   e_tooltip(
     trigger = "axis", 
     axisPointer = list(
@@ -154,63 +155,12 @@ time_spent %>%
     name = "Average Time Spent on Social Media",
     axisLabel = list(
       fontSize = 12,
-      rotate = 0,
+      rotate = 7,
       interval = 0
     )
-  ) 
+  ) %>%
+  e_grid(left = "10%", right = "15%", top = "15%", bottom = "15%")
 ```
-
-time_colour <- "#9FC0DE"
-
-crosstalk_data <- SharedData$new(social_media_health)
-
-# Define a filter_slider for X1..What.is.your.age.
-age_filter <- filter_slider(
-  id = "age",
-  label = "Age Range",
-  sharedData = crosstalk_data,
-  column = ~X1..What.is.your.age.,
-  ticks = TRUE,
-  dragRange = TRUE,  # Allow range selection
-  step = 1,
-  sep = "",
-  width = "90%"
-)
-
-time_spent <- social_media_health %>%
-  filter( X6..Do.you.use.social.media. == "Yes") %>%
-  filter(!is.na(X8..What.is.the.average.time.you.spend.on.social.media.every.day.)) %>%
-  group_by(X8..What.is.the.average.time.you.spend.on.social.media.every.day.) %>%
-  summarise(count = n()) %>%
-  filter(!is.na(count))
-
-time_spent %>%
-  e_charts(X8..What.is.the.average.time.you.spend.on.social.media.every.day.) %>%
-  e_bar(count, 
-        itemStyle = list(color = time_colour),
-        barCategoryGap = "15%",  
-        barGap = "10%") %>%
-  e_tooltip(
-    trigger = "axis", 
-    axisPointer = list(
-      type = "shadow"
-      )
-    ) %>%
-  e_y_axis(
-    splitArea = list(show = FALSE),
-    splitLine = list(show = FALSE),
-    name = "Count",
-    axisLabel = list(fontSize = 12)
-  ) %>%
-  e_x_axis(
-    boundaryGap = c(0, 0.5),
-    name = "Average Time Spent on Social Media",
-    axisLabel = list(
-      fontSize = 12,
-      rotate = 0,
-      interval = 0
-    )
-  ) 
 
 <br>
 
@@ -283,7 +233,7 @@ ggplot(data = as.data.frame(validation_depressed_heatmap), aes(x = Var1, y = Var
 
 <iframe height="400" width="100%" frameborder="no" src="https://liyinnng.shinyapps.io/bargraph-app/"> </iframe>
 
-***WordCloud*** <iframe height="400" width="100%" frameborder="no" src="https://liyinnng.shinyapps.io/wordcloud-app/"> </iframe>
+**WordCloud** <iframe height="400" width="100%" frameborder="no" src="https://liyinnng.shinyapps.io/wordcloud-app/"> </iframe>
 
 
 ## Conclusion
