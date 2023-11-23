@@ -58,3 +58,15 @@ body {
   max-height: 50px;
   width: auto;
 }
+
+/* Custom Styles for Panel Tabset */
+.panel-tabset {
+  border: 1px solid transparent;
+  padding: 10px;
+}
+
+/* Custom Styles for Panel Tab Content */
+.panel-tabset .tab-content {
+  border: 1px solid transparent;
+}
+
