@@ -14,7 +14,7 @@ negative_comments <- data %>%
 
 # Define UI
 ui <- fluidPage(
-  titlePanel("Top words found in comments that are considered a Hate comment"),
+  titlePanel("Top hate words "),
   tags$head(
     tags$style(HTML("
       .wordcloud a {

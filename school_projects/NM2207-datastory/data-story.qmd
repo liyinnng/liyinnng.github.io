@@ -7,20 +7,6 @@ image: cover-nm2207.gif
 draft: false
 ---
 
-# About
-
-This project aims to find stories in data through visualization via shiny, ggplot2 and other functions with Rstudio.
-
-# Background:
-
-<center>
-
-<iframe src="https://liyinnng.github.io/nm2207-slides/" title="Introduction" width="800px," height="500px">
-
-</iframe>
-
-</center>
-
 ```{r, eval=TRUE,echo=FALSE,message = FALSE, warning = FALSE}
 library(tidyverse)
 library(ggplot2)
@@ -41,6 +27,28 @@ social_media_health <- social_media_health %>%
   filter(X1..What.is.your.age. != 91)
 
 ```
+
+# About
+
+This project aims to find stories in data through visualization via shiny, ggplot2, echarts4r and other functions with Rstudio.
+
+# Background:
+
+<center>
+
+<iframe src="https://liyinnng.github.io/nm2207-slides/" title="Introduction" width="800px," height="500px">
+
+</iframe>
+
+</center>
+
+<p>  **notes**:\
+Kaggle dataset <sup><a href="#footnote1">2</a></sup>
+
+Social Network Usage & Growth Statistics: How Many People Use Social Media in 2023? <sup><a href="#footnote3">3</a></sup> 
+
+</p> 
+
 
 # Analysis
 
@@ -280,22 +288,56 @@ On the other hand, as we click into the comparison feelings, while it appears th
 1 indicates feels bad, and 5 indicates feels good for *feelings towards the comparisons*;\
 Clicking on either of the legend at the top will remove the plot respectively </sub>
 
-<iframe height="470" width="100%" frameborder="no" src="https://liyinnng.shinyapps.io/bargraph-app/">
+<iframe height="470" width="100%" frameborder="no" src="https://liyinnng.shinyapps.io/bargraph-app/"> </iframe>
 
-</iframe>
+## Top Hate Words
 
-**WordCloud** <iframe height="400" width="100%" frameborder="no" src="https://liyinnng.shinyapps.io/wordcloud-app/"> </iframe>
+::: panel-tabset
 
-## Conclusion
+## Observations
 
-### References
+From another data set<sup><a href="#footnote4">4</a></sup>, I decided to create a Word Cloud with *Shiny* to find out more about the words that are most used when people are posting comments that are considered as being hateful. The Word Cloud highlights the predominant themes associated with hateful comments, such as those related to gender, race, and religion. With more using the social media, it is important that users are more mindful of what they post online to contribute to a healthy digital environment that promotes understanding, empathy, and constructive dialoague. 
+
+## Shiny
+
+From the data set, there are way too many unique words used, and it is impossible to fit all of them in the word cloud. Hence I included a reactive slider to limit the number of words to be included in the word cloud. I also specifically removed some of the most used words such as "that", "like", etc... that are very obviously words that are hateful.
+
+:::
+
+<iframe height="500" width="100%" frameborder="no" src="https://liyinnng.shinyapps.io/wordcloudShinyApp/"> </iframe>
+
+# Conclusion
+
+
+In conclusion, the impact of social media on its users is undeniably complex, encompassing both positive and negative aspects. While the negative effects are particularly pronounced for children, given their heightened susceptibility to external influences, it is crucial to recognize that social media has also introduced numerous benefits into our lives.
+
+However, the narrative takes a distinct turn when considering children, who may lack the cognitive maturity to navigate the online world responsibly. In this context, social media companies bear a significant responsibility to carefully curate content and consider the potential impact on young, impressionable minds. Striking a balance between fostering a positive online environment and protecting the well-being of children requires a collective effort from parents, educators, and the platforms themselves.
+
+As we navigate the intricate landscape of social media, there is a need for conscientious use, regardless of age. Education on digital literacy, responsible online behavior, and age-appropriate content consumption should be prioritized. By fostering a culture of mindfulness and responsible digital citizenship, we can harness the positive aspects of social media while mitigating its potential adverse effects, particularly for the younger members of our society.
+
+# References
 
 <div id="footnote1">
 <p>
-1.  https://www.channelnewsasia.com/singapore/big-read-teenagers-social-media-addiction-cost-mental-health-3647121
+1.  Lau, D. (2023, July 24). The big read: Teenagers hooked on social media - what’s the cost to their mental health? CNA. https://www.channelnewsasia.com/singapore/big-read-teenagers-social-media-addiction-cost-mental-health-3647121 
 </p>
 </div>
 
-## Citations
+<div id="footnote2">
+<p>
+2.  https://www.kaggle.com/datasets/souvikahmed071/social-media-and-mental-health
+</p>
+</div>
 
-https://backlinko.com/social-media-users#social-media-usage-stats https://www.kaggle.com/datasets/souvikahmed071/social-media-and-mental-health https://www.channelnewsasia.com/singapore/big-read-teenagers-social-media-addiction-cost-mental-health-3647121
+<div id="footnote3">
+<p>
+3.  Dean, B. (2023, November 15). How many people use Social Media in 2023? (65+ statistics). Backlinko. https://backlinko.com/social-media-users#social-media-usage-stats 
+</p>
+</div>
+
+<div id="footnote4">
+<p>
+4.  https://www.kaggle.com/datasets/subhajeetdas/hate-comment
+</p>
+</div>
+
