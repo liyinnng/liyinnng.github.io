@@ -190,7 +190,7 @@ knitr::include_graphics("social-media-downsides.png")
 
 ## Impacts of Social Media
 
-To investigate on the impacts of social media on various variables, such as one's sleep quality, concentration ability, and worries, the interactive shiny app below that uses a 2-dimensional heat map will be able provide us further insights.
+Next, we will investigate the various impacts of social media on various variables. Starting off with one's sleep quality, concentration ability, and worries, the interactive shiny app below that uses a 2-dimensional heat map will be able provide us further insights.
 
 ::: panel-tabset
 ## Sleep Quality
@@ -201,17 +201,21 @@ To investigate on the impacts of social media on various variables, such as one'
 
 -   On the other hand, as we move over to the heat map for those who use social media, the darkest area of the heat map is at the top (where respondents chose 5 as their response).
 
-As we hover over the heat map, a total of 110 and 124 respondents chose 4 and 5 respectively in response to the survey question of "On the scale of 1 to 5, how often do you face issues regarding sleep". The largest group of respondents who use social media indicated that they often face such issues.
+A total of 110 and 124 respondents chose 4 and 5 respectively in response to the survey question of "On the scale of 1 to 5, how often do you face issues regarding sleep". This also ensues that the largest group of respondents who use social media indicated that they often face issues with regards to having a good night's rest.
 
 ## Concentration Ability
 
 #### Relationship between social media usage and it potential effect on concentration ability:
 
-A similar trend can be observed for the plot comparing the concentration ability of both groups, as compared to the sleep quality section earlier.
+As we chose the next variable - concentration ability, to analysis, a similar trend can be observed for the plot comparing the concentration ability of both groups.
 
--   The plot has an *inverse* relationship between both graphs: Most who do not use social media indicated that they face minimal difficulty in concentrating on things;
-
--   On the other hand, the plot is thicker at the top for those who use social media, indicating that they face greater difficulty in concentrating on things.
+* The plot has an *inverse* relationship between both graphs: 
+  
+  + Most who do not use social media indicated that they face minimal difficulty in concentrating on things;
+  
+  + On the other hand, the shade is increasingly darker as we move up the heat map for those who use social media. This indicates that those who do use social media face greater difficulty in concentrating on things.
+  
+A Microsoft study found that people lose focus after just eight seconds. Social media consistently drains attention from crucial aspects of life, like work and education. In addition, a substantial number of users also engage in multitasking while using social media, exacerbating the reduction in attention dedicated to each task. <sup><a href="#footnote6">6</a></sup> Our observations from this dataset further proves that this is true, hence, there is a need to avoid being overstimulated by social media. 
 
 ## Worries
 
@@ -341,5 +345,12 @@ As we navigate the intricate landscape of social media, there is a need for cons
 <p>
 5.  Robinson, L., &amp;  Smith, M. (2023, March 29). Social Media and Mental Health. HelpGuide.org. https://www.helpguide.org/articles/mental-health/social-media-and-mental-health.htm#:~:text=using%20social%20media.-,Modifying%20social%20media%20use%20to%20improve%20mental%20health%20step%201,%2C%20sleep%20problems%2C%20and%20FOMO. 
 </p>
-</div>  
+</div> 
+
+<div id="footnote6">
+<p>
+6.  Baptist Health. (2020, November 6). How social media affects attention span. https://www.baptisthealth.com/blog/family-health/how-social-media-affects-attention-span#:~:text=Not%20only%20are%20attention%20spans,decreased%20attention%20on%20each%20task. 
+</p>
+</div> 
+
 
