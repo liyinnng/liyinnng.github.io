@@ -256,18 +256,24 @@ heatmap_data |>
 
 #### Comparison with others on Social Media
 
-In this section, we will investigate more on the relationship between the frequency in comparing oneself to other successful people through the use of social media, and how one feels about these comparisons generally speaking.
+*Frequency in comparing oneself to other successful people through the use of social media, and how one feels about these comparisons generally speaking*
 
-<p>From the data set, I created a new column, age_group to separate the respondents into different age groups as seen from the drop down menu based on the respective age range the respondents fall into to further analyse the impact of one's age.  
-While those who are under 16 years old are usually considered as a "Child", I have expanded the age range to below "25" accordingly since it is the age range where they are more susceptible to being negatively affected by social media as mentioned earlier<sup><a href="#footnote1">1</a></sup></p>
+::: panel-tabset
 
-* Clicking into the comparison frequency, selecting the "All ages" option, it can be observed that while there are more respondents who seldom compare themselves to other successful people through social media then those who compare frequently, there are still a handful of respondents who do compare themselves frequently.
+## Dataset Mutation
+<p>From the data set, I created a new column, age_group to separate the respondents into different age groups as seen from the drop down menu based on the respective age range the respondents fall into to further analyse the impact of one's age.  While those who are under 16 years old are usually considered as a "Child", I have expanded the age range to below "25" accordingly since it is the age range where they are more susceptible to being negatively affected by social media as mentioned earlier<sup><a href="#footnote1">1</a></sup></p>
 
-    + As we click into the various age groups, it appears that the majority of respondents who very frequently compare themselves ("5") to other successful people fall under the "Child" age group.
+## Comparison Frequency 
+Selecting the "All ages" option, it can be observed that while there are more respondents who seldom compare themselves to other successful people through social media then those who compare frequently, there are still a handful of respondents who do compare themselves frequently.
 
-* On the other hand, as we click into the comparison feelings, while it appears that most are neutral towards these comparisons, it can be observed that there is still a significant amount of respondents who have negative feelings towards these comparisons. In fact, there are more who noted that they are negatively affected by these comparisons ("1" & "2"), as compared to those who feel good from these comparisons ("4" and "5")
+* As we click into the various age groups, it appears that the majority of respondents who very frequently compare themselves ("5") to other successful people fall under the "Child" age group.
 
-    + As we click into the various age groups once again, specifically those who fall under the "Child" category, the majority of them indicated to be neutral towards these comparisons ("3"). However, it can also be observed that there are more respondents in this age group that indicated that they felt bad after these comparisons ("1" & "2") as compared to feeling good ("4" & "5"). Hence this does support the research and studies mentioned earlier. 
+## Comparison Feelings
+On the other hand, as we click into the comparison feelings, while it appears that most are neutral towards these comparisons, it can be observed that there is still a significant amount of respondents who have negative feelings towards these comparisons. In fact, there are more who noted that they are negatively affected by these comparisons ("1" & "2"), as compared to those who feel good from these comparisons ("4" and "5")
+
+* As we click into the various age groups once again, specifically those who fall under the "Child" category, the majority of them indicated to be neutral towards these comparisons ("3"). However, it can also be observed that there are more respondents in this age group that indicated that they felt bad after these comparisons ("1" & "2") as compared to feeling good ("4" & "5"). Hence this does support the research and studies mentioned earlier. 
+
+:::
 
 <sub> **notes**:\
 1 indicates seldom compare, and 5 indicates compare very frequently for *comparison frequency*;\
