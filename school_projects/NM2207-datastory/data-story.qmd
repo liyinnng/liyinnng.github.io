@@ -157,8 +157,13 @@ time_spent %>%
     name = "Average Time Spent on Social Media",
     axisLabel = list(
       fontSize = 12,
-      rotate = 7,
-      interval = 0
+      rotate = 0,
+      interval = 0,
+      formatter = htmlwidgets::JS(
+        "function(value) {
+          return echarts.format.truncateText(value, 100, '...', '14px Microsoft Yahei', '…');
+        }"
+      )
     )
   ) %>%
   e_grid(left = "10%", right = "15%", top = "15%", bottom = "15%")
@@ -248,7 +253,9 @@ heatmap_data |>
 
 In this section, we will investigate more on the relationship between the frequency in comparing oneself to other successful people through the use of social media, and how one feels about these comparisons generally speaking.  
 
-- While it appears that most are not negatively affected by these comparisons and  indicate that they are neutral towards these comparisons ("3" has the highest count), there is a more telling trend as we click into the "Child" age group on the shiny app. 
+- While it appears that most are not negatively affected by these comparisons and  indicate that they are neutral towards these comparisons ("3" has the highest count), there is a more telling trend as we click into the "Child" age group on the shiny app.
+
+<sub> Note: 1 indicates seldom compare, and 5 indicates compare very frequently </sub>
 
 
 <iframe height="470" width="100%" frameborder="no" src="https://liyinnng.shinyapps.io/bargraph-app/"> </iframe>
