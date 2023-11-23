@@ -178,7 +178,7 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <section id="about" class="level1">
 <h1>About</h1>
-<p>This project aims to find stories in data through visualization via shiny, ggplot2 and other functions with Rstudio.</p>
+<p>This project aims to find stories in data through visualization via shiny, ggplot2, echarts4r and other functions with Rstudio.</p>
 </section>
 <section id="background" class="level1">
 <h1>Background:</h1>
@@ -186,17 +186,15 @@ ul.task-list li input[type="checkbox"] {
 <iframe src="https://liyinnng.github.io/nm2207-slides/" title="Introduction" width="800px," height="500px">
 </iframe>
 </center>
-<p>
-</p><p><strong>notes</strong>:<br>
-Kaggle dataset <sup><a href="#footnote1">2</a></sup></p>
-<p>Social Network Usage &amp; Growth Statistics: How Many People Use Social Media in 2023? <sup><a href="#footnote3">3</a></sup></p>
-<p></p>
+<p><sub> <strong>notes</strong>:<br>
+Kaggle dataset <sup><a href="#footnote1">2</a></sup><br>
+Social Network Usage &amp; Growth Statistics: How Many People Use Social Media in 2023? <sup><a href="#footnote3">3</a></sup> </sub></p>
 </section>
 <section id="analysis" class="level1">
 <h1>Analysis</h1>
 <section id="social-media-usage" class="level2">
 <h2 class="anchored" data-anchor-id="social-media-usage">Social Media Usage</h2>
-<p>From our Pie Chart in the first tab, it is evident that most of the respondents from our data set uses social media.</p>
+<p>We will first start off with analysing the usage of social media among our respondents from the dataset. Starting off with our Pie Chart in the first tab, it is evident that most of the respondents from our data set uses social media.</p>
 <p>To further breakdown on our demographics, the Bar Chart in our second tab categorises our respondents and their social media usage tendency according to their ages. From the bars, a similar conclusion can be drawn: most of our respondents are in their 20s, and they do use social media.</p>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
 <ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true">Pie Chart</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">Bar Chart</a></li></ul>
@@ -204,28 +202,27 @@ Kaggle dataset <sup><a href="#footnote1">2</a></sup></p>
 <div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
 <div class="cell">
 <div class="cell-output-display">
-<div class="echarts4r html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-3e4d7d2ebccaffb84dce" style="width:100%;height:500px;"></div>
-<script type="application/json" data-for="htmlwidget-3e4d7d2ebccaffb84dce">{"x":{"theme":"","tl":false,"draw":true,"renderer":"canvas","events":[],"buttons":[],"opts":{"series":[{"name":"Do you use social media?","type":"pie","data":[{"value":3,"name":"No"},{"value":477,"name":"Yes"}]}],"tooltip":{"trigger":"item"},"color":["black","#9FC0DE"],"title":[{"text":"Do you use social media?"}]},"dispose":true},"evals":[],"jsHooks":[]}</script>
+<div class="echarts4r html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-6669aa15a4d4034c437a" style="width:100%;height:500px;"></div>
+<script type="application/json" data-for="htmlwidget-6669aa15a4d4034c437a">{"x":{"theme":"","tl":false,"draw":true,"renderer":"canvas","events":[],"buttons":[],"opts":{"series":[{"name":"Do you use social media?","type":"pie","data":[{"value":3,"name":"No"},{"value":477,"name":"Yes"}]}],"tooltip":{"trigger":"item"},"color":["black","#9FC0DE"],"title":[{"text":"Do you use social media?"}]},"dispose":true},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 </div>
 <div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
 <div class="cell">
 <div class="cell-output-display">
-<div class="echarts4r html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-e247dbdd6cdd1abcdf57" style="width:100%;height:500px;"></div>
-<script type="application/json" data-for="htmlwidget-e247dbdd6cdd1abcdf57">{"x":{"theme":"","tl":false,"draw":true,"renderer":"canvas","events":[],"buttons":[],"opts":{"stack":"grp","yAxis":[{"show":true,"splitArea":{"show":false},"splitLine":{"show":false},"boundaryGap":[0,0.5],"min":0,"max":90,"name":"Count","axisLabel":{"fontSize":12}}],"xAxis":[{"type":"value","boundaryGap":[0,0.5],"min":10,"max":70,"name":"Age","axisLabel":{"fontSize":12}}],"legend":{"data":["Use Social Media","Do Not Use Social Media"]},"series":[{"data":[{"value":[13,2]},{"value":[14,4]},{"value":[15,2]},{"value":[16,2]},{"value":[17,9]},{"value":[18,13]},{"value":[19,19]},{"value":[20,44]},{"value":[21,82]},{"value":[22,81]},{"value":[23,42]},{"value":[24,27]},{"value":[25,17]},{"value":[26,17]},{"value":[26.7,1]},{"value":[27,11]},{"value":[28,5]},{"value":[29,6]},{"value":[30,6]},{"value":[31,1]},{"value":[32,4]},{"value":[33,2]},{"value":[34,6]},{"value":[35,8]},{"value":[36,3]},{"value":[37,4]},{"value":[38,3]},{"value":[40,2]},{"value":[42,1]},{"value":[43,1]},{"value":[44,2]},{"value":[45,1]},{"value":[46,2]},{"value":[47,16]},{"value":[48,13]},{"value":[49,3]},{"value":[50,5]},{"value":[51,2]},{"value":[52,1]},{"value":[53,1]},{"value":[55,1]},{"value":[56,2]},{"value":[60,1]},{"value":[65,1]},{"value":[69,1]}],"name":"Use Social Media","type":"bar","yAxisIndex":0,"xAxisIndex":0,"coordinateSystem":"cartesian2d","stack":"stack","barWidth":10,"itemStyle":{"color":"#9FC0DE"}},{"data":[{"value":[13,0]},{"value":[14,0]},{"value":[15,0]},{"value":[16,0]},{"value":[17,0]},{"value":[18,0]},{"value":[19,0]},{"value":[20,1]},{"value":[21,0]},{"value":[22,0]},{"value":[23,0]},{"value":[24,0]},{"value":[25,0]},{"value":[26,1]},{"value":[26.7,0]},{"value":[27,0]},{"value":[28,0]},{"value":[29,0]},{"value":[30,0]},{"value":[31,0]},{"value":[32,0]},{"value":[33,0]},{"value":[34,0]},{"value":[35,0]},{"value":[36,0]},{"value":[37,0]},{"value":[38,0]},{"value":[40,0]},{"value":[42,0]},{"value":[43,0]},{"value":[44,0]},{"value":[45,0]},{"value":[46,0]},{"value":[47,0]},{"value":[48,0]},{"value":[49,0]},{"value":[50,1]},{"value":[51,0]},{"value":[52,0]},{"value":[53,0]},{"value":[55,0]},{"value":[56,0]},{"value":[60,0]},{"value":[65,0]},{"value":[69,0]}],"name":"Do Not Use Social Media","type":"bar","yAxisIndex":0,"xAxisIndex":0,"coordinateSystem":"cartesian2d","stack":"stack","barWidth":10,"itemStyle":{"color":"black"}}],"tooltip":{"trigger":"axis","axisPointer":{"type":"shadow"}},"title":[{"text":"Do you use social media?"}]},"dispose":true},"evals":[],"jsHooks":[]}</script>
+<div class="echarts4r html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-18481e6ba7a84c66be2b" style="width:100%;height:500px;"></div>
+<script type="application/json" data-for="htmlwidget-18481e6ba7a84c66be2b">{"x":{"theme":"","tl":false,"draw":true,"renderer":"canvas","events":[],"buttons":[],"opts":{"stack":"grp","yAxis":[{"show":true,"splitArea":{"show":false},"splitLine":{"show":false},"boundaryGap":[0,0.5],"min":0,"max":90,"name":"Count","axisLabel":{"fontSize":12}}],"xAxis":[{"type":"value","boundaryGap":[0,0.5],"min":10,"max":70,"name":"Age","axisLabel":{"fontSize":12}}],"legend":{"data":["Use Social Media","Do Not Use Social Media"]},"series":[{"data":[{"value":[13,2]},{"value":[14,4]},{"value":[15,2]},{"value":[16,2]},{"value":[17,9]},{"value":[18,13]},{"value":[19,19]},{"value":[20,44]},{"value":[21,82]},{"value":[22,81]},{"value":[23,42]},{"value":[24,27]},{"value":[25,17]},{"value":[26,17]},{"value":[26.7,1]},{"value":[27,11]},{"value":[28,5]},{"value":[29,6]},{"value":[30,6]},{"value":[31,1]},{"value":[32,4]},{"value":[33,2]},{"value":[34,6]},{"value":[35,8]},{"value":[36,3]},{"value":[37,4]},{"value":[38,3]},{"value":[40,2]},{"value":[42,1]},{"value":[43,1]},{"value":[44,2]},{"value":[45,1]},{"value":[46,2]},{"value":[47,16]},{"value":[48,13]},{"value":[49,3]},{"value":[50,5]},{"value":[51,2]},{"value":[52,1]},{"value":[53,1]},{"value":[55,1]},{"value":[56,2]},{"value":[60,1]},{"value":[65,1]},{"value":[69,1]}],"name":"Use Social Media","type":"bar","yAxisIndex":0,"xAxisIndex":0,"coordinateSystem":"cartesian2d","stack":"stack","barWidth":10,"itemStyle":{"color":"#9FC0DE"}},{"data":[{"value":[13,0]},{"value":[14,0]},{"value":[15,0]},{"value":[16,0]},{"value":[17,0]},{"value":[18,0]},{"value":[19,0]},{"value":[20,1]},{"value":[21,0]},{"value":[22,0]},{"value":[23,0]},{"value":[24,0]},{"value":[25,0]},{"value":[26,1]},{"value":[26.7,0]},{"value":[27,0]},{"value":[28,0]},{"value":[29,0]},{"value":[30,0]},{"value":[31,0]},{"value":[32,0]},{"value":[33,0]},{"value":[34,0]},{"value":[35,0]},{"value":[36,0]},{"value":[37,0]},{"value":[38,0]},{"value":[40,0]},{"value":[42,0]},{"value":[43,0]},{"value":[44,0]},{"value":[45,0]},{"value":[46,0]},{"value":[47,0]},{"value":[48,0]},{"value":[49,0]},{"value":[50,1]},{"value":[51,0]},{"value":[52,0]},{"value":[53,0]},{"value":[55,0]},{"value":[56,0]},{"value":[60,0]},{"value":[65,0]},{"value":[69,0]}],"name":"Do Not Use Social Media","type":"bar","yAxisIndex":0,"xAxisIndex":0,"coordinateSystem":"cartesian2d","stack":"stack","barWidth":10,"itemStyle":{"color":"black"}}],"tooltip":{"trigger":"axis","axisPointer":{"type":"shadow"}},"title":[{"text":"Do you use social media?"}]},"dispose":true},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 </div>
 </div>
 </div>
-<p><br></p>
 <p><strong>Average time spent on social media daily</strong><br>
-Next, we investigate the average time spent on social media daily. The graph indicates that the largest group of respondents spends more than 5 hours of their time on social media daily on average.</p>
+Next, we investigate the average time spent on social media daily by our respondents. The graph indicates that the largest group of respondents spends more than 5 hours of their time on social media daily on average. This is an extremely concerning phenomenon as a study conducted by the University of Pennsylvania in 2018 revealed that daily social media usage that exceeds 30 minutes led to heightened anxiety, depression, feelings of loneliness, sleep disturbances, and the fear of missing out (FOMO).<sup><a href="#footnote5">5</a></sup></p>
 <div class="cell">
 <div class="cell-output-display">
-<div class="echarts4r html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-aeb40c1293c62b9bb295" style="width:100%;height:500px;"></div>
-<script type="application/json" data-for="htmlwidget-aeb40c1293c62b9bb295">{"x":{"theme":"","tl":false,"draw":true,"renderer":"canvas","events":[],"buttons":[],"opts":{"yAxis":[{"show":true,"splitArea":{"show":false},"splitLine":{"show":false},"name":"Count","axisLabel":{"fontSize":12}}],"xAxis":[{"data":["Between 1 and 2 hours","Between 2 and 3 hours","Between 3 and 4 hours","Between 4 and 5 hours","Less than an Hour","More than 5 hours"],"type":"category","boundaryGap":[0,0.5],"name":"Average Time Spent on Social Media","axisLabel":{"fontSize":12,"rotate":0,"interval":0,"formatter":"function(value) {\n          return echarts.format.truncateText(value, 100, '...', '14px Microsoft Yahei', '…');\n        }"}}],"legend":{"data":["count"]},"series":[{"data":[{"value":["Between 1 and 2 hours"," 68"]},{"value":["Between 2 and 3 hours","100"]},{"value":["Between 3 and 4 hours"," 93"]},{"value":["Between 4 and 5 hours"," 67"]},{"value":["Less than an Hour"," 33"]},{"value":["More than 5 hours","116"]}],"name":"count","type":"bar","yAxisIndex":0,"xAxisIndex":0,"coordinateSystem":"cartesian2d","itemStyle":{"color":"#9FC0DE"},"barWidth":100,"barCategoryGap":"10%","barGap":"5%"}],"tooltip":{"trigger":"axis","axisPointer":{"type":"shadow"}},"grid":[{"left":"10%","right":"15%","top":"15%","bottom":"15%"}]},"dispose":true},"evals":["opts.xAxis.0.axisLabel.formatter"],"jsHooks":[]}</script>
+<div class="echarts4r html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-caa8afa44dd1a3100aed" style="width:100%;height:500px;"></div>
+<script type="application/json" data-for="htmlwidget-caa8afa44dd1a3100aed">{"x":{"theme":"","tl":false,"draw":true,"renderer":"canvas","events":[],"buttons":[],"opts":{"yAxis":[{"show":true,"splitArea":{"show":false},"splitLine":{"show":false},"name":"Count","axisLabel":{"fontSize":12}}],"xAxis":[{"data":["Between 1 and 2 hours","Between 2 and 3 hours","Between 3 and 4 hours","Between 4 and 5 hours","Less than an Hour","More than 5 hours"],"type":"category","boundaryGap":[0,0.5],"name":"Average Time Spent on Social Media","axisLabel":{"fontSize":12,"rotate":0,"interval":0,"formatter":"function(value) {\n          return echarts.format.truncateText(value, 100, '...', '14px Microsoft Yahei', '…');\n        }"}}],"legend":{"data":["count"]},"series":[{"data":[{"value":["Between 1 and 2 hours"," 68"]},{"value":["Between 2 and 3 hours","100"]},{"value":["Between 3 and 4 hours"," 93"]},{"value":["Between 4 and 5 hours"," 67"]},{"value":["Less than an Hour"," 33"]},{"value":["More than 5 hours","116"]}],"name":"count","type":"bar","yAxisIndex":0,"xAxisIndex":0,"coordinateSystem":"cartesian2d","itemStyle":{"color":"#9FC0DE"},"barWidth":100,"barCategoryGap":"10%","barGap":"5%"}],"tooltip":{"trigger":"axis","axisPointer":{"type":"shadow"}},"grid":[{"left":"10%","right":"15%","top":"15%","bottom":"15%"}]},"dispose":true},"evals":["opts.xAxis.0.axisLabel.formatter"],"jsHooks":[]}</script>
 </div>
 </div>
 <p><br></p>
@@ -288,8 +285,8 @@ Next, we investigate the average time spent on social media daily. The graph ind
 </ul>
 <div class="cell">
 <div class="cell-output-display">
-<div class="echarts4r html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-5baaa056df15583c5cbc" style="width:100%;height:500px;"></div>
-<script type="application/json" data-for="htmlwidget-5baaa056df15583c5cbc">{"x":{"theme":"macarons2","tl":false,"draw":true,"renderer":"canvas","events":[],"buttons":[],"opts":{"yAxis":[{"data":["1","2","3","4","5"],"name":"How often do you feel depressed or down?"}],"xAxis":[{"data":["1","2","3","4","5"],"name":"How often do you seek validation from SM?"}],"visualMap":[{"calculable":true,"type":"continuous","min":2,"max":38}],"series":[{"data":[{"value":["1","1","37"]},{"value":["2","1"," 9"]},{"value":["3","1"," 8"]},{"value":["4","1"," 3"]},{"value":["5","1"," 3"]},{"value":["1","2","28"]},{"value":["2","2","20"]},{"value":["3","2","23"]},{"value":["4","2"," 9"]},{"value":["5","2"," 3"]},{"value":["1","3","35"]},{"value":["2","3","28"]},{"value":["3","3","38"]},{"value":["4","3","14"]},{"value":["5","3"," 2"]},{"value":["1","4","19"]},{"value":["2","4","33"]},{"value":["3","4","30"]},{"value":["4","4","29"]},{"value":["5","4"," 5"]},{"value":["1","5","31"]},{"value":["2","5"," 9"]},{"value":["3","5","23"]},{"value":["4","5","28"]},{"value":["5","5","13"]}],"name":null,"type":"heatmap","coordinateSystem":"cartesian2d"}],"title":[{"text":"Validation and Depression Heatmap"}],"grid":[{"left":"15%","right":"32%"}]},"dispose":true},"evals":[],"jsHooks":[]}</script>
+<div class="echarts4r html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-e9c6aaf0911cee4ab08e" style="width:100%;height:500px;"></div>
+<script type="application/json" data-for="htmlwidget-e9c6aaf0911cee4ab08e">{"x":{"theme":"macarons2","tl":false,"draw":true,"renderer":"canvas","events":[],"buttons":[],"opts":{"yAxis":[{"data":["1","2","3","4","5"],"name":"How often do you feel depressed or down?"}],"xAxis":[{"data":["1","2","3","4","5"],"name":"How often do you seek validation from SM?"}],"visualMap":[{"calculable":true,"type":"continuous","min":2,"max":38}],"series":[{"data":[{"value":["1","1","37"]},{"value":["2","1"," 9"]},{"value":["3","1"," 8"]},{"value":["4","1"," 3"]},{"value":["5","1"," 3"]},{"value":["1","2","28"]},{"value":["2","2","20"]},{"value":["3","2","23"]},{"value":["4","2"," 9"]},{"value":["5","2"," 3"]},{"value":["1","3","35"]},{"value":["2","3","28"]},{"value":["3","3","38"]},{"value":["4","3","14"]},{"value":["5","3"," 2"]},{"value":["1","4","19"]},{"value":["2","4","33"]},{"value":["3","4","30"]},{"value":["4","4","29"]},{"value":["5","4"," 5"]},{"value":["1","5","31"]},{"value":["2","5"," 9"]},{"value":["3","5","23"]},{"value":["4","5","28"]},{"value":["5","5","13"]}],"name":null,"type":"heatmap","coordinateSystem":"cartesian2d"}],"title":[{"text":"Validation and Depression Heatmap"}],"grid":[{"left":"15%","right":"32%"}]},"dispose":true},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 <p><br></p>
@@ -377,6 +374,13 @@ Clicking on either of the legend at the top will remove the plot respectively </
 <p>
 </p><ol start="4" type="1">
 <li>https://www.kaggle.com/datasets/subhajeetdas/hate-comment</li>
+</ol>
+<p></p>
+</div>
+<div id="footnote5">
+<p>
+</p><ol start="5" type="1">
+<li>Robinson, L., &amp; Smith, M. (2023, March 29). Social Media and Mental Health. HelpGuide.org. https://www.helpguide.org/articles/mental-health/social-media-and-mental-health.htm#:~:text=using%20social%20media.-,Modifying%20social%20media%20use%20to%20improve%20mental%20health%20step%201,%2C%20sleep%20problems%2C%20and%20FOMO.</li>
 </ol>
 <p></p>
 </div>

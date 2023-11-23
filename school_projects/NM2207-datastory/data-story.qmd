@@ -42,19 +42,17 @@ This project aims to find stories in data through visualization via shiny, ggplo
 
 </center>
 
-<p>  **notes**:\
-Kaggle dataset <sup><a href="#footnote1">2</a></sup>
-
+<sub> **notes**:\
+Kaggle dataset <sup><a href="#footnote1">2</a></sup>  
 Social Network Usage & Growth Statistics: How Many People Use Social Media in 2023? <sup><a href="#footnote3">3</a></sup> 
-
-</p> 
+</sub> 
 
 
 # Analysis
 
 ## Social Media Usage
 
-From our Pie Chart in the first tab, it is evident that most of the respondents from our data set uses social media.
+We will first start off with analysing the usage of social media among our respondents from the dataset. Starting off with our Pie Chart in the first tab, it is evident that most of the respondents from our data set uses social media.
 
 To further breakdown on our demographics, the Bar Chart in our second tab categorises our respondents and their social media usage tendency according to their ages. From the bars, a similar conclusion can be drawn: most of our respondents are in their 20s, and they do use social media.
 
@@ -128,10 +126,8 @@ social_media_usage %>%
 ```
 :::
 
-<br>
-
 **Average time spent on social media daily**\
-Next, we investigate the average time spent on social media daily. The graph indicates that the largest group of respondents spends more than 5 hours of their time on social media daily on average.
+Next, we investigate the average time spent on social media daily by our respondents. The graph indicates that the largest group of respondents spends more than 5 hours of their time on social media daily on average. This is an extremely concerning phenomenon as a study conducted by the University of Pennsylvania in 2018 revealed that daily social media usage that exceeds 30 minutes led to heightened anxiety, depression, feelings of loneliness, sleep disturbances, and the fear of missing out (FOMO).<sup><a href="#footnote5">5</a></sup> 
 
 ```{r, eval=T,echo=FALSE, message = FALSE}
 # Average time spent on social media daily
@@ -321,23 +317,29 @@ As we navigate the intricate landscape of social media, there is a need for cons
 <p>
 1.  Lau, D. (2023, July 24). The big read: Teenagers hooked on social media - what’s the cost to their mental health? CNA. https://www.channelnewsasia.com/singapore/big-read-teenagers-social-media-addiction-cost-mental-health-3647121 
 </p>
-</div>
+</div>  
 
 <div id="footnote2">
 <p>
 2.  https://www.kaggle.com/datasets/souvikahmed071/social-media-and-mental-health
 </p>
-</div>
+</div>  
 
 <div id="footnote3">
 <p>
 3.  Dean, B. (2023, November 15). How many people use Social Media in 2023? (65+ statistics). Backlinko. https://backlinko.com/social-media-users#social-media-usage-stats 
 </p>
-</div>
+</div>  
 
 <div id="footnote4">
 <p>
 4.  https://www.kaggle.com/datasets/subhajeetdas/hate-comment
 </p>
-</div>
+</div>  
+
+<div id="footnote5">
+<p>
+5.  Robinson, L., &amp;  Smith, M. (2023, March 29). Social Media and Mental Health. HelpGuide.org. https://www.helpguide.org/articles/mental-health/social-media-and-mental-health.htm#:~:text=using%20social%20media.-,Modifying%20social%20media%20use%20to%20improve%20mental%20health%20step%201,%2C%20sleep%20problems%2C%20and%20FOMO. 
+</p>
+</div>  
 
