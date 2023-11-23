@@ -8,11 +8,18 @@ draft: false
 ---
 
 # About
+
 This project aims to find stories in data through visualization via shiny, ggplot2 and other functions with Rstudio.
 
 # Background:
-<center><iframe src="https://liyinnng.github.io/nm2207-slides/" title="Introduction" width=800px, height=500px></iframe></center>
 
+<center>
+
+<iframe src="https://liyinnng.github.io/nm2207-slides/" title="Introduction" width="800px," height="500px">
+
+</iframe>
+
+</center>
 
 ```{r, eval=TRUE,echo=FALSE,message = FALSE, warning = FALSE}
 library(tidyverse)
@@ -35,16 +42,15 @@ social_media_health <- social_media_health %>%
 
 ```
 
-# Analysis 
+# Analysis
 
 ## Social Media Usage
 
-From our Pie Chart in the first tab, it is evident that most of the respondents from our data set uses social media. 
+From our Pie Chart in the first tab, it is evident that most of the respondents from our data set uses social media.
 
-To further breakdown on our demographics, the Bar Chart in our second tab categorises our respondents and their social media usage tendency according to their ages. From the bars, a similar conclusion can be drawn: most of our respondents are in their 20s, and they do use social media. 
+To further breakdown on our demographics, the Bar Chart in our second tab categorises our respondents and their social media usage tendency according to their ages. From the bars, a similar conclusion can be drawn: most of our respondents are in their 20s, and they do use social media.
 
-::: {.panel-tabset}
-
+::: panel-tabset
 ## Pie Chart
 
 ```{r, out.width='100%', eval=TRUE,echo=FALSE, message = FALSE}
@@ -112,7 +118,6 @@ social_media_usage %>%
   e_title("Do you use social media?")
 
 ```
-
 :::
 
 <br>
@@ -179,19 +184,18 @@ time_spent %>%
 knitr::include_graphics("social-media-downsides.png")
 ```
 
-## Impacts of Social Media 
+## Impacts of Social Media
 
-To investigate on the impacts of social media on various variables, such as one's sleep quality, concentration ability, and worries, the interactive shiny app below that uses a 2-dimensional heat map will be able provide us further insights. 
+To investigate on the impacts of social media on various variables, such as one's sleep quality, concentration ability, and worries, the interactive shiny app below that uses a 2-dimensional heat map will be able provide us further insights.
 
-::: {.panel-tabset}
-
+::: panel-tabset
 ## Sleep Quality
 
-#### Relationship between social media usage and sleep quality:  
+#### Relationship between social media usage and sleep quality:
 
-- From the heat map, it is evident that those who do not use social media never, or seldom face issues with regards to sleeping as the respondents generally chose between 1 and 2 only. 
+-   From the heat map, it is evident that those who do not use social media never, or seldom face issues with regards to sleeping as the respondents generally chose between 1 and 2 only.
 
-- On the other hand, as we move over to the heat map for those who use social media, the darkest area of the heat map is at the top (where respondents chose 5 as their response). 
+-   On the other hand, as we move over to the heat map for those who use social media, the darkest area of the heat map is at the top (where respondents chose 5 as their response).
 
 As we hover over the heat map, a total of 110 and 124 respondents chose 4 and 5 respectively in response to the survey question of "On the scale of 1 to 5, how often do you face issues regarding sleep". The largest group of respondents who use social media indicated that they often face such issues.
 
@@ -199,33 +203,34 @@ As we hover over the heat map, a total of 110 and 124 respondents chose 4 and 5 
 
 #### Relationship between social media usage and it potential effect on concentration ability:
 
-A similar trend can be observed for the plot comparing the concentration ability of both groups, as compared to the sleep quality section earlier. 
+A similar trend can be observed for the plot comparing the concentration ability of both groups, as compared to the sleep quality section earlier.
 
-- The plot has an *inverse* relationship between both graphs: Most who do not use social media indicated that they face minimal difficulty in concentrating on things; 
+-   The plot has an *inverse* relationship between both graphs: Most who do not use social media indicated that they face minimal difficulty in concentrating on things;
 
-- On the other hand, the plot is thicker at the top for those who use social media, indicating that they face greater difficulty in concentrating on things.
+-   On the other hand, the plot is thicker at the top for those who use social media, indicating that they face greater difficulty in concentrating on things.
 
 ## Worries
 
-#### Relationship between social media usage and its potential effect of causing worries to users: 
+#### Relationship between social media usage and its potential effect of causing worries to users:
 
-- Starting on the side for those who do not use social media, respondents have only selected "1" and "2", which indicates that they are not at all, to very minimally bothered by worries. 
+-   Starting on the side for those who do not use social media, respondents have only selected "1" and "2", which indicates that they are not at all, to very minimally bothered by worries.
 
-- On the other hand, the color of the heatmap gets darker progressively, which is an indication that for those who use social media, there is an increasing trend of users being bothered by worries.
-
+-   On the other hand, the color of the heatmap gets darker progressively, which is an indication that for those who use social media, there is an increasing trend of users being bothered by worries.
 :::
 
-<iframe height="500" width="100%" frameborder="no" src="https://liyinnng.shinyapps.io/HeatmapShinyApp/"> </iframe>
+<iframe height="500" width="100%" frameborder="no" src="https://liyinnng.shinyapps.io/HeatmapShinyApp/">
 
-#### Seeking validation & feeling depressed: 
+</iframe>
+
+#### Seeking validation & feeling depressed:
 
 *Seeking validation from social media*
 
-Plotting a heat map to observe the relationship between the frequency of seeking validation from Social Media, and the frequency of feeling depressed or down, these are some notable trends: 
+Plotting a heat map to observe the relationship between the frequency of seeking validation from Social Media, and the frequency of feeling depressed or down, these are some notable trends:
 
-- Those who do not seek validation from social media also rarely feel depressed or down 
+-   Those who do not seek validation from social media also rarely feel depressed or down
 
-- On the other hand, out of those who seek validation from social media very often (those who indicated 5 to that question), the largest group of them indicated that they often feel depressed or down. 
+-   On the other hand, out of those who seek validation from social media very often (those who indicated 5 to that question), the largest group of them indicated that they often feel depressed or down.
 
 ```{r, eval=T,echo=FALSE}
 # Data filtering to find rs between frequency of seeking validation from SM and frequency of feeling depressed or down 
@@ -251,23 +256,40 @@ heatmap_data |>
 
 #### Comparison with others on Social Media
 
-In this section, we will investigate more on the relationship between the frequency in comparing oneself to other successful people through the use of social media, and how one feels about these comparisons generally speaking.  
+In this section, we will investigate more on the relationship between the frequency in comparing oneself to other successful people through the use of social media, and how one feels about these comparisons generally speaking.
 
-- While it appears that most are not negatively affected by these comparisons and  indicate that they are neutral towards these comparisons ("3" has the highest count), there is a more telling trend as we click into the "Child" age group on the shiny app.
+<p>From the data set, I created a new column, age_group to separate the respondents into different age groups as seen from the drop down menu based on the respective age range the respondents fall into to further analyse the impact of one's age.  
+While those who are under 16 years old are usually considered as a "Child", I have expanded the age range to below "25" accordingly since it is the age range where they are more susceptible to being negatively affected by social media as mentioned earlier<sup><a href="#footnote1">1</a></sup></p>
 
-<sub> Note: 1 indicates seldom compare, and 5 indicates compare very frequently </sub>
+* Clicking into the comparison frequency, selecting the "All ages" option, it can be observed that while there are more respondents who seldom compare themselves to other successful people through social media then those who compare frequently, there are still a handful of respondents who do compare themselves frequently.
 
+    + As we click into the various age groups, it appears that the majority of respondents who very frequently compare themselves ("5") to other successful people fall under the "Child" age group.
 
-<iframe height="470" width="100%" frameborder="no" src="https://liyinnng.shinyapps.io/bargraph-app/"> </iframe>
+* On the other hand, as we click into the comparison feelings, while it appears that most are neutral towards these comparisons, it can be observed that there is still a significant amount of respondents who have negative feelings towards these comparisons. In fact, there are more who noted that they are negatively affected by these comparisons ("1" & "2"), as compared to those who feel good from these comparisons ("4" and "5")
+
+    + As we click into the various age groups once again, specifically those who fall under the "Child" category, the majority of them indicated to be neutral towards these comparisons ("3"). However, it can also be observed that there are more respondents in this age group that indicated that they felt bad after these comparisons ("1" & "2") as compared to feeling good ("4" & "5"). Hence this does support the research and studies mentioned earlier. 
+
+<sub> **notes**:\
+1 indicates seldom compare, and 5 indicates compare very frequently for *comparison frequency*;\
+1 indicates feels bad, and 5 indicates feels good for *feelings towards the comparisons*;\
+Clicking on either of the legend at the top will remove the plot respectively </sub>
+
+<iframe height="470" width="100%" frameborder="no" src="https://liyinnng.shinyapps.io/bargraph-app/">
+
+</iframe>
 
 **WordCloud** <iframe height="400" width="100%" frameborder="no" src="https://liyinnng.shinyapps.io/wordcloud-app/"> </iframe>
 
-
 ## Conclusion
 
+### References
 
+<div id="footnote1">
+<p>
+1.  https://www.channelnewsasia.com/singapore/big-read-teenagers-social-media-addiction-cost-mental-health-3647121
+</p>
+</div>
 
-## Citations 
-https://backlinko.com/social-media-users#social-media-usage-stats
-https://www.kaggle.com/datasets/souvikahmed071/social-media-and-mental-health
+## Citations
 
+https://backlinko.com/social-media-users#social-media-usage-stats https://www.kaggle.com/datasets/souvikahmed071/social-media-and-mental-health https://www.channelnewsasia.com/singapore/big-read-teenagers-social-media-addiction-cost-mental-health-3647121

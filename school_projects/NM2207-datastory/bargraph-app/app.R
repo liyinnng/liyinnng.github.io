@@ -9,8 +9,8 @@ social_media_health <- read.csv("social-media-and-mental-health.csv")
 
 social_media_health <- mutate(social_media_health,
                               age_group = case_when(
-                                X1..What.is.your.age. <= 16 ~ "Child",
-                                between(X1..What.is.your.age., 17, 30) ~ "Youth",
+                                X1..What.is.your.age. <= 25 ~ "Child",
+                                between(X1..What.is.your.age., 25, 30) ~ "Youth",
                                 between(X1..What.is.your.age., 31, 45) ~ "Adults",
                                 X1..What.is.your.age. > 45 ~ "Old-aged adults",
                                 TRUE ~ NA_character_
