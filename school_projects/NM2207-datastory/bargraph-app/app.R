@@ -71,7 +71,7 @@ server <- function(input, output) {
     output$myChart <- renderEcharts4r({
       df %>%
         e_charts(
-          `X15..On.a.scale.of.1.5..how.often.do.you.compare.yourself.to.other.successful.people.through.the.use.of.social.media.`,
+          X15..On.a.scale.of.1.5..how.often.do.you.compare.yourself.to.other.successful.people.through.the.use.of.social.media.,
           axisPointer = list(
             link = list(
               xAxisIndex = "all"

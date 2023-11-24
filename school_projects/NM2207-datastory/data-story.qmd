@@ -22,11 +22,19 @@ library(viridis)
 
 social_media_health <- read.csv("social-media-and-mental-health.csv")
 
-social_media_health
-
 # Filter age outliers
 social_media_health <- social_media_health %>%
   filter(X1..What.is.your.age. != 91)
+
+social_media_health <- mutate(social_media_health,
+                              age_group = case_when(
+                                X1..What.is.your.age. <= 25 ~ "Child",
+                                between(X1..What.is.your.age., 25, 30) ~ "Youth",
+                                between(X1..What.is.your.age., 31, 45) ~ "Adults",
+                                X1..What.is.your.age. > 45 ~ "Old-aged adults",
+                                TRUE ~ NA_character_
+                              )
+)
 
 ```
 
@@ -57,6 +65,26 @@ Social Network Usage & Growth Statistics: How Many People Use Social Media in 20
 We will first start off with analyzing the usage of social media among our respondents from the dataset. 
 
 ::: panel-tabset
+
+## Dataset Mutation
+<p>Before we start, this is how I mutated the dataset to better observe trends that are more applicable to focus of the project. From the data set, I created a new column, age_group to separate the respondents into different age groups as seen from the drop down menu based on the respective age range the respondents fall into to further analyse the impact of one's age.  While those who are under 16 years old are usually considered as a "Child", I have expanded the age range to below "25" accordingly since it is the age range where they are more susceptible to being negatively affected by social media as mentioned earlier<sup><a href="#footnote1">1</a></sup></p> From the donut chart below, this data set is a good one to work with to investigate the impacts of social media on children as majority of our respondents do fall under the "child" category.
+
+```{r, out.width='100%', eval=TRUE,echo=FALSE, message = FALSE}
+
+agegroup_distribution <- social_media_health %>%
+  count(age_group)
+
+donut <- agegroup_distribution %>% 
+  e_charts(x = age_group) %>% 
+  e_pie(n, legend = FALSE, name = "Age Group", radius = c("40%", "70%")) %>% 
+  e_tooltip() %>%
+  e_theme("blue") %>%
+  e_opts(title = list(text = "Age Group Distribution", textStyle = list(color = "black")))
+
+donut
+
+```
+
 ## Pie Chart
 Starting off with our Pie Chart in the first tab, it is evident that most of the respondents from our data set uses social media.
 
@@ -247,7 +275,7 @@ knitr::include_graphics("social-media-downsides.png")
 
 ## Impacts of Social Media
 
-Next, we will investigate the various impacts of social media on various variables. Starting off with one's sleep quality, concentration ability, and worries, the interactive shiny app below that uses a 2-dimensional heat map will be able provide us further insights.
+Next, lets dive into the investigation of the various impacts of social media on various variables. Starting off with one's sleep quality, concentration ability, and worries, the interactive shiny app below that uses a 2-dimensional heat map will be able provide us further insights.
 
 ::: panel-tabset
 ## Sleep Quality
@@ -259,6 +287,14 @@ Next, we will investigate the various impacts of social media on various variabl
 -   On the other hand, as we move over to the heat map for those who use social media, the darkest area of the heat map is at the top (where respondents chose 5 as their response).
 
 A total of 110 and 124 respondents chose 4 and 5 respectively in response to the survey question of "On the scale of 1 to 5, how often do you face issues regarding sleep". This also ensues that the largest group of respondents who use social media indicated that they often face issues with regards to having a good night's rest.
+
+There are multiple reasons to as why social media does affect one's sleep quality. <sup><a href="#footnote7">7</a></sup> Here are some of the reasons why: 
+
+1. **Extended Blue Light Use.** Our phones emit blue light from their screens, and this confuses one's circadian rhythm and body's ability to release melatonin, the chemical that lulls you to bed. 
+
+2. **Excessive Mental Stimulation.** The over stimulation from activities such as a simple notification puts your body off "sleep mode" and gives our brain a rush. In addition, when the likes and interactions do not roll in as expected, it can lead to anxiety and depression, something that we will explore further later. 
+
+3. **Irregular Sleep Patterns.** With the plethora of things to do on social media, it can keep one up all night as we lose track of time.  
 
 ## Concentration Ability
 
@@ -289,13 +325,24 @@ A Microsoft study found that people lose focus after just eight seconds. Social 
 
 #### Seeking validation & feeling depressed:
 
-*Seeking validation from social media*
+In this section, a heat map is plotted to observe the relationship between the frequency of seeking validation from Social Media, and the frequency of feeling depressed or down.
 
-Plotting a heat map to observe the relationship between the frequency of seeking validation from Social Media, and the frequency of feeling depressed or down, these are some notable trends:
+::: panel-tabset
 
--   Those who do not seek validation from social media also rarely feel depressed or down
+## Trends
 
--   On the other hand, out of those who seek validation from social media very often (those who indicated 5 to that question), the largest group of them indicated that they often feel depressed or down.
+From the heat map, these are some of the trends observed: 
+
+-   Those who do not seek validation from social media rarely feels depressed or down (those who chose "1" to both the questions of how often they seek validation from social media, and how often they feel depressed or down). 
+
+-   On the other hand, if we were to look at the respondents who indicated that they seek validation from Social Media very frequently (those who chose "5"), the colour of the heat map gets darker. Alongside the count indicated at the side as we hover over the heat map, it is evident that those who seek validation very frequently also feels depressed or down very frequently.
+
+## Research 
+
+The trend that we observed is in line with a research study conducted by the Royal Society for Public Health revealed that individuals who extensively engage with social media, particularly young people, are more prone to encountering adverse mental health outcomes such as symptoms associated with anxiety and depression. <sup><a href="#footnote8">8</a></sup> When reassurance-seeking behaviors and attempts at receiving validation from others through social media becomes excessive, individuals could develop a sense of dependency on these validation. And the moment they do not receive them, everything goes downhill and spirals out of control, eventually taking a toll on their mental and physical health. 
+
+
+:::
 
 ```{r, eval=T,echo=FALSE}
 # Data filtering to find rs between frequency of seeking validation from SM and frequency of feeling depressed or down 
@@ -321,12 +368,9 @@ heatmap_data |>
 
 #### Comparison with others on Social Media
 
-*Frequency in comparing oneself to other successful people through the use of social media, and how one feels about these comparisons generally speaking*
+This section focuses on the frequency in comparing oneself to other successful people through the use of social media, and how one feels about these comparisons generally speaking
 
 ::: panel-tabset
-
-## Dataset Mutation
-<p>From the data set, I created a new column, age_group to separate the respondents into different age groups as seen from the drop down menu based on the respective age range the respondents fall into to further analyse the impact of one's age.  While those who are under 16 years old are usually considered as a "Child", I have expanded the age range to below "25" accordingly since it is the age range where they are more susceptible to being negatively affected by social media as mentioned earlier<sup><a href="#footnote1">1</a></sup></p>
 
 ## Comparison Frequency 
 Selecting the "All ages" option, it can be observed that while there are more respondents who seldom compare themselves to other successful people through social media then those who compare frequently, there are still a handful of respondents who do compare themselves frequently.
@@ -381,7 +425,7 @@ As we navigate the intricate landscape of social media, there is a need for cons
 
 <div id="footnote2">
 <p>
-2.  https://www.kaggle.com/datasets/souvikahmed071/social-media-and-mental-health
+2.  Ahmed, S., &amp; Syeda, M. N. (2023, July). Social Media and Mental Health. https://www.kaggle.com/datasets/souvikahmed071/social-media-and-mental-health/data. 
 </p>
 </div>  
 
@@ -393,7 +437,7 @@ As we navigate the intricate landscape of social media, there is a need for cons
 
 <div id="footnote4">
 <p>
-4.  https://www.kaggle.com/datasets/subhajeetdas/hate-comment
+4.  Das, S. (2022, November 1). Social media hate comments. Kaggle. https://www.kaggle.com/datasets/subhajeetdas/hate-comment 
 </p>
 </div>  
 
@@ -409,4 +453,15 @@ As we navigate the intricate landscape of social media, there is a need for cons
 </p>
 </div> 
 
+<div id="footnote7">
+<p>
+7.  Nuno, S. (2023, February 14). How does social media affect sleep? (2023). Mattress Clarity. https://www.mattressclarity.com/sleep-resources/social-media-affects-sleep/#:~:text=Social%20Media%20and%20Insomnia,understanding%20of%20when%20bedtime%20is. 
+</p>
+</div> 
+
+<div id="footnote8">
+<p>
+8.  Cramer, S., &amp; Inkster, B. (2017, May). #StatusOfMind Social media and young people’s mental health and wellbeing. https://www.rsph.org.uk/our-work/campaigns/status-of-mind.html 
+</p>
+</div> 
 
