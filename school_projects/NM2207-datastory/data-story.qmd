@@ -52,13 +52,13 @@ This project aims to find stories in data through visualization via shiny, ggplo
 
 </center>
 
-<sub> **notes**:\
+::: {.callout-note title="References from slides" collapse="true"}
 Channel News Asia <sup><a href="#footnote1">1</a></sup>  
 Kaggle dataset <sup><a href="#footnote1">2</a></sup>  
 Social Network Usage & Growth Statistics: How Many People Use Social Media in 2023? <sup><a href="#footnote3">3</a></sup>  
 Cybersmile Foundation <sup><a href="#footnote9">9</a></sup>  
 National Center for Health Research <sup><a href="#footnote11">10</a></sup> 
-</sub> 
+:::
 
 
 # Analysis
