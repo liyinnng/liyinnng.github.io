@@ -80,9 +80,17 @@ agegroup_distribution <- social_media_health %>%
 donut <- agegroup_distribution %>% 
   e_charts(x = age_group) %>% 
   e_pie(n, legend = FALSE, name = "Age Group", radius = c("40%", "70%")) %>% 
-  e_tooltip() %>%
+  e_tooltip(
+        formatter = htmlwidgets::JS(
+      "function(params) {
+        return '<div style=\"background-color: white; padding: 10px;\">' +
+               '<strong>' + params.name + '</strong>: ' + params.value +
+               '</div>';
+      }"
+    )  
+  ) %>%
   e_theme("blue") %>%
-  e_title("Age Group Distribution", color = "black")
+  e_title("Age Group Distribution")
 
 donut
 
