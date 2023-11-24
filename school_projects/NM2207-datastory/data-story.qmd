@@ -31,7 +31,7 @@ social_media_health <- mutate(social_media_health,
                                 X1..What.is.your.age. <= 25 ~ "Child",
                                 between(X1..What.is.your.age., 25, 30) ~ "Youth",
                                 between(X1..What.is.your.age., 31, 45) ~ "Adults",
-                                X1..What.is.your.age. > 45 ~ "Old-aged adults",
+                                X1..What.is.your.age. > 45 ~ "Old-aged-adults",
                                 TRUE ~ NA_character_
                               )
 )
@@ -221,57 +221,67 @@ plot_ly(
 :::
 
 **Average time spent on social media daily**\
-Next, we investigate the average time spent on social media daily by our respondents. The graph indicates that the largest group of respondents spends more than 5 hours of their time on social media daily on average. This is an extremely concerning phenomenon as a study conducted by the University of Pennsylvania in 2018 revealed that daily social media usage that exceeds 30 minutes led to heightened anxiety, depression, feelings of loneliness, sleep disturbances, and the fear of missing out (FOMO).<sup><a href="#footnote5">5</a></sup> 
+Next, we investigate the average time spent on social media daily by our respondents. The graph indicates that the largest group of respondents spends more than 5 hours of their time on social media daily on average. To further breakdown on this bar chart, we remove all age groups other than "Child". A general increasing trend in the usage duration of social media is observed, and the majority of them spends > 5h on social media. This is an extremely concerning phenomenon as a study conducted by the University of Pennsylvania in 2018 revealed that daily social media usage that exceeds 30 minutes led to heightened anxiety, depression, feelings of loneliness, sleep disturbances, and the fear of missing out (FOMO).<sup><a href="#footnote5">5</a></sup> 
 
 ```{r, eval=T,echo=FALSE, message = FALSE}
 # Average time spent on social media daily
 
-time_colour <- "#9FC0DE"
-
 time_spent <- social_media_health %>%
-  filter( X6..Do.you.use.social.media. == "Yes") %>%
-  filter(!is.na(X8..What.is.the.average.time.you.spend.on.social.media.every.day.)) %>%
-  group_by(X8..What.is.the.average.time.you.spend.on.social.media.every.day.) %>%
-  summarise(count = n()) %>%
-  filter(!is.na(count))
+  filter(X6..Do.you.use.social.media. == "Yes") %>%
+  count(age_group, X8..What.is.the.average.time.you.spend.on.social.media.every.day.) %>%
+  spread(age_group, n)
 
-# Create echarts4r bar chart
+# Define the order of the labels
+order_of_labels <- c("Less than an Hour", "Between 1 and 2 hours", "Between 2 and 3 hours", "Between 3 and 4 hours", "Between 4 and 5 hours", "More than 5 hours")
+
 time_spent %>%
   e_charts(X8..What.is.the.average.time.you.spend.on.social.media.every.day.) %>%
-  e_bar(count, 
-        itemStyle = list(color = time_colour),
-        barWidth = 100,
-        barCategoryGap = "10%",  
-        barGap = "5%") %>%
+  e_bar(`Old-aged-adults`, name = "Old-aged Adults", stack = "grp", barWidth = 100) %>% 
+  e_bar(Adults, name = "Adults", stack = "grp", barWidth = 100) %>% 
+  e_bar(Child, name = "Child", stack = "grp", barWidth = 100) %>% 
+  e_bar(Youth, name = "Youth", stack = "grp", barWidth = 100) %>% 
   e_tooltip(
-    trigger = "axis", 
-    axisPointer = list(
-      type = "shadow"
-      )
-    ) %>%
+    trigger = "axis",
+    axisPointer = list(),
+    backgroundColor = "white"
+  ) %>% 
   e_y_axis(
     splitArea = list(show = FALSE),
-    splitLine = list(show = FALSE),
+    splitLine = list(show = FALSE), 
+    boundaryGap = c(0, 0.5), 
     name = "Count",
-    axisLabel = list(fontSize = 12)
-  ) %>%
-  e_x_axis(
-    boundaryGap = c(0, 0.5),
-    name = "Average Time Spent on Social Media",
     axisLabel = list(
       fontSize = 12,
-      rotate = 0,
-      interval = 0,
-      formatter = htmlwidgets::JS(
-        "function(value) {
-          return echarts.format.truncateText(value, 100, '...', '14px Microsoft Yahei', '…');
-        }"
-      )
+      showMinLabel = TRUE,
+      showMaxLabel = TRUE
     )
   ) %>%
-  e_toolbox_feature("dataZoom", title = list(zoom = "zoom", back = "back")) %>%
+  e_x_axis(
+    type = "category", 
+    boundaryGap = c(0, 0.5),
+    name = "Time Spent",
+    axisLabel = list(
+      fontSize = 12,
+      showMinLabel = TRUE,
+      showMaxLabel = TRUE,
+      rotate = 0,
+      interval = 0, 
+      formatter = htmlwidgets::JS(
+        "function(value) {
+          return value.split(' ').map(function(v) {
+            return echarts.format.truncateText(v, 100, '...', '14px Microsoft Yahei', '…');
+          }).join('\\n');
+        }"
+      )
+    ),
+    data = order_of_labels  
+  ) %>% 
+  e_title("Social Media Usage Duration") %>%
+  e_toolbox_feature("dataZoom", title = list(zoom = "zoom", back = "back"), orient = "vertical", x = "right", y = "top") %>%
   e_datazoom() %>%
-  e_grid(left = "10%", right = "15%", top = "15%", bottom = "15%")
+  e_theme("blue") %>%
+  e_grid(left = "10%", right = "15%", top = "15%", bottom = "25%")  %>%
+  e_y_axis(max = 120)
 
 ```
 
