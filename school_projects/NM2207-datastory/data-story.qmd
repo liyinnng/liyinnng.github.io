@@ -22,6 +22,8 @@ library(viridis)
 
 social_media_health <- read.csv("social-media-and-mental-health.csv")
 
+social_media_health
+
 # Filter age outliers
 social_media_health <- social_media_health %>%
   filter(X1..What.is.your.age. != 91)
@@ -36,7 +38,7 @@ This project aims to find stories in data through visualization via shiny, ggplo
 
 <center>
 
-<iframe src="https://liyinnng.github.io/nm2207-slides/" title="Introduction" width="800px," height="500px">
+<iframe src="https://liyinnng.github.io/nm2207-projectslides/" title="Introduction" width="800px," height="500px">
 
 </iframe>
 
@@ -52,12 +54,11 @@ Social Network Usage & Growth Statistics: How Many People Use Social Media in 20
 
 ## Social Media Usage
 
-We will first start off with analysing the usage of social media among our respondents from the dataset. Starting off with our Pie Chart in the first tab, it is evident that most of the respondents from our data set uses social media.
-
-To further breakdown on our demographics, the Bar Chart in our second tab categorises our respondents and their social media usage tendency according to their ages. From the bars, a similar conclusion can be drawn: most of our respondents are in their 20s, and they do use social media.
+We will first start off with analyzing the usage of social media among our respondents from the dataset. 
 
 ::: panel-tabset
 ## Pie Chart
+Starting off with our Pie Chart in the first tab, it is evident that most of the respondents from our data set uses social media.
 
 ```{r, out.width='100%', eval=TRUE,echo=FALSE, message = FALSE}
 
@@ -78,6 +79,7 @@ pie
 ```
 
 ## Bar Chart
+To further breakdown on our demographics, the Bar Chart in our second tab categorises our respondents and their social media usage tendency according to their ages. From the bars, a similar conclusion can be drawn: most of our respondents are in their 20s, and they do use social media.
 
 ```{r, out.width='100%', eval=TRUE,echo=FALSE, message = FALSE}
 
@@ -121,9 +123,61 @@ social_media_usage %>%
       fontSize = 12
     )
   ) %>% 
-  e_title("Do you use social media?")
+  e_title("Do you use social media?") %>%
+  e_toolbox_feature("dataZoom", title = list(zoom = "zoom", back = "back")) %>%
+  e_datazoom()
 
 ```
+## Platforms
+Our data set also has a column consisting of the different social media platforms that are used by the respondents. This bubble chart illustrates the various platforms used, alongside their popularity. It can be observed that among the respondents, the top 3 most commonly used platforms are Facebook, Instagram and Youtube. 
+
+```{r, eval=TRUE, echo=FALSE, message=FALSE, warning=FALSE}
+
+platforms <- social_media_health %>%
+  filter( X6..Do.you.use.social.media. == "Yes") %>%
+  filter(!is.na(X7..What.social.media.platforms.do.you.commonly.use.)) %>%
+  # Split the strings into individual platforms
+  mutate(platforms_list = strsplit(X7..What.social.media.platforms.do.you.commonly.use., ", ")) %>%
+  # Unnest data
+  unnest(platforms_list) %>%
+  # Count of each unique platform
+  count(platform = platforms_list)
+
+plot_ly(
+  data = platforms,
+  x = ~platform,
+  y = ~n,
+  text = ~paste(platform, "<br>Count:", n),
+  size = ~n,
+  type = 'scatter',
+  mode = 'markers',
+  marker = list(sizemode = 'diameter',
+  color = viridis::viridis(length(unique(platforms$platform)))
+  )
+) %>%
+  layout(
+    title = "Bubble Chart for use of various Platforms",
+    xaxis = list(showgrid = FALSE, showline = FALSE, zeroline = FALSE),
+    yaxis = list(showgrid = FALSE, showline = FALSE, zeroline = FALSE),
+    showlegend = FALSE,
+    hovermode = "closest",
+    paper_bgcolor = 'rgba(0,0,0,0)',
+    plot_bgcolor = 'rgba(0,0,0,0)',
+    annotations = list(
+      list(
+        x = 0,
+        y = 0.98,
+        xref = "paper",
+        yref = "paper",
+        text = "Count",
+        showarrow = FALSE,
+        font = list(size = 12)
+      )
+    )
+  )
+
+```
+
 :::
 
 **Average time spent on social media daily**\
@@ -175,7 +229,10 @@ time_spent %>%
       )
     )
   ) %>%
+  e_toolbox_feature("dataZoom", title = list(zoom = "zoom", back = "back")) %>%
+  e_datazoom() %>%
   e_grid(left = "10%", right = "15%", top = "15%", bottom = "15%")
+
 ```
 
 <br>
@@ -307,7 +364,6 @@ From the data set, there are way too many unique words used, and it is impossibl
 <iframe height="500" width="100%" frameborder="no" src="https://liyinnng.shinyapps.io/wordcloudShinyApp/"> </iframe>
 
 # Conclusion
-
 
 In conclusion, the impact of social media on its users is undeniably complex, encompassing both positive and negative aspects. While the negative effects are particularly pronounced for children, given their heightened susceptibility to external influences, it is crucial to recognize that social media has also introduced numerous benefits into our lives.
 
