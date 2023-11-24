@@ -223,6 +223,9 @@ plot_ly(
 **Average time spent on social media daily**\
 Next, we investigate the average time spent on social media daily by our respondents. The interactive stacked bargraph indicates that the largest group of respondents spends more than 5 hours of their time on social media daily on average. To further breakdown on this bar chart, we remove all age groups other than "Child". A general increasing trend in the usage duration of social media is observed, and the majority of them spends > 5h on social media. This is an extremely concerning phenomenon as a study conducted by the University of Pennsylvania in 2018 revealed that daily social media usage that exceeds 30 minutes led to heightened anxiety, depression, feelings of loneliness, sleep disturbances, and the fear of missing out (FOMO).<sup><a href="#footnote5">5</a></sup> 
 
+<sub> **notes**:\
+Clicking on either of the legend at the top will remove the plot respectively </sub>
+
 ```{r, eval=T,echo=FALSE, message = FALSE}
 # Average time spent on social media daily
 
@@ -284,9 +287,6 @@ time_spent %>%
   e_y_axis(max = 120)
 
 ```
-
-<sub> **notes**:\
-Clicking on either of the legend at the top will remove the plot respectively </sub>
 
 <br>
 
@@ -365,7 +365,6 @@ From the heat map, these are some of the trends observed:
 ## Research 
 
 The trend that we observed is in line with a research study conducted by the Royal Society for Public Health revealed that individuals who extensively engage with social media, particularly young people, are more prone to encountering adverse mental health outcomes such as symptoms associated with anxiety and depression. <sup><a href="#footnote8">8</a></sup> When reassurance-seeking behaviors and attempts at receiving validation from others through social media becomes excessive, individuals could develop a sense of dependency on these validation. And the moment they do not receive them, everything goes downhill and spirals out of control, eventually taking a toll on their mental and physical health. 
-
 
 :::
 
