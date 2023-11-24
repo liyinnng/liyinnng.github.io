@@ -424,7 +424,7 @@ As we navigate the intricate landscape of social media, there is a need for cons
 
 # References
 
-::: {.callout-caution collapse="true"}
+::: {.callout-tip title="References & Citations" collapse="true"}
 
 <div id="footnote1">
 <p>
