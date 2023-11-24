@@ -53,8 +53,11 @@ This project aims to find stories in data through visualization via shiny, ggplo
 </center>
 
 <sub> **notes**:\
+Channel News Asia <sup><a href="#footnote1">1</a></sup>  
 Kaggle dataset <sup><a href="#footnote1">2</a></sup>  
-Social Network Usage & Growth Statistics: How Many People Use Social Media in 2023? <sup><a href="#footnote3">3</a></sup> 
+Social Network Usage & Growth Statistics: How Many People Use Social Media in 2023? <sup><a href="#footnote3">3</a></sup>  
+Cybersmile Foundation <sup><a href="#footnote9">9</a></sup>  
+National Center for Health Research <sup><a href="#footnote11">10</a></sup> 
 </sub> 
 
 
@@ -79,7 +82,7 @@ donut <- agegroup_distribution %>%
   e_pie(n, legend = FALSE, name = "Age Group", radius = c("40%", "70%")) %>% 
   e_tooltip() %>%
   e_theme("blue") %>%
-  e_opts(title = list(text = "Age Group Distribution", textStyle = list(color = "black")))
+  e_title("Age Group Distribution", color = "black")
 
 donut
 
@@ -103,6 +106,7 @@ pie <- social_media_use %>%
   e_tooltip() %>%
   e_color(color = list(color_no, color_yes)) %>% 
   e_title("Do you use social media?")
+
 pie
 ```
 
@@ -382,6 +386,9 @@ On the other hand, as we click into the comparison feelings, while it appears th
 
 * As we click into the various age groups once again, specifically those who fall under the "Child" category, the majority of them indicated to be neutral towards these comparisons ("3"). However, it can also be observed that there are more respondents in this age group that indicated that they felt bad after these comparisons ("1" & "2") as compared to feeling good ("4" & "5"). Hence this does support the research and studies mentioned earlier. 
 
+## Research 
+While the inclination to compare ourselves to others is inherent in human nature, social media amplifies the adverse consequences of such social comparisons, especially for teenagers. This is primarily attributed to the fact that the basis for their comparisons lies in meticulously crafted images of their peers. The overarching concept of social comparison suggests that comparing ourselves to those seemingly ahead of us tends to generate negative feelings. The prevailing pattern indicates that individuals tend to engage in more upward comparisons than downward ones. Consequently, the aftermath of an upward comparison often leads to a diminished sense of well-being — a phenomenon commonly referred to as "the contrast effect." <sup><a href="#footnote11">11</a></sup>
+
 :::
 
 <sub> **notes**:\
@@ -464,4 +471,23 @@ As we navigate the intricate landscape of social media, there is a need for cons
 8.  Cramer, S., &amp; Inkster, B. (2017, May). #StatusOfMind Social media and young people’s mental health and wellbeing. https://www.rsph.org.uk/our-work/campaigns/status-of-mind.html 
 </p>
 </div> 
+
+<div id="footnote9">
+<p>
+9.  MacRae, D. (2022, June 22). 89% of people feel social media negatively affects their mental health. Marketing Tech News. https://www.marketingtechnews.net/news/2022/jun/22/89-of-people-feel-social-media-negatively-affects-their-mental-health/  
+</p>
+</div> 
+
+<div id="footnote10">
+<p>
+10.  Mir, E., &amp; Sun, A. (2023, July 20). Social Media and adolescents’ and Young Adults’ mental health. National Center for Health Research. https://www.center4research.org/social-media-affects-mental-health/ 
+</p>
+</div> 
+
+<div id="footnote11">
+<p>
+11.  Newport Academy. (2023, August 3). The theory of social comparison and Mental Health. https://www.newportacademy.com/resources/empowering-teens/theory-of-social-comparison/ 
+</p>
+</div> 
+
 
