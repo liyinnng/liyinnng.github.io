@@ -424,6 +424,8 @@ As we navigate the intricate landscape of social media, there is a need for cons
 
 # References
 
+::: {.callout-caution collapse="true"}
+
 <div id="footnote1">
 <p>
 1.  Lau, D. (2023, July 24). The big read: Teenagers hooked on social media - what’s the cost to their mental health? CNA. https://www.channelnewsasia.com/singapore/big-read-teenagers-social-media-addiction-cost-mental-health-3647121 
@@ -489,5 +491,7 @@ As we navigate the intricate landscape of social media, there is a need for cons
 11.  Newport Academy. (2023, August 3). The theory of social comparison and Mental Health. https://www.newportacademy.com/resources/empowering-teens/theory-of-social-comparison/ 
 </p>
 </div> 
+
+:::
 
 
