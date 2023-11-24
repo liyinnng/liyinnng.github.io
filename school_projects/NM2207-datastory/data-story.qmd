@@ -285,6 +285,9 @@ time_spent %>%
 
 ```
 
+<sub> **notes**:\
+Clicking on either of the legend at the top will remove the plot respectively </sub>
+
 <br>
 
 ```{r}
