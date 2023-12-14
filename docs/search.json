@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "HI, I’M LI YING",
     "section": "",
-    "text": "I am a Penultimate undergraduate at the National University of Singapore. Professionally, I am an ambivert individual with an inquisite mind to adapt fast to a new environment. In all (non)seriousness, I enjoy writing, is a novice (but passionate) meal-maker, occasional gamer, and also loves doodling.\nPoke around my website to learn more, and feel free to contact me if you have any questions or would like to discuss potential collaborations!"
+    "text": "I am a Penultimate undergraduate at the National University of Singapore. Professionally, I am an ambivert individual with an inquisite mind to adapt fast to a new environment. On a personal level, I enjoy writing, is a novice (but passionate) meal-maker, occasional gamer, and also loves doodling.\nPoke around my website to learn more, and feel free to contact me if you have any questions or would like to discuss potential collaborations!"
   },
   {
     "objectID": "about.html",
@@ -25,7 +25,7 @@
     "href": "education.html",
     "title": "Education",
     "section": "",
-    "text": "NATIONAL UNIVERSITY OF SINGAPORE (NUS)\nMajor in Bachelor of Business Administration with Minor in Interactive Media Development\n• Current CAP Score: 4.58/5.0\n\n ACHIEVEMENTS, LEADERSHIP & COMMITTEE EXPERIENCE\nNUS ROTARACT CLUB\nDuration: Aug 2021 - Aug 2022\nRole: Level In-Charge\n• Facilitated welcome activities for over 100 active and new volunteers from different faculties in NUS\n• Responsible for weekly lesson plans and worksheets alongside being in charge of overseeing and ensuring smooth execution of weekly tutoring sessions\nNUS BUSINESS CAMP\nDuration: Sep 2021 - Jun 2022\nRole: Publicity Executive\n• Led a faculty-wide publicity campaigns that attracted more than 600 sign-ups to be a participant of the 2022 NUS Business Camp\n• Person in-charge of managing social-relations with students and public, accumulating over a thousand followers on Instagram\nNUS BIZCONNECT\nDuration: Sep 2022 – Present\nRole: Publicity Executive\n• Working with a team of 7 in bridging relations between undergraduates and alumni of NUS Business School to connect various like-minded individuals\n• In-charge of social media marketing within the team to extend outreach of organized events to attract interested participants\n\n\n\n\nNanyang Junior College\nGCE ‘A’ Levels\n• Achievement 4 distinctions in Mathematics, General Paper, Physics and Economics\n• President of International Service-Learning Club"
+    "text": "NATIONAL UNIVERSITY OF SINGAPORE (NUS)\nMajor in Bachelor of Business Administration with Minor in Interactive Media Development\n• Current CAP Score: 4.38/5.0\n\n ACHIEVEMENTS, LEADERSHIP & COMMITTEE EXPERIENCE\nNUS ROTARACT CLUB\nDuration: Aug 2021 - Aug 2022\nRole: Level In-Charge\n• Facilitated welcome activities for over 100 active and new volunteers from different faculties in NUS\n• Responsible for weekly lesson plans and worksheets alongside being in charge of overseeing and ensuring smooth execution of weekly tutoring sessions\nNUS BUSINESS CAMP\nDuration: Sep 2021 - Jun 2022\nRole: Publicity Executive\n• Led a faculty-wide publicity campaigns that attracted more than 600 sign-ups to be a participant of the 2022 NUS Business Camp\n• Person in-charge of managing social-relations with students and public, accumulating over a thousand followers on Instagram\nNUS BIZCONNECT\nDuration: Sep 2022 – Present\nRole: Publicity Executive\n• Working with a team of 7 in bridging relations between undergraduates and alumni of NUS Business School to connect various like-minded individuals\n• In-charge of social media marketing within the team to extend outreach of organized events to attract interested participants\n\n\n\n\nNanyang Junior College\nGCE ‘A’ Levels\n• Achievement 4 distinctions in Mathematics, General Paper, Physics and Economics\n• President of International Service-Learning Club"
   },
   {
     "objectID": "CV.html",
@@ -116,7 +116,7 @@
     "href": "projects.html",
     "title": "Projects",
     "section": "",
-    "text": "NM2207 Final Project\n\n\n\nCurriculum\n\n\n\nData-story telling for my final project\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNUS Business Camp (NBC)\n\n\n\nCommittee\n\n\n\nPublicity works done for a faculty-wide orientation camp\n\n\n\n\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "Digital Marketing\n\n\n\nCurriculum\n\n\n\nA record of what I have learnt while taking Digital Marketing (MKT3714), alongside my final project.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNM2207 Final Project\n\n\n\nCurriculum\n\n\n\nData-story telling for my final project\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNUS Business Camp (NBC)\n\n\n\nCommittee\n\n\n\nPublicity works done for a faculty-wide orientation camp\n\n\n\n\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "school_projects/NM2207-datastory/data-story.html",
@@ -250,5 +250,19 @@
     "title": "NM2207 Final Project",
     "section": "Shiny",
     "text": "Shiny\nFrom the data set, there are way too many unique words used, and it is impossible to fit all of them in the word cloud. Hence I included a reactive slider to limit the number of words to be included in the word cloud. I also specifically removed some of the most used words such as “that”, “like”, etc… that are very obviously words that are hateful."
+  },
+  {
+    "objectID": "school_projects/MKT3714/MKT3714.html",
+    "href": "school_projects/MKT3714/MKT3714.html",
+    "title": "Digital Marketing",
+    "section": "",
+    "text": "Embarking on a journey to delve into the dynamic realm of digital marketing, I’ve made the conscious decision to enroll in a comprehensive course that promises to unravel the intricacies of this ever-evolving field. I consider myself incredibly fortunate to have the opportunity to learn from the esteemed Prof. Shao, a seasoned expert in the field of digital marketing. His guidance not only extends to the academic facets of the course but is enriched by his wealth of practical experience and honed skills. In essence, this post becomes a chronicle of my exploration into the world of digital marketing, as well as the project my team and I have worked on."
+  },
+  {
+    "objectID": "school_projects/MKT3714/MKT3714.html#marketing-in-a-digital-age",
+    "href": "school_projects/MKT3714/MKT3714.html#marketing-in-a-digital-age",
+    "title": "Digital Marketing",
+    "section": "",
+    "text": "Embarking on a journey to delve into the dynamic realm of digital marketing, I’ve made the conscious decision to enroll in a comprehensive course that promises to unravel the intricacies of this ever-evolving field. I consider myself incredibly fortunate to have the opportunity to learn from the esteemed Prof. Shao, a seasoned expert in the field of digital marketing. His guidance not only extends to the academic facets of the course but is enriched by his wealth of practical experience and honed skills. In essence, this post becomes a chronicle of my exploration into the world of digital marketing, as well as the project my team and I have worked on."
   }
 ]
