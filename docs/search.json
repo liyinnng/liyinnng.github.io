@@ -116,7 +116,7 @@
     "href": "projects.html",
     "title": "Projects",
     "section": "",
-    "text": "Digital Marketing\n\n\n\nCurriculum\n\n\n\nA record of what I have learnt while taking Digital Marketing (MKT3714), alongside my final project.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNM2207 Final Project\n\n\n\nCurriculum\n\n\n\nData-story telling for my final project\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNUS Business Camp (NBC)\n\n\n\nCommittee\n\n\n\nPublicity works done for a faculty-wide orientation camp\n\n\n\n\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "Digital Marketing\n\n\n\nCurriculum\n\n\n\nA record of what I have learnt while taking Digital Marketing (MKT3714), alongside my final project.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNM2207 Final Project\n\n\n\nCurriculum\n\n\n\nData-story telling for my final project\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNUS Business Camp (NBC)\n\n\n\nCommittee\n\n\n\nPublicity works done for a faculty-wide orientation camp\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nUI/UX Notes\n\n\n\nOthers\n\n\n\nSome notes for my personal learning on UI/UX!\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "school_projects/NM2207-datastory/data-story.html",
@@ -256,13 +256,41 @@
     "href": "school_projects/MKT3714/MKT3714.html",
     "title": "Digital Marketing",
     "section": "",
-    "text": "Embarking on a journey to delve into the dynamic realm of digital marketing, I’ve made the conscious decision to enroll in a comprehensive course that promises to unravel the intricacies of this ever-evolving field. I consider myself incredibly fortunate to have the opportunity to learn from the esteemed Prof. Shao, a seasoned expert in the field of digital marketing. His guidance not only extends to the academic facets of the course but is enriched by his wealth of practical experience and honed skills. In essence, this post becomes a chronicle of my exploration into the world of digital marketing, as well as the project my team and I have worked on."
+    "text": "Embarking on a journey to delve into the dynamic realm of digital marketing, I decided to enroll in a comprehensive course that promises to unravel the intricacies of this ever-evolving field. I consider myself incredibly fortunate to have the opportunity to learn from the esteemed Prof. Shao, a seasoned expert in the field of digital marketing. In essence, this post is a chronicle of my exploration into the world of digital marketing, as well as the project my team and I have worked on."
   },
   {
     "objectID": "school_projects/MKT3714/MKT3714.html#marketing-in-a-digital-age",
     "href": "school_projects/MKT3714/MKT3714.html#marketing-in-a-digital-age",
     "title": "Digital Marketing",
     "section": "",
-    "text": "Embarking on a journey to delve into the dynamic realm of digital marketing, I’ve made the conscious decision to enroll in a comprehensive course that promises to unravel the intricacies of this ever-evolving field. I consider myself incredibly fortunate to have the opportunity to learn from the esteemed Prof. Shao, a seasoned expert in the field of digital marketing. His guidance not only extends to the academic facets of the course but is enriched by his wealth of practical experience and honed skills. In essence, this post becomes a chronicle of my exploration into the world of digital marketing, as well as the project my team and I have worked on."
+    "text": "Embarking on a journey to delve into the dynamic realm of digital marketing, I decided to enroll in a comprehensive course that promises to unravel the intricacies of this ever-evolving field. I consider myself incredibly fortunate to have the opportunity to learn from the esteemed Prof. Shao, a seasoned expert in the field of digital marketing. In essence, this post is a chronicle of my exploration into the world of digital marketing, as well as the project my team and I have worked on."
+  },
+  {
+    "objectID": "school_projects/MKT3714/MKT3714.html#final-project",
+    "href": "school_projects/MKT3714/MKT3714.html#final-project",
+    "title": "Digital Marketing",
+    "section": "Final Project",
+    "text": "Final Project"
+  },
+  {
+    "objectID": "school_projects/UIUX/UIUX.html",
+    "href": "school_projects/UIUX/UIUX.html",
+    "title": "UI/UX Notes",
+    "section": "",
+    "text": "A page dedicated to document some concepts and articles that I’ve found interesting in the UI/UX space!\n\n\n\n\nNotice how the ‘Microinteraction’ above turns a shade darker as you hover over it before clicking to be redirected to a website that I’ve just visited? According to several articles that I had read, these can be game-changers when it comes to user experience. These subtle design elements provide users with instant feedback, which generously helps users in keeping tabs on their actions. It also helps in interface comprehension while guiding users through tasks.\n Articles:\nhttps://bootcamp.uxdesign.cc/8-huge-ui-design-trends-to-watch-out-for-in-2024-2026-9f5bd243de2f \n\n\n\n\n\n\n3D Design and Minimalism Dark Mode Sustainability"
+  },
+  {
+    "objectID": "school_projects/UIUX/UIUX.html#fa-lightbulb-concepts",
+    "href": "school_projects/UIUX/UIUX.html#fa-lightbulb-concepts",
+    "title": "UI/UX Notes",
+    "section": "",
+    "text": "Notice how the ‘Microinteraction’ above turns a shade darker as you hover over it before clicking to be redirected to a website that I’ve just visited? According to several articles that I had read, these can be game-changers when it comes to user experience. These subtle design elements provide users with instant feedback, which generously helps users in keeping tabs on their actions. It also helps in interface comprehension while guiding users through tasks.\n Articles:\nhttps://bootcamp.uxdesign.cc/8-huge-ui-design-trends-to-watch-out-for-in-2024-2026-9f5bd243de2f"
+  },
+  {
+    "objectID": "school_projects/UIUX/UIUX.html#fa-newspaper-articles",
+    "href": "school_projects/UIUX/UIUX.html#fa-newspaper-articles",
+    "title": "UI/UX Notes",
+    "section": "",
+    "text": "3D Design and Minimalism Dark Mode Sustainability"
   }
 ]

@@ -1,0 +1,35 @@
+--- 
+title: "UI/UX Notes"
+description: 
+  Some notes for my personal learning on UI/UX!
+categories: [Others]
+image: UIUX-cover-gif.gif
+draft: false
+---
+
+# About
+
+A page dedicated to document some concepts and articles that I've found interesting in the UI/UX space!
+
+## {{< fa lightbulb >}} Concepts 
+
+#### [Microinterations](https://bootcamp.uxdesign.cc/8-huge-ui-design-trends-to-watch-out-for-in-2024-2026-9f5bd243de2f)
+Notice how the 'Microinteraction' above turns a shade darker as you hover over it before clicking to be redirected to a website that I've just visited? According to several articles that I had read, these can be game-changers when it comes to user experience. These  subtle design elements provide users with instant feedback, which generously helps users in keeping tabs on their actions. It also helps in interface comprehension while guiding users through tasks. 
+
+<sub> **Articles**:\
+https://bootcamp.uxdesign.cc/8-huge-ui-design-trends-to-watch-out-for-in-2024-2026-9f5bd243de2f
+ </sub>
+
+
+## {{< fa newspaper >}} Articles 
+
+#### Trends to look out for 
+[3D Design and Minimalism](https://bootcamp.uxdesign.cc/8-huge-ui-design-trends-to-watch-out-for-in-2024-2026-9f5bd243de2f)
+Dark Mode
+Sustainability
+
+
+
+## {{< fa bookmark >}} Others 
+
+

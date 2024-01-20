@@ -9,4 +9,15 @@ draft: false
 
 ## Marketing in a Digital Age
 
-Embarking on a journey to delve into the dynamic realm of digital marketing, I've made the conscious decision to enroll in a comprehensive course that promises to unravel the intricacies of this ever-evolving field. I consider myself incredibly fortunate to have the opportunity to learn from the esteemed Prof. Shao, a seasoned expert in the field of digital marketing. His guidance not only extends to the academic facets of the course but is enriched by his wealth of practical experience and honed skills. In essence, this post becomes a chronicle of my exploration into the world of digital marketing, as well as the project my team and I have worked on. 
+Embarking on a journey to delve into the dynamic realm of digital marketing, I decided to enroll in a comprehensive course that promises to unravel the intricacies of this ever-evolving field. I consider myself incredibly fortunate to have the opportunity to learn from the esteemed [Prof. Shao](https://www.linkedin.com/in/shaochunchen/), a seasoned expert in the field of digital marketing. In essence, this post is a chronicle of my exploration into the world of digital marketing, as well as the project my team and I have worked on. 
+
+## Final Project
+
+<center>
+
+<iframe src="https://liyinnng.github.io/nm2207-projectslides/" title="Introduction" width="800px," height="500px">
+
+</iframe>
+
+</center>
+
