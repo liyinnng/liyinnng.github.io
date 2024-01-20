@@ -4,18 +4,18 @@
 $black: #000000 !default; 
 $gray: #a69eb0 !default; 
 $cream: #efe7df !default; 
-$periwinkle: #dadae3 !default;
+$periwinkle: #ecedf5 !default;
 $light-blue: #efeff2 !default;
 $dark-gray: #474747 !default;
 $mint-cream: #f5fffa !default;
 
 // Base document colors
-$navbar-bg: $gray; 
+$navbar-bg: $periwinkle; 
 $navbar-fg: $dark-gray; 
-$navbar-hl: $periwinkle; 
-$body-bg: $cream;
+$navbar-hl: #9370db; 
+$body-bg: $periwinkle;
 $body-color: $dark-gray;
-$footer-bg: $gray; 
+$footer-bg: $periwinkle; 
 $link-color: #9370db;
 
 /* ELEMENT SELECTORS */

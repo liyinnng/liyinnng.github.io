@@ -32,7 +32,7 @@
     "href": "CV.html",
     "title": "CV",
     "section": "",
-    "text": "Download current CV"
+    "text": "Download CV"
   },
   {
     "objectID": "education.html#gce-a-levels",
@@ -277,7 +277,7 @@
     "href": "school_projects/UIUX/UIUX.html",
     "title": "UI/UX Notes",
     "section": "",
-    "text": "A page dedicated to document some concepts and articles that I’ve found interesting in the UI/UX space!\n\n\n\n\nNotice how the ‘Microinteraction’ above turns a shade darker as you hover over it before clicking to be redirected to a website that I’ve just visited? According to several articles that I had read, these can be game-changers when it comes to user experience. These subtle design elements provide users with instant feedback, which generously helps users in keeping tabs on their actions. It also helps in interface comprehension while guiding users through tasks.\n Articles:\nhttps://bootcamp.uxdesign.cc/8-huge-ui-design-trends-to-watch-out-for-in-2024-2026-9f5bd243de2f \n\n\n\n\n\n\n3D Design and Minimalism Dark Mode Sustainability"
+    "text": "A page dedicated to document some concepts and articles that I’ve found interesting in the UI/UX space!\n\n\n\n\nNotice how the ‘Microinteraction’ above turns a shade darker as you hover over it before clicking to be redirected to a website that I’ve just visited? According to several articles that I had read, these can be game-changers when it comes to user experience. These subtle design elements provide users with instant feedback, which generously helps users in keeping tabs on their actions. It also helps in interface comprehension while guiding users through tasks.\n Articles:\nhttps://bootcamp.uxdesign.cc/8-huge-ui-design-trends-to-watch-out-for-in-2024-2026-9f5bd243de2f \n\n\n\n\n\n\n3D Design and Minimalism Dark Mode Sustainability Accessibility"
   },
   {
     "objectID": "school_projects/UIUX/UIUX.html#fa-lightbulb-concepts",
@@ -291,6 +291,6 @@
     "href": "school_projects/UIUX/UIUX.html#fa-newspaper-articles",
     "title": "UI/UX Notes",
     "section": "",
-    "text": "3D Design and Minimalism Dark Mode Sustainability"
+    "text": "3D Design and Minimalism Dark Mode Sustainability Accessibility"
   }
 ]
