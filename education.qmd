@@ -10,7 +10,8 @@ title: "Education"
 
 I possess a proactive approach towards skill acquisition, driven by a desire to excel both academically and professionally. This inclination has led me to undertake a series of online courses, motivated by both curiosity and a pragmatic concern for remaining competitive. In fact, this website was built from scratch with the help of online tutorials about Quarto! Below are some of the skills I have cultivated through these endeavors: 
 
-{{< fa r-project >}}
+
+
 
 #### {{< fa server >}} Achievements, Leadership & Committee Experiences.
 **NUS ROTARACT CLUB**  
@@ -35,7 +36,12 @@ I possess a proactive approach towards skill acquisition, driven by a desire to 
 
 # Nanyang Junior College 
 *GCE ‘A’ Levels*  
-•	Achievement 4 distinctions in Mathematics, General Paper, Physics and Economics  
-•	President of International Service-Learning Club
+•	**Achievement 4 distinctions** in Mathematics, General Paper, Physics and Economics  
+•	**Involvement in Extracurricular Activities：**  
+- International Service Learning Expedition Club  
+- Dance Society
+
+ 
+
 
 
