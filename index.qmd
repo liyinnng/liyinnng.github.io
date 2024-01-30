@@ -14,6 +14,7 @@ about:
       href: https://github.com/liyinnng
     - text: Resume
       icon: file-text
+      href: resume.pdf
 ---
 
 ::: {#about-block}
