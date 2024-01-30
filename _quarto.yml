@@ -20,12 +20,10 @@ website:
         file: about.qmd
       - text: "Education"
         file: education.qmd
-      - text: "Experiences"
-        file: experiences.qmd
       - text: "Projects"
         file: projects.qmd
-      - text: "CV"
-        file: CV.qmd
+      - text: "Resume"
+        file: resume.qmd
         
   #footer
   page-footer:
