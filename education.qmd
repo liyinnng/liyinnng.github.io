@@ -2,7 +2,7 @@
 title: "Education"
 ---
 
-# NATIONAL UNIVERSITY OF SINGAPORE (NUS)
+## NATIONAL UNIVERSITY OF SINGAPORE (NUS)
 *Major in Bachelor of Business Administration with Minor in Interactive Media Development*  
 •	Current CAP Score: 4.38/5.0
 
@@ -34,7 +34,7 @@ I possess a proactive approach towards skill acquisition, driven by a desire to 
 
 ---
 
-# Nanyang Junior College 
+## Nanyang Junior College 
 *GCE ‘A’ Levels*  
 •	**Achievement 4 distinctions** in Mathematics, General Paper, Physics and Economics  
 •	**Involvement in Extracurricular Activities：**  
