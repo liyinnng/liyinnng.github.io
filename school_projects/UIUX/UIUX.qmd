@@ -27,3 +27,12 @@ https://bootcamp.uxdesign.cc/8-huge-ui-design-trends-to-watch-out-for-in-2024-20
 [3D Design and Minimalism](https://bootcamp.uxdesign.cc/8-huge-ui-design-trends-to-watch-out-for-in-2024-2026-9f5bd243de2f) Dark Mode Sustainability Accessibility
 
 ## {{< fa bookmark >}} Others
+Here's one of first project with Figma under the guidance of [Flux Academy!](https://www.figma.com/@fluxacademy)
+
+```{r}
+#| eval: true 
+#| echo: false
+#| fig-align: "center"
+#| out-width: "100%" 
+knitr::include_graphics("beginner-websit.jpg")
+```
