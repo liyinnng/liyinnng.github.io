@@ -1,0 +1,13 @@
+---
+title: "CS3240 Design Project"
+description: 
+  An individual assignment on Conceptual Design, Visual Design, and Prototyping.
+categories: [Curriculum]
+image: cs3240-cover.gif
+draft: false
+---
+
+# About
+
+
+```
