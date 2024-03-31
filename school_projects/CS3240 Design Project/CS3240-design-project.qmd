@@ -6,4 +6,3 @@ draft: false
 ---
 
 ![Design Portfolio](design.png)
-  
