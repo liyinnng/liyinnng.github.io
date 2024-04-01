@@ -1,5 +1,7 @@
 ---
 title: "CS3240 Design Project"
+description: 
+ A project portfolio for my Individual Assignment
 categories: [Curriculum]
 image: cs3240-cover.gif
 draft: false
