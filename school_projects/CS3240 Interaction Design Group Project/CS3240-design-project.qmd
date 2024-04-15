@@ -1,0 +1,20 @@
+---
+title: "CS3240 Design Group Project"
+description: 
+ A project portfolio for Group 4's design group project
+categories: [Curriculum]
+image: cs3240-cover.gif
+draft: false
+---
+
+![Design Portfolio1](Slide 16_9 - 1.png)
+![Design Portfolio2](Slide 4_3 - 2.png)
+
+**Here's our full prototype**
+
+  
+  
+**Relevant links**
+
+
+
