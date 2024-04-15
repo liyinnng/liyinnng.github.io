@@ -1,0 +1,16 @@
+{
+  "hash": "24dd39f1e472f1d713662f3dc349d225",
+  "result": {
+    "markdown": "--- \ntitle: \"NUS Business Camp (NBC)\"\ndescription: \n  Publicity works done for a faculty-wide orientation camp\ncategories: [Committee]\nimage: nbc_lower.gif\ndraft: false\n---\n\n\n# About\n\nNBC (NUS Business Camp) serves as the firestarter to the five Freshman Orientation Programmes (FOPs), bringing incoming freshmen together through highly immersive activities. \n\nTaking up the role of publicity executive in the NUS Business Camp planning committee, my team and I were the ones who came up with the thematic of the camp, publicity stints, and designs of the collateral.  \nHaving experience in Canva, Procreate and Adobe Photoshop, my contributions includes publicity campaigns as well as design works. From Instagram stories to illustrated grid layouts from scratch, these designs attracted over 600 sign ups for the camp. \n\n\n---\nformat: html\nfilters:\n   - lightbox\nlightbox: auto\n---\n\n\n```{.r .cell-code}\nimg_files <- fs::dir_ls(\"images\", glob=\"*.jpg\")\ncat(\"::: {layout-ncol=2}\\n\",\n    glue::glue(\"![]({img_files})\\n\\n\\n\"),\n    \":::\",\n    sep = \"\"\n)\n```\n\n::: {layout-ncol=2}\n![](images/photo_2024-04-15_17-08-57.jpg)\n\n![](images/photo_2024-04-15_17-10-19.jpg)\n\n![](images/photo_2024-04-15_17-10-23.jpg)\n\n![](images/photo_2024-04-15_17-10-26.jpg)\n\n![](images/photo_2024-04-15_17-10-28.jpg)\n\n![](images/photo_2024-04-15_17-10-31.jpg)\n\n![](images/photo_2024-04-15_17-10-33.jpg)\n\n![](images/photo_2024-04-15_17-10-38.jpg)\n\n![](images/photo_2024-04-15_17-10-41.jpg)\n\n![](images/photo_2024-04-15_17-10-53.jpg)\n\n:::\n",
+    "supporting": [
+      "NBC_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
