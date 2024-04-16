@@ -8,9 +8,14 @@ title: "Education"
 
 #### {{< fa certificate >}} Skills. 
 
-I possess a proactive approach towards skill acquisition, driven by a desire to excel both academically and professionally. This inclination has led me to undertake a series of online courses, motivated by both curiosity and a pragmatic concern for remaining competitive. In fact, this website was built from scratch with the help of online tutorials about Quarto! Below are some of the skills I have cultivated through these endeavors: 
+I possess a proactive approach towards skill acquisition, driven by a desire to excel both academically and professionally. This inclination has led me to undertake a series of online courses, motivated by both curiosity and a pragmatic concern for remaining competitive. In fact, this website was built from scratch with the help of online tutorials about Quarto! Below are some of the skills I have cultivated through these endeavors:   
 
-
+<div>
+  <i class="fa-solid fa-brands fa-python fa-5x" style="margin-right: 40px;"></i>
+  <i class="fa-solid fa-brands fa-figma fa-5x" style="margin-right: 40px;"></i>
+  <i class="fa-solid fa-brands fa-r-project fa-5x" style="margin-right: 40px;"></i>
+  Google Analytics, and more!
+</div>
 
 
 #### {{< fa server >}} Achievements, Leadership & Committee Experiences.
@@ -20,7 +25,7 @@ I possess a proactive approach towards skill acquisition, driven by a desire to 
 •	Facilitated welcome activities for over 100 active and new volunteers from different faculties in NUS  
 •	Responsible for weekly lesson plans and worksheets alongside being in charge of overseeing and ensuring smooth execution of weekly tutoring sessions
  
-**[NUS BUSINESS CAMP](https://liyinnng.github.io/school_projects/NBC.html)**	 
+**[NUS BUSINESS CAMP](https://liyinnng.github.io/school_projects/NBC/NBC.html)**	 
 **Duration**: Sep 2021 - Jun 2022  
 **Role**: Publicity Executive  
 •	Led a faculty-wide publicity campaigns that attracted more than 600 sign-ups to be a participant of the 2022 NUS Business Camp  

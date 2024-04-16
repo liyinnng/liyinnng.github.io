@@ -7,12 +7,15 @@ image: cs3240-cover.gif
 draft: false
 ---
 
-![Design Portfolio](combined.png)
+## Design Portfolio
+![](combined.png)
 
-**Here's our full prototype**
+## Prototype
+Here's our full prototype
 
 <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="900" height="700" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FTw12snPlPeQ5ivL3lJomXx%2Fgroup-assignment%3Fpage-id%3D0%253A1%26type%3Ddesign%26node-id%3D531-1498%26viewport%3D46%252C32%252C0.07%26t%3D6ABXfwhMUCwed3Jv-1%26scaling%3Dscale-down%26starting-point-node-id%3D531%253A1498%26show-proto-sidebar%3D1%26mode%3Ddesign" allowfullscreen></iframe>
 
+## Links
 ::: {.callout-note title="Relevant Links" collapse="true"}  
 
 ***Lofi wireframes***  
