@@ -1,9 +1,9 @@
 ---
 title: "CS3240 Individual Reflection"
 description: 
- Reflection 
+ Reflection on my Interaction Design (CS3240) journey, inspired by Spotify Year-End Wrapped!
 categories: [Curriculum]
 image: cs3240-cover.gif
 draft: false
 ---
-<iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="900" height="700px" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FWhqmYv9inTzoOFLiadZ7UK%2FSpotify-Wrapped-2021-(Community)%3Fpage-id%3D102%253A4096%26type%3Ddesign%26node-id%3D163-11383%26viewport%3D728%252C126%252C0.12%26t%3Drvw3INFlwMQqsJEr-1%26scaling%3Dscale-down%26starting-point-node-id%3D104%253A5886%26mode%3Ddesign" allowfullscreen></iframe>
+<iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="1000" height="900px" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FWhqmYv9inTzoOFLiadZ7UK%2FSpotify-Wrapped-2021-(Community)%3Fpage-id%3D102%253A4096%26type%3Ddesign%26node-id%3D163-11383%26viewport%3D728%252C126%252C0.12%26t%3Drvw3INFlwMQqsJEr-1%26scaling%3Dscale-down%26starting-point-node-id%3D104%253A5886%26mode%3Ddesign" allowfullscreen></iframe>
