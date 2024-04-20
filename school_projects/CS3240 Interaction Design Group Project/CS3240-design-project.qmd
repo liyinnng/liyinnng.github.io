@@ -3,7 +3,7 @@ title: "CS3240 Design Group Project"
 description: 
  A project portfolio for Group 4's design group project
 categories: [Curriculum]
-image: cs3240-cover.gif
+image: log in page.png
 draft: false
 ---
 
