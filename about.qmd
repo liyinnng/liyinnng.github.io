@@ -5,7 +5,7 @@ subtitle: "A little bit more about me"
 
 ## {{< fa coffee >}} Me.
 
-I am currently a penultimate undergraduate at the [National University of Singapore](https://nus.edu.sg/), pursuing a [Bachelor's in Business Administration](https://bba.nus.edu.sg/) with a major in Marketing alongside a minor in [Interactive Media Development](https://fass.nus.edu.sg/cnm/undergraduate-minor-imd/). As I was introduced to the world of data analysis/coding a tad later than my peers, I was really apprehensive towards this field. But thankfully I was surrounded by some really supportive professors/instructors and peers who gave me immense help to make up for being a 'laggard'.
+I am currently a final year undergraduate at the [National University of Singapore](https://nus.edu.sg/), pursuing a [Bachelor's in Business Administration](https://bba.nus.edu.sg/) with a major in Marketing alongside a minor in [Interactive Media Development](https://fass.nus.edu.sg/cnm/undergraduate-minor-imd/). As I was introduced to the world of data analysis/coding a tad later than my peers, I was really apprehensive towards this field. But thankfully I was surrounded by some really supportive professors/instructors and peers who gave me immense help to make up for being a 'laggard'.
 
 With that being said, I am also a good team player who's not afraid to experiment with fresh things. I really believe in the importance of being an eager self-directed learner, hence and I enjoy gaining new knowledge along the way.
 
