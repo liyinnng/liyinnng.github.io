@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Li Ying - Education</title>
+<title>Li Ying - Experiences</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -31,6 +31,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
 <link href="./img/logo.png" rel="icon" type="image/png">
+<script src="site_libs/quarto-listing/list.min.js"></script>
+<script src="site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -69,7 +71,65 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script>
 
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-listing .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      
+      searchColumns: ["listing-title","listing-author","listing-image","listing-description","listing-categories"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  </script>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -98,11 +158,11 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./education.html" aria-current="page"> 
+    <a class="nav-link" href="./education.html"> 
 <span class="menu-text">Education</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./index.html"> 
+    <a class="nav-link active" href="./experience.html" aria-current="page"> 
 <span class="menu-text">Experience</span></a>
   </li>  
   <li class="nav-item">
@@ -121,30 +181,24 @@ ul.task-list li input[type="checkbox"] {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#national-university-of-singapore-nus" id="toc-national-university-of-singapore-nus" class="nav-link active" data-scroll-target="#national-university-of-singapore-nus">NATIONAL UNIVERSITY OF SINGAPORE (NUS)</a></li>
-  <li><a href="#nanyang-junior-college" id="toc-nanyang-junior-college" class="nav-link" data-scroll-target="#nanyang-junior-college">Nanyang Junior College</a></li>
-  </ul>
-</nav>
-    </div>
+        
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(1)</span></div></div></div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content column-page-left" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Education</h1>
+<h1 class="title">Experiences</h1>
+<p class="subtitle lead">Past internship experiences</p>
 </div>
 
 
 
-<div class="quarto-title-meta">
+<div class="quarto-title-meta column-page-left">
 
     
   
@@ -156,49 +210,39 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="national-university-of-singapore-nus" class="level2">
-<h2 class="anchored" data-anchor-id="national-university-of-singapore-nus">NATIONAL UNIVERSITY OF SINGAPORE (NUS)</h2>
-<p><em>Major in Bachelor of Business Administration with Minor in Interactive Media Development</em><br>
-• Current CAP Score: 4.38/5.0</p>
-<section id="skills." class="level4">
-<h4 class="anchored" data-anchor-id="skills."><i class="fa-solid fa-certificate" aria-label="certificate"></i> Skills.</h4>
-<p>I possess a proactive approach towards skill acquisition, driven by a desire to excel both academically and professionally. This inclination has led me to undertake a series of online courses, motivated by both curiosity and a pragmatic concern for remaining competitive. In fact, this website was built from scratch with the help of online tutorials about Quarto! Below are some of the skills I have cultivated through these endeavors:</p>
-<div>
-<p><i class="fa-solid fa-brands fa-python fa-5x" style="margin-right: 40px;"></i> <i class="fa-solid fa-brands fa-figma fa-5x" style="margin-right: 40px;"></i> <i class="fa-solid fa-brands fa-r-project fa-5x" style="margin-right: 40px;"></i> Google Analytics, and more!</p>
+
+
+
+
+<div class="quarto-listing quarto-listing-container-grid" id="listing-listing">
+<div class="list grid quarto-listing-cols-3">
+<div class="g-col-1" data-index="0" data-listing-file-modified-sort="1737708419605" data-listing-reading-time-sort="1" data-listing-word-count-sort="14">
+<a href="./experiences/Razer/Razer.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img src="./experiences/Razer/razer logo.png" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Razer
+</h5>
+<div class="card-text listing-description">
+Product Marketing (Lifestyle) Intern
 </div>
-</section>
-<section id="achievements-leadership-committee-experiences." class="level4">
-<h4 class="anchored" data-anchor-id="achievements-leadership-committee-experiences."><i class="fa-solid fa-server" aria-label="server"></i> Achievements, Leadership &amp; Committee Experiences.</h4>
-<p><strong>NUS ROTARACT CLUB</strong><br>
-<strong>Duration</strong>: Aug 2021 - Aug 2022<br>
-<strong>Role</strong>: Level In-Charge<br>
-• Facilitated welcome activities for over 100 active and new volunteers from different faculties in NUS<br>
-• Responsible for weekly lesson plans and worksheets alongside being in charge of overseeing and ensuring smooth execution of weekly tutoring sessions</p>
-<p><strong><a href="https://liyinnng.github.io/school_projects/NBC/NBC.html">NUS BUSINESS CAMP</a></strong><br>
-<strong>Duration</strong>: Sep 2021 - Jun 2022<br>
-<strong>Role</strong>: Publicity Executive<br>
-• Led a faculty-wide publicity campaigns that attracted more than 600 sign-ups to be a participant of the 2022 NUS Business Camp<br>
-• Person in-charge of managing social-relations with students and public, accumulating over a thousand followers on Instagram</p>
-<p><strong>NUS BIZCONNECT</strong><br>
-<strong>Duration</strong>: Sep 2022 – Present<br>
-<strong>Role</strong>: Publicity Executive<br>
-• Working with a team of 7 in bridging relations between undergraduates and alumni of NUS Business School to connect various like-minded individuals<br>
-• In-charge of social media marketing within the team to extend outreach of organized events to attract interested participants</p>
-<hr>
-</section>
-</section>
-<section id="nanyang-junior-college" class="level2">
-<h2 class="anchored" data-anchor-id="nanyang-junior-college">Nanyang Junior College</h2>
-<p><em>GCE ‘A’ Levels</em><br>
-• <strong>Achievement 4 distinctions</strong> in Mathematics, General Paper, Physics and Economics<br>
-• <strong>Involvement in Extracurricular Activities：</strong><br>
-- International Service Learning Expedition Club<br>
-- Dance Society</p>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
 
-
-</section>
-
-</main> <!-- /main -->
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+</div>
+<div class="listing-no-matching d-none">
+No matching items
+</div>
+</div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -612,7 +656,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">
-<p>Copyright 2024, Soh Li Ying</p>
+<p>Copyright 2025, Soh Li Ying</p>
 </div>   
     <div class="nav-footer-center">
       &nbsp;

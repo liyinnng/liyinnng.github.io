@@ -14,12 +14,12 @@ website:
     
     # sub-pages
     left:
-      - text: "Home"
-        file: index.qmd
       - text: "About"
         file: about.qmd
       - text: "Education"
         file: education.qmd
+      - text: "Experience"
+        file: experience.qmd
       - text: "Projects"
         file: projects.qmd
       - text: "Resume"
@@ -27,7 +27,7 @@ website:
         
   #footer
   page-footer:
-    left: Copyright 2023, Soh Li Ying
+    left: Copyright 2025, Soh Li Ying
     right: This website is built with {{< fa heart >}} and [Quarto](https://quarto.org/)
         
 preview: 
