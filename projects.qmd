@@ -1,10 +1,11 @@
 ---
-title: Projects
-subtitle: "A list of projects I've done and associated materials"
+title: Experiences & Projects
+subtitle: "My internship experiences and schoool projects across the years"
 listing: 
   contents: school_projects
   feed: true
   type: grid
+  sort: custom
   grid-item-border: true
   grid-item-align: left
   max-description-length: 175
@@ -12,5 +13,4 @@ listing:
   categories: numbered
   sort-ui: false
   filter-ui: false
-page-layout: full
 ---

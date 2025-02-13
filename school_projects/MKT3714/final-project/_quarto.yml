@@ -1,6 +1,0 @@
-project:
-  title: "MKT3714 Final Project"
-  type: website
-  output-dir: docs
-resources:
-  - quarto-ext/fontawesome

@@ -1,0 +1,517 @@
+---
+title: "NM2207 Final Project"
+description: 
+  Data-story telling for my final project
+categories: [Curriculum]
+image: cover-nm2207.gif
+draft: false
+---
+
+```{r, eval=TRUE,echo=FALSE,message = FALSE, warning = FALSE}
+library(tidyverse)
+library(ggplot2)
+library(dplyr)
+library(plotly)
+library(r2symbols)
+library(echarts4r)
+library(reactable)
+library(reactablefmtr)
+library(htmltools)
+library(crosstalk)
+library(viridis)
+
+social_media_health <- read.csv("social-media-and-mental-health.csv")
+
+# Filter age outliers
+social_media_health <- social_media_health %>%
+  filter(X1..What.is.your.age. != 91)
+
+social_media_health <- mutate(social_media_health,
+                              age_group = case_when(
+                                X1..What.is.your.age. <= 25 ~ "Child",
+                                between(X1..What.is.your.age., 25, 30) ~ "Youth",
+                                between(X1..What.is.your.age., 31, 45) ~ "Adults",
+                                X1..What.is.your.age. > 45 ~ "Old-aged-adults",
+                                TRUE ~ NA_character_
+                              )
+)
+
+```
+
+# About
+
+This project aims to find stories in data through visualization via shiny, ggplot2, echarts4r and other functions with Rstudio.
+
+# Background:
+
+<center>
+
+<iframe src="https://liyinnng.github.io/nm2207-projectslides/" title="Introduction" width="800px," height="500px">
+
+</iframe>
+
+</center>
+
+::: {.callout-note title="References from slides" collapse="true"}
+Channel News Asia <sup><a href="#footnote1">1</a></sup>  
+Kaggle dataset <sup><a href="#footnote1">2</a></sup>  
+Social Network Usage & Growth Statistics: How Many People Use Social Media in 2023? <sup><a href="#footnote3">3</a></sup>  
+Cybersmile Foundation <sup><a href="#footnote9">9</a></sup>  
+National Center for Health Research <sup><a href="#footnote11">10</a></sup> 
+:::
+
+
+# Analysis
+
+## Social Media Usage
+
+We will first start off with analyzing the usage of social media among our respondents from the dataset. 
+
+::: panel-tabset
+
+## Dataset Mutation
+<p>Before we start, this is how I mutated the dataset to better observe trends that are more applicable to focus of the project. From the data set, I created a new column, age_group to separate the respondents into different age groups as seen from the drop down menu based on the respective age range the respondents fall into to further analyse the impact of one's age.  While those who are under 16 years old are usually considered as a "Child", I have expanded the age range to below "25" accordingly since it is the age range where they are more susceptible to being negatively affected by social media as mentioned earlier<sup><a href="#footnote1">1</a></sup></p> From the donut chart below, this data set is a good one to work with to investigate the impacts of social media on children as majority of our respondents do fall under the "child" category.
+
+```{r, out.width='100%', eval=TRUE,echo=FALSE, message = FALSE}
+
+agegroup_distribution <- social_media_health %>%
+  count(age_group)
+
+donut <- agegroup_distribution %>% 
+  e_charts(x = age_group) %>% 
+  e_pie(n, legend = FALSE, name = "Age Group", radius = c("40%", "70%")) %>% 
+  e_tooltip(
+        formatter = htmlwidgets::JS(
+      "function(params) {
+        return '<div style=\"background-color: white; padding: 10px;\">' +
+               '<strong>' + params.name + '</strong>: ' + params.value +
+               '</div>';
+      }"
+    )  
+  ) %>%
+  e_theme("blue") %>%
+  e_title("Age Group Distribution")
+
+donut
+
+```
+
+## Pie Chart
+Starting off with our Pie Chart in the first tab, it is evident that most of the respondents from our data set uses social media.
+
+```{r, out.width='100%', eval=TRUE,echo=FALSE, message = FALSE}
+
+social_media_use <- social_media_health %>%
+  count(X6..Do.you.use.social.media.)
+
+# Define custom colors
+color_yes <- "#9FC0DE"
+color_no <- "black"
+
+pie <- social_media_use %>% 
+  e_charts(x = X6..Do.you.use.social.media.) %>% 
+  e_pie(n, legend = FALSE, name = "Do you use social media?") %>% 
+  e_tooltip() %>%
+  e_color(color = list(color_no, color_yes)) %>% 
+  e_title("Do you use social media?")
+
+pie
+```
+
+## Bar Chart
+To further breakdown on our demographics, the Bar Chart in our second tab categorises our respondents and their social media usage tendency according to their ages. From the bars, a similar conclusion can be drawn: most of our respondents are in their 20s, and they do use social media.
+
+```{r, out.width='100%', eval=TRUE,echo=FALSE, message = FALSE}
+
+# Define custom colors
+color_yes <- "#9FC0DE"
+color_no <- "black"
+
+social_media_usage <- social_media_health %>%
+  count(X1..What.is.your.age., X6..Do.you.use.social.media.) %>%
+  spread(X6..Do.you.use.social.media., n, fill = 0)
+
+social_media_usage %>%
+  e_charts(X1..What.is.your.age., stack = "grp") %>%
+  e_bar(Yes, name = "Use Social Media", stack = "stack", barWidth = 10, 
+        itemStyle = list(color = color_yes)) %>% 
+  e_bar(No, name = "Do Not Use Social Media", stack = "stack", barWidth = 10, 
+        itemStyle = list(color = color_no)) %>% 
+  e_tooltip(
+    trigger = "axis",
+    axisPointer = list(
+      type = "shadow"
+    )
+  ) %>% 
+  e_y_axis(
+    splitArea = list(show = FALSE),
+    splitLine = list(show = FALSE), 
+    boundaryGap = c(0, 0.5), 
+    min = 0,
+    max = 90, 
+    name = "Count",
+    axisLabel = list(
+      fontSize = 12 
+    )
+  ) %>%
+  e_x_axis(
+    boundaryGap = c(0, 0.5), 
+    min = 10,
+    max = 70, 
+    name = "Age",
+    axisLabel = list(
+      fontSize = 12
+    )
+  ) %>% 
+  e_title("Do you use social media?") %>%
+  e_toolbox_feature("dataZoom", title = list(zoom = "zoom", back = "back")) %>%
+  e_datazoom()
+
+```
+## Platforms
+Our data set also has a column consisting of the different social media platforms that are used by the respondents. This bubble chart illustrates the various platforms used, alongside their popularity. It can be observed that among the respondents, the top 3 most commonly used platforms are Facebook, Instagram and Youtube. 
+
+```{r, eval=TRUE, echo=FALSE, message=FALSE, warning=FALSE}
+
+platforms <- social_media_health %>%
+  filter( X6..Do.you.use.social.media. == "Yes") %>%
+  filter(!is.na(X7..What.social.media.platforms.do.you.commonly.use.)) %>%
+  # Split the strings into individual platforms
+  mutate(platforms_list = strsplit(X7..What.social.media.platforms.do.you.commonly.use., ", ")) %>%
+  # Unnest data
+  unnest(platforms_list) %>%
+  # Count of each unique platform
+  count(platform = platforms_list)
+
+plot_ly(
+  data = platforms,
+  x = ~platform,
+  y = ~n,
+  text = ~paste(platform, "<br>Count:", n),
+  size = ~n,
+  type = 'scatter',
+  mode = 'markers',
+  marker = list(sizemode = 'diameter',
+  color = viridis::viridis(length(unique(platforms$platform)))
+  )
+) %>%
+  layout(
+    title = "Bubble Chart for use of various Platforms",
+    xaxis = list(showgrid = FALSE, showline = FALSE, zeroline = FALSE),
+    yaxis = list(showgrid = FALSE, showline = FALSE, zeroline = FALSE),
+    showlegend = FALSE,
+    hovermode = "closest",
+    paper_bgcolor = 'rgba(0,0,0,0)',
+    plot_bgcolor = 'rgba(0,0,0,0)',
+    annotations = list(
+      list(
+        x = 0,
+        y = 0.98,
+        xref = "paper",
+        yref = "paper",
+        text = "Count",
+        showarrow = FALSE,
+        font = list(size = 12)
+      )
+    )
+  )
+
+```
+
+:::
+
+**Average time spent on social media daily**\
+Next, we investigate the average time spent on social media daily by our respondents. The interactive stacked bargraph indicates that the largest group of respondents spends more than 5 hours of their time on social media daily on average. To further breakdown on this bar chart, we remove all age groups other than "Child". A general increasing trend in the usage duration of social media is observed, and the majority of them spends > 5h on social media. This is an extremely concerning phenomenon as a study conducted by the University of Pennsylvania in 2018 revealed that daily social media usage that exceeds 30 minutes led to heightened anxiety, depression, feelings of loneliness, sleep disturbances, and the fear of missing out (FOMO).<sup><a href="#footnote5">5</a></sup> 
+
+<sub> **notes**:\
+Clicking on either of the legend at the top will remove the plot respectively </sub>
+
+```{r, eval=T,echo=FALSE, message = FALSE}
+# Average time spent on social media daily
+
+time_spent <- social_media_health %>%
+  filter(X6..Do.you.use.social.media. == "Yes") %>%
+  count(age_group, X8..What.is.the.average.time.you.spend.on.social.media.every.day.) %>%
+  spread(age_group, n)
+
+# Define the order of the labels
+order_of_labels <- c("Less than an Hour", "Between 1 and 2 hours", "Between 2 and 3 hours", "Between 3 and 4 hours", "Between 4 and 5 hours", "More than 5 hours")
+
+time_spent %>%
+  e_charts(X8..What.is.the.average.time.you.spend.on.social.media.every.day.) %>%
+  e_bar(`Old-aged-adults`, name = "Old-aged Adults", stack = "grp", barWidth = 100) %>% 
+  e_bar(Adults, name = "Adults", stack = "grp", barWidth = 100) %>% 
+  e_bar(Child, name = "Child", stack = "grp", barWidth = 100) %>% 
+  e_bar(Youth, name = "Youth", stack = "grp", barWidth = 100) %>% 
+  e_tooltip(
+    trigger = "axis",
+    axisPointer = list(),
+    backgroundColor = "white"
+  ) %>% 
+  e_y_axis(
+    splitArea = list(show = FALSE),
+    splitLine = list(show = FALSE), 
+    boundaryGap = c(0, 0.5), 
+    name = "Count",
+    axisLabel = list(
+      fontSize = 12,
+      showMinLabel = TRUE,
+      showMaxLabel = TRUE
+    )
+  ) %>%
+  e_x_axis(
+    type = "category", 
+    boundaryGap = c(0, 0.5),
+    name = "Time Spent",
+    axisLabel = list(
+      fontSize = 12,
+      showMinLabel = TRUE,
+      showMaxLabel = TRUE,
+      rotate = 0,
+      interval = 0, 
+      formatter = htmlwidgets::JS(
+        "function(value) {
+          return value.split(' ').map(function(v) {
+            return echarts.format.truncateText(v, 100, '...', '14px Microsoft Yahei', '…');
+          }).join('\\n');
+        }"
+      )
+    ),
+    data = order_of_labels  
+  ) %>% 
+  e_title("Social Media Usage Duration") %>%
+  e_toolbox_feature("dataZoom", title = list(zoom = "zoom", back = "back"), orient = "vertical", x = "right", y = "top") %>%
+  e_datazoom() %>%
+  e_theme("blue") %>%
+  e_grid(left = "10%", right = "15%", top = "15%", bottom = "25%")  %>%
+  e_y_axis(max = 120)
+
+```
+
+<br>
+
+```{r}
+#| eval: true 
+#| echo: false
+#| fig-align: "center"
+#| out-width: "100%" 
+knitr::include_graphics("social-media-downsides.png")
+```
+
+## Impacts of Social Media
+
+Next, lets dive into the investigation of the various impacts of social media on various variables. Starting off with one's sleep quality, concentration ability, and worries, the interactive shiny app below that uses a 2-dimensional heat map will be able provide us further insights.
+
+::: panel-tabset
+## Sleep Quality
+
+#### Relationship between social media usage and sleep quality:
+
+-   From the heat map, it is evident that those who do not use social media never, or seldom face issues with regards to sleeping as the respondents generally chose between 1 and 2 only.
+
+-   On the other hand, as we move over to the heat map for those who use social media, the darkest area of the heat map is at the top (where respondents chose 5 as their response).
+
+A total of 110 and 124 respondents chose 4 and 5 respectively in response to the survey question of "On the scale of 1 to 5, how often do you face issues regarding sleep". This also ensues that the largest group of respondents who use social media indicated that they often face issues with regards to having a good night's rest.
+
+There are multiple reasons to as why social media does affect one's sleep quality. <sup><a href="#footnote7">7</a></sup> Here are some of the reasons why: 
+
+1. **Extended Blue Light Use.** Our phones emit blue light from their screens, and this confuses one's circadian rhythm and body's ability to release melatonin, the chemical that lulls you to bed. 
+
+2. **Excessive Mental Stimulation.** The over stimulation from activities such as a simple notification puts your body off "sleep mode" and gives our brain a rush. In addition, when the likes and interactions do not roll in as expected, it can lead to anxiety and depression, something that we will explore further later. 
+
+3. **Irregular Sleep Patterns.** With the plethora of things to do on social media, it can keep one up all night as we lose track of time.  
+
+## Concentration Ability
+
+#### Relationship between social media usage and it potential effect on concentration ability:
+
+As we chose the next variable - concentration ability, to analysis, a similar trend can be observed for the plot comparing the concentration ability of both groups.
+
+* The plot has an *inverse* relationship between both graphs: 
+  
+  + Most who do not use social media indicated that they face minimal difficulty in concentrating on things;
+  
+  + On the other hand, the shade is increasingly darker as we move up the heat map for those who use social media. This indicates that those who do use social media face greater difficulty in concentrating on things.
+  
+A Microsoft study found that people lose focus after just eight seconds. Social media consistently drains attention from crucial aspects of life, like work and education. In addition, a substantial number of users also engage in multitasking while using social media, exacerbating the reduction in attention dedicated to each task. <sup><a href="#footnote6">6</a></sup> Our observations from this dataset further proves that this is true, hence, there is a need to avoid being overstimulated by social media. 
+
+## Worries
+
+#### Relationship between social media usage and its potential effect of causing worries to users:
+
+-   Starting on the side for those who do not use social media, respondents have only selected "1" and "2", which indicates that they are not at all, to very minimally bothered by worries.
+
+-   On the other hand, the color of the heatmap gets darker progressively, which is an indication that for those who use social media, there is an increasing trend of users being bothered by worries.
+:::
+
+<iframe height="500" width="100%" frameborder="no" src="https://liyinnng.shinyapps.io/HeatmapShinyApp/">
+
+</iframe>
+
+#### Seeking validation & feeling depressed:
+
+In this section, a heat map is plotted to observe the relationship between the frequency of seeking validation from Social Media, and the frequency of feeling depressed or down.
+
+::: panel-tabset
+
+## Trends
+
+From the heat map, these are some of the trends observed: 
+
+-   Those who do not seek validation from social media rarely feels depressed or down (those who chose "1" to both the questions of how often they seek validation from social media, and how often they feel depressed or down). 
+
+-   On the other hand, if we were to look at the respondents who indicated that they seek validation from Social Media very frequently (those who chose "5"), the colour of the heat map gets darker. Alongside the count indicated at the side as we hover over the heat map, it is evident that those who seek validation very frequently also feels depressed or down very frequently.
+
+## Research 
+
+The trend that we observed is in line with a research study conducted by the Royal Society for Public Health revealed that individuals who extensively engage with social media, particularly young people, are more prone to encountering adverse mental health outcomes such as symptoms associated with anxiety and depression. <sup><a href="#footnote8">8</a></sup> When reassurance-seeking behaviors and attempts at receiving validation from others through social media becomes excessive, individuals could develop a sense of dependency on these validation. And the moment they do not receive them, everything goes downhill and spirals out of control, eventually taking a toll on their mental and physical health. 
+
+:::
+
+```{r, eval=T,echo=FALSE}
+# Data filtering to find rs between frequency of seeking validation from SM and frequency of feeling depressed or down 
+
+# Create a cross-tabulation of the two variables
+validation_depressed_heatmap <- table(social_media_health$X17..How.often.do.you.look.to.seek.validation.from.features.of.social.media., social_media_health$X18..How.often.do.you.feel.depressed.or.down.)
+
+heatmap_data <- as.data.frame(validation_depressed_heatmap)
+
+heatmap_data |>
+  e_chart(Var1) |>
+  e_visual_map(Freq) |>
+  e_heatmap(Var2, Freq) |>
+  e_title("Validation and Depression Heatmap") |>
+  e_theme("macarons2") |>
+  e_x_axis(name = "How often do you seek validation from SM?") |>
+  e_y_axis(name = "How often do you feel depressed or down?")|>
+  e_grid(left = "15%", right = "32%")
+
+```
+
+<br>
+
+#### Comparison with others on Social Media
+
+This section focuses on the frequency in comparing oneself to other successful people through the use of social media, and how one feels about these comparisons generally speaking
+
+::: panel-tabset
+
+## Comparison Frequency 
+Selecting the "All ages" option, it can be observed that while there are more respondents who seldom compare themselves to other successful people through social media then those who compare frequently, there are still a handful of respondents who do compare themselves frequently.
+
+* As we click into the various age groups, it appears that the majority of respondents who very frequently compare themselves ("5") to other successful people fall under the "Child" age group.
+
+## Comparison Feelings
+On the other hand, as we click into the comparison feelings, while it appears that most are neutral towards these comparisons, it can be observed that there is still a significant amount of respondents who have negative feelings towards these comparisons. In fact, there are more who noted that they are negatively affected by these comparisons ("1" & "2"), as compared to those who feel good from these comparisons ("4" and "5")
+
+* As we click into the various age groups once again, specifically those who fall under the "Child" category, the majority of them indicated to be neutral towards these comparisons ("3"). However, it can also be observed that there are more respondents in this age group that indicated that they felt bad after these comparisons ("1" & "2") as compared to feeling good ("4" & "5"). Hence this does support the research and studies mentioned earlier. 
+
+## Research 
+While the inclination to compare ourselves to others is inherent in human nature, social media amplifies the adverse consequences of such social comparisons, especially for teenagers. This is primarily attributed to the fact that the basis for their comparisons lies in meticulously crafted images of their peers. The overarching concept of social comparison suggests that comparing ourselves to those seemingly ahead of us tends to generate negative feelings. The prevailing pattern indicates that individuals tend to engage in more upward comparisons than downward ones. Consequently, the aftermath of an upward comparison often leads to a diminished sense of well-being — a phenomenon commonly referred to as "the contrast effect." <sup><a href="#footnote11">11</a></sup>
+
+:::
+
+<sub> **notes**:\
+1 indicates seldom compare, and 5 indicates compare very frequently for *comparison frequency*;\
+1 indicates feels bad, and 5 indicates feels good for *feelings towards the comparisons*;\
+Clicking on either of the legend at the top will remove the plot respectively </sub>
+
+<iframe height="470" width="100%" frameborder="no" src="https://liyinnng.shinyapps.io/bargraph-app/"> </iframe>
+
+## Top Hate Words
+
+::: panel-tabset
+
+## Observations
+
+From another data set<sup><a href="#footnote4">4</a></sup>, I decided to create a Word Cloud with *Shiny* to find out more about the words that are most used when people are posting comments that are considered as being hateful. The Word Cloud highlights the predominant themes associated with hateful comments, such as those related to gender, race, and religion. With more using the social media, it is important that users are more mindful of what they post online to contribute to a healthy digital environment that promotes understanding, empathy, and constructive dialoague. 
+
+## Shiny
+
+From the data set, there are way too many unique words used, and it is impossible to fit all of them in the word cloud. Hence I included a reactive slider to limit the number of words to be included in the word cloud. I also specifically removed some of the most used words such as "that", "like", etc... that are very obviously words that are hateful.
+
+:::
+
+<iframe height="500" width="100%" frameborder="no" src="https://liyinnng.shinyapps.io/wordcloudShinyApp/"> </iframe>
+
+# Conclusion
+
+In conclusion, the impact of social media on its users is undeniably complex, encompassing both positive and negative aspects. While the negative effects are particularly pronounced for children, given their heightened susceptibility to external influences, it is crucial to recognize that social media has also introduced numerous benefits into our lives.
+
+However, the narrative takes a distinct turn when considering children, who may lack the cognitive maturity to navigate the online world responsibly. In this context, social media companies bear a significant responsibility to carefully curate content and consider the potential impact on young, impressionable minds. Striking a balance between fostering a positive online environment and protecting the well-being of children requires a collective effort from parents, educators, and the platforms themselves.
+
+As we navigate the intricate landscape of social media, there is a need for conscientious use, regardless of age. Education on digital literacy, responsible online behavior, and age-appropriate content consumption should be prioritized. By fostering a culture of mindfulness and responsible digital citizenship, we can harness the positive aspects of social media while mitigating its potential adverse effects, particularly for the younger members of our society.
+
+# References
+
+::: {.callout-note title="References & Citations" collapse="true"}
+
+<div id="footnote1">
+<p>
+1.  Lau, D. (2023, July 24). The big read: Teenagers hooked on social media - what’s the cost to their mental health? CNA. https://www.channelnewsasia.com/singapore/big-read-teenagers-social-media-addiction-cost-mental-health-3647121 
+</p>
+</div>  
+
+<div id="footnote2">
+<p>
+2.  Ahmed, S., &amp; Syeda, M. N. (2023, July). Social Media and Mental Health. https://www.kaggle.com/datasets/souvikahmed071/social-media-and-mental-health/data. 
+</p>
+</div>  
+
+<div id="footnote3">
+<p>
+3.  Dean, B. (2023, November 15). How many people use Social Media in 2023? (65+ statistics). Backlinko. https://backlinko.com/social-media-users#social-media-usage-stats 
+</p>
+</div>  
+
+<div id="footnote4">
+<p>
+4.  Das, S. (2022, November 1). Social media hate comments. Kaggle. https://www.kaggle.com/datasets/subhajeetdas/hate-comment 
+</p>
+</div>  
+
+<div id="footnote5">
+<p>
+5.  Robinson, L., &amp;  Smith, M. (2023, March 29). Social Media and Mental Health. HelpGuide.org. https://www.helpguide.org/articles/mental-health/social-media-and-mental-health.htm#:~:text=using%20social%20media.-,Modifying%20social%20media%20use%20to%20improve%20mental%20health%20step%201,%2C%20sleep%20problems%2C%20and%20FOMO. 
+</p>
+</div> 
+
+<div id="footnote6">
+<p>
+6.  Baptist Health. (2020, November 6). How social media affects attention span. https://www.baptisthealth.com/blog/family-health/how-social-media-affects-attention-span#:~:text=Not%20only%20are%20attention%20spans,decreased%20attention%20on%20each%20task. 
+</p>
+</div> 
+
+<div id="footnote7">
+<p>
+7.  Nuno, S. (2023, February 14). How does social media affect sleep? (2023). Mattress Clarity. https://www.mattressclarity.com/sleep-resources/social-media-affects-sleep/#:~:text=Social%20Media%20and%20Insomnia,understanding%20of%20when%20bedtime%20is. 
+</p>
+</div> 
+
+<div id="footnote8">
+<p>
+8.  Cramer, S., &amp; Inkster, B. (2017, May). #StatusOfMind Social media and young people’s mental health and wellbeing. https://www.rsph.org.uk/our-work/campaigns/status-of-mind.html 
+</p>
+</div> 
+
+<div id="footnote9">
+<p>
+9.  MacRae, D. (2022, June 22). 89% of people feel social media negatively affects their mental health. Marketing Tech News. https://www.marketingtechnews.net/news/2022/jun/22/89-of-people-feel-social-media-negatively-affects-their-mental-health/  
+</p>
+</div> 
+
+<div id="footnote10">
+<p>
+10.  Mir, E., &amp; Sun, A. (2023, July 20). Social Media and adolescents’ and Young Adults’ mental health. National Center for Health Research. https://www.center4research.org/social-media-affects-mental-health/ 
+</p>
+</div> 
+
+<div id="footnote11">
+<p>
+11.  Newport Academy. (2023, August 3). The theory of social comparison and Mental Health. https://www.newportacademy.com/resources/empowering-teens/theory-of-social-comparison/ 
+</p>
+</div> 
+
+:::
+
+

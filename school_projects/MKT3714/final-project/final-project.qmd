@@ -1,7 +1,0 @@
----
-format: 
-  revealjs:
-    theme: solarized.scss
-editor: visual
-footer: Slides available on [GitHub {{< fa-brands github >}}](https://liyinnng.github.io/nm2207-slides/NM2207.html#/title-slide)
----

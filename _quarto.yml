@@ -18,9 +18,7 @@ website:
         href: about.qmd
       - text: "Education"
         href: education.qmd
-      - text: "Experience"
-        href: experience.qmd
-      - text: "Projects"
+      - text: "Experience/Projects"
         href: projects.qmd
       - text: "Resume"
         href: resume.qmd

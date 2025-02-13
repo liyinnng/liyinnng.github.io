@@ -1,0 +1,33 @@
+---
+title: "NUS Business Camp (NBC)"
+description: 
+  Publicity works done for a faculty-wide orientation camp
+categories: [Committee]
+image: nbc_lower.gif
+lightbox: auto
+---
+
+# About
+
+NBC (NUS Business Camp) serves as the firestarter to the five Freshman Orientation Programmes (FOPs), bringing incoming freshmen together through highly immersive activities.
+
+Taking up the role of publicity executive in the NUS Business Camp planning committee, my team and I were the ones who came up with the thematic of the camp, publicity stints, and designs of the collateral.\
+Having experience in Canva, Procreate and Adobe Photoshop, my contributions includes publicity campaigns as well as design works. From Instagram stories to illustrated grid layouts from scratch, these designs attracted over 600 sign ups for the camp.
+
+## Designs
+
+Here are some of the designs and posts that I have curated from scratch! You can also take a look at our Instagram page for [Elysium](https://www.instagram.com/nusbusinesscamp/)
+
+![](photo_2024-04-15_17-08-57.jpg)
+
+::: {style="display: flex; justify-content: center; align-items: center; height: 100vh;"}
+![](instagram.jpg){width="500"}
+:::
+
+::: {style="display: grid; grid-template-columns: repeat(auto-fill, minmax(1000px, 1fr)); grid-gap: 1em; row-gap: 1em; align-items: center;"}
+![](photo_2024-04-15_17-10-19.jpg){width="200"} ![](photo_2024-04-15_17-10-23.jpg){width="200"} ![](photo_2024-04-15_17-10-26.jpg){width="200"} ![](photo_2024-04-15_17-10-28.jpg){width="200"} ![](photo_2024-04-15_17-10-31.jpg){width="200"} ![](photo_2024-04-15_17-10-33.jpg){width="200"} ![](photo_2024-04-15_17-10-38.jpg){width="200"} ![](photo_2024-04-15_17-10-41.jpg){width="200"} ![](photo_2024-04-15_17-10-53.jpg){width="200"}
+![](photo_2024-04-15_17-09-38.jpg){width="200"}
+![](photo_2022-05-29_02-42-41.jpg){width="800"}
+:::
+
+
