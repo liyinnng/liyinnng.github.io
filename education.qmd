@@ -14,7 +14,9 @@ I possess a proactive approach towards skill acquisition, driven by a desire to 
   <i class="fa-solid fa-brands fa-python fa-5x" style="margin-right: 40px;"></i>
   <i class="fa-solid fa-brands fa-figma fa-5x" style="margin-right: 40px;"></i>
   <i class="fa-solid fa-brands fa-r-project fa-5x" style="margin-right: 40px;"></i>
-  Google Analytics, and more!
+  <i class="fa-solid fa-brands fa-figma fa-5x" style="margin-right: 40px;"></i>
+
+  Google Analytics, Adobe Photoshop, Procreate and more!
 </div>
 
 

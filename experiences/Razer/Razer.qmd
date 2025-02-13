@@ -3,16 +3,12 @@ title: "Razer"
 description: Product Marketing (Lifestyle) Intern
 image: razer logo.png
 draft: false
+editor: 
+  markdown: 
+    wrap: 72
 ---
 
-![](Header.png)
+![](Group 1.png)
 
-# Projects
-
-  
-  
-**Relevant links**
-
-**Low-fi prototype:** https://www.figma.com/file/SL0wOTlkB6HuvR97wSRsfo/CS3240-IA-low-fi?type=design&node-id=203%3A5106&mode=design&t=7fJlG6h2H14bPv1W-1  
-**High-fi prototype:** https://www.figma.com/proto/ep8zSL5qnnMOWb3RrtJHO3/Hi-Fi-Prototype%3A-Prodigi-Mobile-App?page-id=186%3A5180&type=design&node-id=2-2&viewport=522%2C239%2C0.12&t=Z730iof622HVbYy6-1&scaling=scale-down&starting-point-node-id=2%3A2&mode=design  
-
+![](gifs.gif)
+![](Group 2.png)

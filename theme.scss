@@ -21,7 +21,7 @@ html, body {
 }
 
 body {
-  font-size: 16px;
+  font-family: "Source Sans Pro", sans-serif;
   line-height: 1.6;
   margin: 0 auto;
   background: linear-gradient(135deg, $gradient-start 0%, $gradient-end 100%);
@@ -45,12 +45,12 @@ h2 {
 }
 
 h3, h4 {
-  font-size: 20px;
+  font-size: 22px;
 }
 
 p {
-  font-size: 20px;
-  line-height: 1.45;
+  font-size: 18px;
+  line-height: 1.8;
 }
 
 /* Navbar styles */
@@ -100,23 +100,14 @@ p {
 
 /* Footer styles */
 footer {
-  background-color: #c3cfe2; /* Set footer background color */
-  color: black; /* Set text color to black */
+  background-color: #c3cfe2; 
+  color: black;
   text-align: center;
-  padding: 10px; /* Add padding around the inner content */
+  padding: 10px; 
   width: 100%;
-  box-sizing: border-box; /* Ensure padding is included in the width */
-  position: relative; /* Ensure it's positioned normally */
-  margin-top: 0; /* Remove any additional margin at the top */
-  margin-bottom: 0; /* Ensure no bottom margin */
+  box-sizing: border-box;
+  position: relative;
+  margin-top: 0;
+  margin-bottom: 0; 
 }
 
-/* Inner content of the footer */
-footer .footer-content {
-  background-color: #c3cfe2; /* Set solid #c3cfe2 background */
-  color: black; /* Text color inside footer content */
-  padding: 10px; /* Add white padding around the content */
-  border: 5px solid white; /* White border around the inner content */
-  box-sizing: border-box; /* Ensure padding and border are included in the width */
-  display: inline-block; /* Allow content to fit naturally */
-}

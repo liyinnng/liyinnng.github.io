@@ -15,15 +15,15 @@ website:
     # sub-pages
     left:
       - text: "About"
-        file: about.qmd
+        href: about.qmd
       - text: "Education"
-        file: education.qmd
+        href: education.qmd
       - text: "Experience"
-        file: experience.qmd
+        href: experience.qmd
       - text: "Projects"
-        file: projects.qmd
+        href: projects.qmd
       - text: "Resume"
-        file: resume.qmd
+        href: resume.qmd
         
   #footer
   page-footer:
@@ -50,7 +50,7 @@ format:
     reference-location: margin
     grid:
       sidebar-width: 100px
-      body-width: 900px
+      body-width: 950px
       margin-width: 200px
       gutter-width: 1.5rem
 
