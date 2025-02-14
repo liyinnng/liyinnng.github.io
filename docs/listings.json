@@ -17,5 +17,18 @@
     "items": [
       "/experiences/Razer/Razer.html"
     ]
+  },
+  {
+    "listing": "/experiences.html",
+    "items": [
+      "/experiences_projects/01_Razer/Razer.html",
+      "/experiences_projects/02_CS3240 Interaction Design Group Project/CS3240-design-project.html",
+      "/experiences_projects/03_CS3240 Design Project/CS3240-design-project.html",
+      "/experiences_projects/04_MKT3714/MKT3714.html",
+      "/experiences_projects/05_NM2207-datastory/data-story.html",
+      "/experiences_projects/06_NBC/NBC.html",
+      "/experiences_projects/07_CS3240 Wrapped/CS3240-Wrapped.html",
+      "/experiences_projects/08_UIUX/UIUX.html"
+    ]
   }
 ]

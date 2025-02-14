@@ -19,7 +19,7 @@ website:
       - text: "Education"
         href: education.qmd
       - text: "Experience/Projects"
-        href: projects.qmd
+        href: experiences.qmd
       - text: "Resume"
         href: resume.qmd
         
